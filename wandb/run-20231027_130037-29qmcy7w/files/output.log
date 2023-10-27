@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/cov_tester.py", line 90, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,model_path=model_path)
+  File "/home/kaustubh/Code3/cov_tester.py", line 53, in main
+    X_emb,losses = create_model_embs(net,trainloader_priv,device= torch.device('cuda'),l=len(X),h=0.82)
+  File "/home/kaustubh/Code3/cov_help.py", line 266, in create_model_embs
+    net = net.to(device)
+AttributeError: 'collections.OrderedDict' object has no attribute 'to'

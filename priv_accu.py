@@ -229,7 +229,9 @@ def main():
         ci_der = CI_KDE_der(f_der,f,n,h,d,alpha)
         loss =torch.max(torch.linalg.norm(f_der/(f-ci).view(f.shape[0],1)+m1.loss_reg,dim=1),torch.linalg.norm(f_der/(f+ci).view(f.shape[0],1)+m1.loss_reg,dim=1)) + torch.norm(ci_der/f.view(-1,1),dim=1)
         losses[ct:bs+ct] =loss
-    
+    losses,indices = torch.sort(losses)
+    X = X[indices]
+    Y = Y[indices]
     eps_list = [1,1.25,1.5,2,2.5,3,3.5,4.5]
     acc_list =[]
     for eps in eps_list:
@@ -298,16 +300,16 @@ def main():
             # if(epoch%100==99):
             #     with torch.no_grad():
         y_pred = model(X_emb_train)
-        accuracy1 = (y_pred.round() == Y_train.cuda()).float().mean()
+        accuracy1 = (y_pred.round() == Y_train.cuda()).cpu().float().mean().numpy()
         # print(f"Train Accuracy {accuracy}")
         y_pred = model(X_emb_test)
-        accuracy2 = (y_pred.round() == Y_test.cuda()).float().mean()
+        accuracy2 = (y_pred.round() == Y_test.cuda()).cpu().float().mean().numpy()
         # print(f"Test Accuracy {accuracy}")
         y_pred = model(X_emb_test2)
-        accuracy3 = (y_pred.round() == Y_test2.cuda()).float().mean()
+        accuracy3 = (y_pred.round() == Y_test2.cuda()).cpu().float().mean().numpy()
 
         y_pred = model(X_emb)
-        accuracy4 = (y_pred.round() == Y.cuda()).float().mean()
+        accuracy4 = (y_pred.round() == Y.cuda()).cpu().float().mean().numpy()
         # print(f"Test Accuracy 2 {accuracy}")
         acc_list.append([str(eps),str(accuracy1),str(accuracy2),str(accuracy3),str(accuracy4),str(ind)])
         # for row in acc_list:
