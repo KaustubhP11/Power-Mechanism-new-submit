@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/cov_tester.py", line 127, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,model_path=model_path)
+  File "/home/kaustubh/Code3/cov_tester.py", line 122, in main
+    train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_emb_loader)
+  File "/home/kaustubh/Code3/cov_help.py", line 425, in train_emb
+    acc = test_model(model,test_loader)
+  File "/home/kaustubh/Code3/cov_help.py", line 435, in test_model
+    outputs = model(inputs)
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)

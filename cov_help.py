@@ -12,8 +12,69 @@ from scipy import stats
 import wandb
 
 
-
 class Net(nn.Module):
+    def __init__(self,p):
+        super(Net, self ).__init__()
+        
+        self.loss_reg = 0
+        self.p =p 
+        self.x = 0
+        self.y = 0
+        self.H_net1 = nn.Sequential(
+            nn.Linear(54, 128),
+            nn.Sigmoid(),
+            nn.Linear(128, 256),
+            nn.Sigmoid(),
+            nn.Linear(256, 54*54).cuda()
+        )
+        self.X_net = nn.Sequential(
+            nn.Linear(54, 64),
+            nn.ReLU(),
+            nn.Linear(64, 128),
+            nn.ReLU(),
+            nn.Linear(128, 128),
+            nn.ReLU(),
+            nn.Linear(128, 7),
+            nn.Softmax(dim=2)
+
+        )
+        
+    def forward(self, x):
+        def H_mul(z):
+            H12 = self.H_net1(z)
+            H12= H12.reshape(z.shape[0],d,d)
+            x12 = torch.matmul(z,H12)
+            return(x12)
+    
+        
+        def batch_jacobian(func, z, create_graph=False):
+            # x in shape (Batch, Length)
+            def _func_sum(z):
+                return func(z).sum(dim=0)
+            return torch.squeeze(torch.autograd.functional.jacobian(_func_sum, z, create_graph=create_graph)).permute(1,0,2)
+        
+        x.requires_grad =True
+        p = self.p
+        self.x = x
+        d = x.shape[1]
+        bs = x.shape[0]
+        x= torch.unsqueeze(x,1)
+        z = x.cuda()
+        loss_reg = torch.zeros(bs,d).cuda()
+        for i in range(p):
+            H = self.H_net1(z).cuda()
+            H = H.reshape(bs,d,d)
+            z = torch.matmul(z,H).cuda()
+            J = batch_jacobian(H_mul, z, create_graph=True)
+            J_int =-torch.log(torch.abs(torch.det(J)))
+            loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).cuda()
+        self.loss_reg = loss_reg
+        self.y = z
+        y = self.X_net(z)
+        return y
+
+
+class Net2(nn.Module):
     def __init__(self,p):
         super(Net, self ).__init__()
         
@@ -108,13 +169,16 @@ def CI_KDE(p_x,n,h,d,alpha):
 def CI_KDE_der(p_x_der,p_x,n,h,d,alpha):
     return( p_x_der*stats.norm.ppf(1-alpha/2)*torch.sqrt(1/(p_x.unsqueeze(dim=1)*(2**d)*math.sqrt(torch.pi**d)*n*h**(d))).cuda() )
 
-
-
-def normalize(x):
-    x_normed = 0.1*x /(x.max(0, keepdim=True)[0])
+def normalize2(x,norm=1):
+    n = torch.norm(x,dim=1).max()
+    x_normed =norm*x /(n)
     return x_normed
 
-def cov_data_loader(path):
+def normalize(x,norm=1):
+    x_normed = norm*x /(x.max(0, keepdim=True)[0])
+    return x_normed
+
+def cov_data_loader(path,norm=1):
     """
     This function loads the data from the path and returns the data as a pandas dataframe.
     """
@@ -123,13 +187,15 @@ def cov_data_loader(path):
     Y= df["Cover_Type"].values
     X = torch.Tensor(X)
     Y = torch.Tensor(Y)
-    X = normalize(X)
+    
     #Write code to convert Y from 1,2,3,4,5,6,7 to 0,1,2,3,4,5,6
     Y = Y-1
     Y = Y.type(torch.LongTensor)
     X = X[::10]
     Y= Y[::10]
-
+    
+    X = normalize2(X,norm)
+   
 
     return X,Y
 
@@ -177,7 +243,8 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
             loss = loss.detach().cpu()/len(inputs)
 
           
-
+            if(epoch ==0 and i==0):
+                continue
             loss_reg = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().detach().cpu()/len(inputs)
             wandb.log({"loss": loss.item(),"loss_reg":loss_reg.item()})
 
@@ -297,8 +364,52 @@ def create_model_embs(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
         X_emb[i*bs:i*bs+len(loss)] = torch.squeeze(net.y.detach().cpu())
     return(X_emb,losses)
 
-def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.device('cpu')):
+def create_model_embs2(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
+    alpha =1/l;
+    
+    # scheduler = lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
+    X_emb = torch.zeros(l,54)
+    losses = torch.zeros(l)
+    bs = 1000
+
+
+    net = net.to(device)
+    # criterion = nn.CrossEntropyLoss()
+
+        
+        
+    for i, data in enumerate(trainloader, 0):
+        # get the inputs; data is a list of [inputs, labels]
+   
+        inputs = data[0].to(device)
+        n = len(inputs)
+        d = inputs.shape[1]
+        inputs.requires_grad = True
+        labels = data[1].to(device)
+        f = py_kde(inputs,inputs,h)
+
+
+        f_der = py_kde_der(f,inputs)
+      
+        ci = CI_KDE(f,n,h,d,alpha)
+       
+        output =  net(inputs)
+        
+        loss =torch.max(torch.linalg.norm(f_der/(f-ci).view(f.shape[0],1)+net.loss_reg,dim=1),torch.linalg.norm(f_der/(f+ci).view(f.shape[0],1)+net.loss_reg,dim=1)) 
+        try:
+            losses[i*bs:i*bs+len(loss)] =loss.detach().cpu()
+        except:
+            print(loss.detach().cpu().shape)
+            print(len(loss))
+            print(net.y.detach().cpu().shape)
+            print(i*bs)
+            print(X_emb[i*bs:i*bs+len(loss)].shape)
+        X_emb[i*bs:i*bs+len(loss)] = torch.squeeze(net.y.detach().cpu())
+    return(X_emb,losses)
+
+def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.device('cpu'),test_loader = None,test_total_loader = None):
     running_loss = 0.0
+    counter = 0
     model = model.to(device)
     for epoch in range(num_epochs):
         
@@ -313,24 +424,38 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
-            # wandb.log({"loss": loss.item()/len(inputs)})
-            # # counter =0
-        if((epoch+1)%10==0):
-            print('Epoch [%d], loss: %.3f' % (epoch + 1, running_loss /(10* len(train_loader))))
-            running_loss = 0.0
+            wandb.log({"loss": loss.item()})
+            # counter =0
+        # if((epoch+1)%10==0):
+            # print('Epoch [%d], loss: %.3f' % (epoch + 1, running_loss /(10* len(train_loader))))
+            # running_loss = 0.0
+        acc = test_model(model,train_loader,device=device)
+        wandb.log({"train acc": acc})
+        if(test_loader):
+
+            acc = test_model(model,test_loader,device=device)
+            wandb.log({"test acc": acc})
+            # wandb.log({"epoch": epoch})
+        if(test_total_loader):
+            acc = test_model(model,test_total_loader,device=device)
+            wandb.log({"test total acc": acc})
+           
 
 
-def test_model(model, test_loader):
+def test_model(model, test_loader,device=torch.device('cpu')):
     correct = 0
     total = 0
     with torch.no_grad():
         for data in test_loader:
             inputs, labels = data
+            inputs = inputs.to(device)
+            labels = labels.to(device)
             outputs = model(inputs)
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
 
-    print('Accuracy of the network on the test images: %d %%' % (
-        100 * correct / total))
+    # print('Accuracy of the network on the test images: %d %%' % (
+    #     100 * correct / total))
+    return(100 * correct / total)
  

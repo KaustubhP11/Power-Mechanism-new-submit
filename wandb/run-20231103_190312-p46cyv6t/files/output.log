@@ -1,0 +1,28 @@
+tensor(21721)
+1532
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/cov_tester.py", line 135, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,model_path=model_path)
+  File "/home/kaustubh/Code3/cov_tester.py", line 130, in main
+    train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_emb_loader,test_total_loader = test_emb_full_loader)
+  File "/home/kaustubh/Code3/cov_help.py", line 433, in train_emb
+    acc = test_model(model,test_total_loader,device=device)
+  File "/home/kaustubh/Code3/cov_help.py", line 442, in test_model
+    for data in test_loader:
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 441, in __iter__
+    return self._get_iterator()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 388, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1042, in __init__
+    w.start()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/context.py", line 281, in _Popen
+    return Popen(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 66, in _launch
+    self.pid = os.fork()
+KeyboardInterrupt

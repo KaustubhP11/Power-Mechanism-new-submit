@@ -1,0 +1,32 @@
+tensor(35161)
+2479
+Exception ignored in: <function _releaseLock at 0x7fd147d87d90>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 228, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.10/multiprocessing/queues.py", line 114, in get
+    raise Empty
+_queue.Empty
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/cov_tester.py", line 135, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,model_path=model_path)
+  File "/home/kaustubh/Code3/cov_tester.py", line 130, in main
+    train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_emb_loader,test_total_loader = test_emb_full_loader)
+  File "/home/kaustubh/Code3/cov_help.py", line 429, in train_emb
+    acc = test_model(model,test_loader,device=device)
+  File "/home/kaustubh/Code3/cov_help.py", line 442, in test_model
+    for data in test_loader:
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1294, in _get_data
+    success, data = self._try_get_data()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1145, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 1408308) exited unexpectedly

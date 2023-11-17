@@ -1,0 +1,43 @@
+
+Epoch [10], loss: 1.679
+Epoch [20], loss: 1.678
+Exception ignored in: <function _releaseLock at 0x7fef5d295630>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 228, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt:
+Epoch [30], loss: 1.678
+Epoch [40], loss: 1.678
+Exception ignored in: <function _releaseLock at 0x7fef5d295630>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 228, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt:
+Epoch [50], loss: 1.678
+Epoch [60], loss: 1.679
+Epoch [70], loss: 1.679
+Epoch [10], loss: 1.680
+Epoch [20], loss: 1.678
+Epoch [30], loss: 1.678
+Epoch [40], loss: 1.678
+Exception ignored in: <function _releaseLock at 0x7fef5d295630>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 228, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt:
+Epoch [50], loss: 1.678
+Epoch [60], loss: 1.678
+Epoch [70], loss: 1.678
+Epoch [80], loss: 1.678
+Epoch [90], loss: 1.678
+Epoch [100], loss: 1.678
+Epoch [10], loss: 1.676
+Epoch [20], loss: 1.670
+Epoch [30], loss: 1.671
+Epoch [40], loss: 1.670
+Epoch [50], loss: 1.670
+Epoch [60], loss: 1.671
+Epoch [70], loss: 1.670
+Epoch [80], loss: 1.670
+Epoch [90], loss: 1.670
+Epoch [100], loss: 1.670

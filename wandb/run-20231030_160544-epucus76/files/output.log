@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/cov_trainer.py", line 71, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,train_flag=train_flag)
+  File "/home/kaustubh/Code3/cov_trainer.py", line 57, in main
+    train_model_priv(net,trainloader_priv,optim,num_epochs,h=0.82,rate=10,device=torch.device('cuda'),only_reg_flag=0,lr_schedular=lr_schedule)
+  File "/home/kaustubh/Code3/cov_help.py", line 160, in train_model_priv
+    f = py_kde(inputs,inputs,h)
+  File "/home/kaustubh/Code3/cov_help.py", line 83, in py_kde
+    prob+= (torch.squeeze(gau_ker((x - X_t[i])/h))/norm).cuda()
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 15.73 GiB total capacity; 135.53 MiB already allocated; 21.12 MiB free; 152.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

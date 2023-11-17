@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/cov_trainer.py", line 77, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,train_flag=train_flag)
+  File "/home/kaustubh/Code3/cov_trainer.py", line 50, in main
+    max_dist = torch.cdist(X, X).max()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/functional.py", line 1222, in cdist
+    return _VF.cdist(x1, x2, p, None)  # type: ignore[attr-defined]
+TypeError: cdist(): argument 'x1' (position 1) must be Tensor, not NoneType

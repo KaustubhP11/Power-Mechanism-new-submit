@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/cov_tester.py", line 127, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,model_path=model_path)
+  File "/home/kaustubh/Code3/cov_tester.py", line 122, in main
+    train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_emb_loader)
+  File "/home/kaustubh/Code3/cov_help.py", line 416, in train_emb
+    loss.backward()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
