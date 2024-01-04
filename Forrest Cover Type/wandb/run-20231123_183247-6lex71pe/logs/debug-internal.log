@@ -1,0 +1,180 @@
+2023-11-23 18:32:47,645 INFO    StreamThr :849029 [internal.py:wandb_internal():86] W&B internal server running at pid: 849029, started at: 2023-11-23 18:32:47.645101
+2023-11-23 18:32:47,648 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: status
+2023-11-23 18:32:47,649 INFO    WriterThread:849029 [datastore.py:open_for_write():85] open: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/run-6lex71pe.wandb
+2023-11-23 18:32:47,652 DEBUG   SenderThread:849029 [sender.py:send():380] send: header
+2023-11-23 18:32:47,653 DEBUG   SenderThread:849029 [sender.py:send():380] send: run
+2023-11-23 18:32:48,403 INFO    SenderThread:849029 [dir_watcher.py:__init__():211] watching files in: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files
+2023-11-23 18:32:48,403 INFO    SenderThread:849029 [sender.py:_start_run_threads():1122] run started: 6lex71pe with start time 1700744567.644322
+2023-11-23 18:32:48,422 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: check_version
+2023-11-23 18:32:48,423 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: check_version
+2023-11-23 18:32:48,539 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: run_start
+2023-11-23 18:32:48,557 DEBUG   HandlerThread:849029 [system_info.py:__init__():32] System info init
+2023-11-23 18:32:48,557 DEBUG   HandlerThread:849029 [system_info.py:__init__():47] System info init done
+2023-11-23 18:32:48,557 INFO    HandlerThread:849029 [system_monitor.py:start():181] Starting system monitor
+2023-11-23 18:32:48,558 INFO    SystemMonitor:849029 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-11-23 18:32:48,559 INFO    HandlerThread:849029 [system_monitor.py:probe():201] Collecting system info
+2023-11-23 18:32:48,560 INFO    SystemMonitor:849029 [interfaces.py:start():190] Started cpu monitoring
+2023-11-23 18:32:48,561 INFO    SystemMonitor:849029 [interfaces.py:start():190] Started disk monitoring
+2023-11-23 18:32:48,562 INFO    SystemMonitor:849029 [interfaces.py:start():190] Started gpu monitoring
+2023-11-23 18:32:48,563 INFO    SystemMonitor:849029 [interfaces.py:start():190] Started memory monitoring
+2023-11-23 18:32:48,564 INFO    SystemMonitor:849029 [interfaces.py:start():190] Started network monitoring
+2023-11-23 18:32:48,621 DEBUG   HandlerThread:849029 [system_info.py:probe():196] Probing system
+2023-11-23 18:32:48,625 DEBUG   HandlerThread:849029 [system_info.py:_probe_git():181] Probing git
+2023-11-23 18:32:48,637 DEBUG   HandlerThread:849029 [system_info.py:_probe_git():189] Probing git done
+2023-11-23 18:32:48,638 DEBUG   HandlerThread:849029 [system_info.py:probe():244] Probing system done
+2023-11-23 18:32:48,638 DEBUG   HandlerThread:849029 [system_monitor.py:probe():210] {'os': 'Linux-6.2.0-36-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-11-23T13:02:48.621844', 'startedAt': '2023-11-23T13:02:47.638909', 'docker': None, 'cuda': None, 'args': ('--model_path', 'Models/cov_new_norm_1_2', '--eps', '1', '--net_depth', '1'), 'state': 'running', 'program': '/home/kaustubh/Code3/Forrest Cover Type/cov_tester.py', 'codePathLocal': 'cov_tester.py', 'codePath': 'Forrest Cover Type/cov_tester.py', 'git': {'remote': 'https://github.com/Kaustubh-iitb/Power-Mechanism-new.git', 'commit': '97b32bb0d1664f9d9818679c0b014b872eda714d'}, 'email': 'kaustubhponkshe@iitb.ac.in', 'root': '/home/kaustubh/Code3', 'host': 'optimus-prime', 'username': 'kaustubh', 'executable': '/home/kaustubh/llm/bin/python3', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1660.8905312500003, 'min': 1500.0, 'max': 2800.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1421.888, 'min': 1500.0, 'max': 2800.0}, {'current': 1421.894, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.972, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.806, 'min': 1500.0, 'max': 2800.0}, {'current': 2000.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1332.876, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1800.284, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1421.806, 'min': 1500.0, 'max': 2800.0}, {'current': 3199.761, 'min': 1500.0, 'max': 2800.0}, {'current': 1415.133, 'min': 1500.0, 'max': 2800.0}, {'current': 1673.508, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 2800.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 3196.102, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1392.858, 'min': 1500.0, 'max': 2800.0}, {'current': 3200.056, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1792.697, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1799.388, 'min': 1500.0, 'max': 2800.0}, {'current': 1378.092, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}, {'current': 1813.734, 'min': 1500.0, 'max': 2800.0}, {'current': 1999.345, 'min': 1500.0, 'max': 2800.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2800.0}], 'disk': {'/': {'total': 548.9522247314453, 'used': 31.296916961669922}}, 'gpu': 'NVIDIA RTX A4000', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}], 'memory': {'total': 125.7433967590332}}
+2023-11-23 18:32:48,638 INFO    HandlerThread:849029 [system_monitor.py:probe():211] Finished collecting system info
+2023-11-23 18:32:48,638 INFO    HandlerThread:849029 [system_monitor.py:probe():214] Publishing system info
+2023-11-23 18:32:48,638 DEBUG   HandlerThread:849029 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-23 18:32:48,639 DEBUG   HandlerThread:849029 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-23 18:32:48,640 INFO    HandlerThread:849029 [system_monitor.py:probe():216] Finished publishing system info
+2023-11-23 18:32:48,647 DEBUG   SenderThread:849029 [sender.py:send():380] send: files
+2023-11-23 18:32:48,647 INFO    SenderThread:849029 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-23 18:32:48,655 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: stop_status
+2023-11-23 18:32:48,655 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: stop_status
+2023-11-23 18:32:48,659 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-23 18:32:49,144 DEBUG   SenderThread:849029 [sender.py:send():380] send: telemetry
+2023-11-23 18:32:49,144 DEBUG   SenderThread:849029 [sender.py:send():380] send: config
+2023-11-23 18:32:49,405 INFO    Thread-12 :849029 [dir_watcher.py:_on_file_created():271] file/dir created: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/requirements.txt
+2023-11-23 18:32:49,406 INFO    Thread-12 :849029 [dir_watcher.py:_on_file_created():271] file/dir created: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/output.log
+2023-11-23 18:32:49,407 INFO    Thread-12 :849029 [dir_watcher.py:_on_file_created():271] file/dir created: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/wandb-metadata.json
+2023-11-23 18:32:49,507 DEBUG   SenderThread:849029 [sender.py:send():380] send: exit
+2023-11-23 18:32:49,507 INFO    SenderThread:849029 [sender.py:send_exit():585] handling exit code: 1
+2023-11-23 18:32:49,507 INFO    SenderThread:849029 [sender.py:send_exit():587] handling runtime: 0
+2023-11-23 18:32:49,508 INFO    SenderThread:849029 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-23 18:32:49,508 INFO    SenderThread:849029 [sender.py:send_exit():593] send defer
+2023-11-23 18:32:49,508 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:49,508 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 0
+2023-11-23 18:32:49,509 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:49,509 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-23 18:32:49,509 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 1
+2023-11-23 18:32:49,509 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:49,509 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 1
+2023-11-23 18:32:49,509 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:49,509 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-23 18:32:49,509 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 2
+2023-11-23 18:32:49,510 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:49,510 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 2
+2023-11-23 18:32:49,510 INFO    HandlerThread:849029 [system_monitor.py:finish():190] Stopping system monitor
+2023-11-23 18:32:49,510 DEBUG   SystemMonitor:849029 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-11-23 18:32:49,510 DEBUG   SystemMonitor:849029 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-11-23 18:32:49,510 DEBUG   SystemMonitor:849029 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-11-23 18:32:49,511 INFO    HandlerThread:849029 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-23 18:32:49,512 INFO    HandlerThread:849029 [interfaces.py:finish():202] Joined disk monitor
+2023-11-23 18:32:49,697 INFO    HandlerThread:849029 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-23 18:32:49,697 INFO    HandlerThread:849029 [interfaces.py:finish():202] Joined memory monitor
+2023-11-23 18:32:49,698 INFO    HandlerThread:849029 [interfaces.py:finish():202] Joined network monitor
+2023-11-23 18:32:49,698 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:49,699 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-23 18:32:49,699 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 3
+2023-11-23 18:32:49,699 DEBUG   SenderThread:849029 [sender.py:send():380] send: stats
+2023-11-23 18:32:49,699 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:49,699 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 3
+2023-11-23 18:32:49,700 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:49,700 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-23 18:32:49,700 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 4
+2023-11-23 18:32:49,700 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:49,700 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 4
+2023-11-23 18:32:49,700 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:49,701 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-23 18:32:49,701 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 5
+2023-11-23 18:32:49,701 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:49,701 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 5
+2023-11-23 18:32:49,701 DEBUG   SenderThread:849029 [sender.py:send():380] send: summary
+2023-11-23 18:32:49,702 INFO    SenderThread:849029 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-23 18:32:49,702 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:49,702 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-23 18:32:49,702 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 6
+2023-11-23 18:32:49,702 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:49,703 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 6
+2023-11-23 18:32:49,703 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:49,703 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-23 18:32:49,708 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: status_report
+2023-11-23 18:32:50,026 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 7
+2023-11-23 18:32:50,026 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:50,027 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 7
+2023-11-23 18:32:50,027 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:50,027 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-23 18:32:50,303 INFO    wandb-upload_0:849029 [upload_job.py:push():131] Uploaded file /tmp/tmpxzl4yabfwandb/iegr8qvb-wandb-metadata.json
+2023-11-23 18:32:50,404 INFO    Thread-12 :849029 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/config.yaml
+2023-11-23 18:32:50,405 INFO    Thread-12 :849029 [dir_watcher.py:_on_file_created():271] file/dir created: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/wandb-summary.json
+2023-11-23 18:32:50,507 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-23 18:32:51,405 INFO    Thread-12 :849029 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/output.log
+2023-11-23 18:32:51,515 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 8
+2023-11-23 18:32:51,516 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: poll_exit
+2023-11-23 18:32:51,516 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:51,516 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 8
+2023-11-23 18:32:51,517 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:51,517 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-23 18:32:51,517 INFO    SenderThread:849029 [job_builder.py:build():281] Attempting to build job artifact
+2023-11-23 18:32:51,517 INFO    SenderThread:849029 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-11-23 18:32:51,520 INFO    SenderThread:849029 [job_builder.py:build():369] adding wandb-job metadata file
+2023-11-23 18:32:51,523 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 9
+2023-11-23 18:32:51,524 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:51,524 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 9
+2023-11-23 18:32:51,524 DEBUG   SenderThread:849029 [sender.py:send():380] send: artifact
+2023-11-23 18:32:52,405 INFO    Thread-12 :849029 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/output.log
+2023-11-23 18:32:53,198 INFO    SenderThread:849029 [sender.py:send_artifact():1456] sent artifact job-https___github.com_Kaustubh-iitb_Power-Mechanism-new.git_Forrest_Cover_Type_cov_tester.py - {'id': 'QXJ0aWZhY3Q6NjQ2NzI3NzIw', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExODA2NTU3Mw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjQ2NzI3NzIw', 'versionIndex': 1}}}
+2023-11-23 18:32:53,198 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:53,198 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-23 18:32:53,198 INFO    SenderThread:849029 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-23 18:32:53,406 INFO    SenderThread:849029 [dir_watcher.py:finish():388] scan: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files
+2023-11-23 18:32:53,406 INFO    SenderThread:849029 [dir_watcher.py:finish():402] scan save: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/config.yaml config.yaml
+2023-11-23 18:32:53,407 INFO    SenderThread:849029 [dir_watcher.py:finish():402] scan save: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/requirements.txt requirements.txt
+2023-11-23 18:32:53,407 INFO    SenderThread:849029 [dir_watcher.py:finish():402] scan save: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/output.log output.log
+2023-11-23 18:32:53,408 INFO    SenderThread:849029 [dir_watcher.py:finish():402] scan save: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/wandb-summary.json wandb-summary.json
+2023-11-23 18:32:53,412 INFO    SenderThread:849029 [dir_watcher.py:finish():402] scan save: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/wandb-metadata.json wandb-metadata.json
+2023-11-23 18:32:53,412 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 10
+2023-11-23 18:32:53,413 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:53,413 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 10
+2023-11-23 18:32:53,417 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:53,417 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-23 18:32:53,417 INFO    SenderThread:849029 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-23 18:32:54,164 INFO    wandb-upload_0:849029 [upload_job.py:push():131] Uploaded file /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/requirements.txt
+2023-11-23 18:32:54,289 INFO    wandb-upload_1:849029 [upload_job.py:push():131] Uploaded file /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/config.yaml
+2023-11-23 18:32:54,393 INFO    wandb-upload_3:849029 [upload_job.py:push():131] Uploaded file /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/wandb-summary.json
+2023-11-23 18:32:54,411 INFO    wandb-upload_2:849029 [upload_job.py:push():131] Uploaded file /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/files/output.log
+2023-11-23 18:32:54,612 INFO    Thread-11 (_thread_body):849029 [sender.py:transition_state():613] send defer: 11
+2023-11-23 18:32:54,612 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:54,612 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 11
+2023-11-23 18:32:54,613 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:54,613 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-23 18:32:54,613 INFO    SenderThread:849029 [file_pusher.py:join():181] waiting for file pusher
+2023-11-23 18:32:54,614 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 12
+2023-11-23 18:32:54,614 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:54,614 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 12
+2023-11-23 18:32:54,614 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:54,614 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-23 18:32:54,614 INFO    SenderThread:849029 [file_stream.py:finish():595] file stream finish called
+2023-11-23 18:32:55,509 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: keepalive
+2023-11-23 18:32:56,483 INFO    SenderThread:849029 [file_stream.py:finish():599] file stream finish is done
+2023-11-23 18:32:56,483 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 13
+2023-11-23 18:32:56,484 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:56,484 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 13
+2023-11-23 18:32:56,484 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:56,485 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-23 18:32:56,485 INFO    SenderThread:849029 [sender.py:transition_state():613] send defer: 14
+2023-11-23 18:32:56,485 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: defer
+2023-11-23 18:32:56,485 INFO    HandlerThread:849029 [handler.py:handle_request_defer():170] handle defer: 14
+2023-11-23 18:32:56,486 DEBUG   SenderThread:849029 [sender.py:send():380] send: final
+2023-11-23 18:32:56,486 DEBUG   SenderThread:849029 [sender.py:send():380] send: footer
+2023-11-23 18:32:56,486 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: defer
+2023-11-23 18:32:56,486 INFO    SenderThread:849029 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-23 18:32:56,487 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: poll_exit
+2023-11-23 18:32:56,487 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: poll_exit
+2023-11-23 18:32:56,488 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: server_info
+2023-11-23 18:32:56,488 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: server_info
+2023-11-23 18:32:56,492 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: get_summary
+2023-11-23 18:32:56,493 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: sampled_history
+2023-11-23 18:32:56,493 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: internal_messages
+2023-11-23 18:32:56,494 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: job_info
+2023-11-23 18:32:56,776 DEBUG   SenderThread:849029 [sender.py:send_request():407] send_request: job_info
+2023-11-23 18:32:56,777 INFO    MainThread:849029 [wandb_run.py:_footer_history_summary_info():3554] rendering history
+2023-11-23 18:32:56,777 INFO    MainThread:849029 [wandb_run.py:_footer_history_summary_info():3586] rendering summary
+2023-11-23 18:32:56,777 INFO    MainThread:849029 [wandb_run.py:_footer_sync_info():3513] logging synced files
+2023-11-23 18:32:56,778 DEBUG   HandlerThread:849029 [handler.py:handle_request():144] handle_request: shutdown
+2023-11-23 18:32:56,778 INFO    HandlerThread:849029 [handler.py:finish():844] shutting down handler
+2023-11-23 18:32:57,494 INFO    WriterThread:849029 [datastore.py:close():294] close: /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231123_183247-6lex71pe/run-6lex71pe.wandb
+2023-11-23 18:32:57,777 INFO    SenderThread:849029 [sender.py:finish():1534] shutting down sender
+2023-11-23 18:32:57,777 INFO    SenderThread:849029 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-23 18:32:57,777 INFO    SenderThread:849029 [file_pusher.py:join():181] waiting for file pusher

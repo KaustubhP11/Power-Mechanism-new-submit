@@ -1,0 +1,12 @@
+tensor(0.9416)
+29255
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/Forrest Cover Type/cov_trainer.py", line 82, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,train_flag=train_flag)
+  File "/home/kaustubh/Code3/Forrest Cover Type/cov_trainer.py", line 68, in main
+    train_model_priv(net,trainloader_priv,optim,num_epochs,h=0.82,rate=10,device=torch.device('cuda'),only_reg_flag=train_flag,lr_schedular=lr_schedule)
+  File "/home/kaustubh/Code3/Forrest Cover Type/cov_help.py", line 226, in train_model_priv
+    f = py_kde(inputs,inputs,h)
+  File "/home/kaustubh/Code3/Forrest Cover Type/cov_help.py", line 144, in py_kde
+    prob+= (torch.squeeze(gau_ker((x - X_t[i])/h))/norm).cuda()
+KeyboardInterrupt

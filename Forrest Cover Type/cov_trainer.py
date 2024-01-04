@@ -50,6 +50,7 @@ wandb.config.update(args)  # adds all of the arguments as config variables
 
 def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
     X,Y = cov_data_loader(data_path,norm=norm)
+    
     max_dist = torch.cdist(X, X).max()
     print(max_dist) 
   

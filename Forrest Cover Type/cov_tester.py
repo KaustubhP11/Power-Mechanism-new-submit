@@ -24,7 +24,7 @@ parser.add_argument('--model_path', type=str, default='Models/net_1_cov',
                     help='Path to the Model to create embeddings')
 parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
-parser.add_argument('--num_epochs', type=int, default=200,
+parser.add_argument('--num_epochs', type=int, default=300,
                     help='Number of epochs to train the model')
 parser.add_argument('--learning_rate', type=float, default=0.003,
                     help='Learning rate for the optimizer')
@@ -70,6 +70,7 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     # print(X[0:2])
     # print(outp)
     # print(net.y)
+    
     
     X_emb,losses = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X),h=0.82)
     losses,indices = torch.sort(losses*max_dist)
@@ -120,15 +121,18 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     model = nn.Sequential(
             nn.Linear(54, 64),
             nn.ReLU(),
+            nn.Linear(64, 64),
+            nn.ReLU(),
             nn.Linear(64, 128),
             nn.ReLU(),
-            nn.Linear(128, 256),
+            nn.Linear(128, 128),
             nn.ReLU(),
-            nn.Linear(256, 128),
+            nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Linear(128, 7),
+            nn.Linear(64, 64),
+            nn.ReLU(),
+            nn.Linear(64, 7),
             nn.Softmax(dim=1)
-
         )
     optimizer = torch.optim.Adam(model.parameters(),lr=learning_rate,weight_decay=1e-4)
     train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_emb_loader,test_total_loader = test_emb_full_loader)

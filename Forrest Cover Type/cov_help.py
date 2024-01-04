@@ -349,7 +349,7 @@ def create_model_embs(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
         f_der = py_kde_der(f,inputs)
       
         ci = CI_KDE(f,n,h,d,alpha)
-       
+        
         output =  net(inputs)
         
         loss =torch.max(torch.linalg.norm(f_der/(f-ci).view(f.shape[0],1)+net.loss_reg,dim=1),torch.linalg.norm(f_der/(f+ci).view(f.shape[0],1)+net.loss_reg,dim=1)) 

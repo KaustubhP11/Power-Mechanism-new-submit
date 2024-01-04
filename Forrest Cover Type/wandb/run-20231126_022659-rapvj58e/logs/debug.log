@@ -1,0 +1,29 @@
+2023-11-26 02:26:59,984 INFO    MainThread:1942047 [wandb_setup.py:_flush():76] Current SDK version is 0.15.11
+2023-11-26 02:26:59,984 INFO    MainThread:1942047 [wandb_setup.py:_flush():76] Configure stats pid to 1942047
+2023-11-26 02:26:59,984 INFO    MainThread:1942047 [wandb_setup.py:_flush():76] Loading settings from /home/kaustubh/.config/wandb/settings
+2023-11-26 02:26:59,984 INFO    MainThread:1942047 [wandb_setup.py:_flush():76] Loading settings from /home/kaustubh/Code3/Forrest Cover Type/wandb/settings
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'Forrest Cover Type/cov_tester_2.py', 'program_abspath': '/home/kaustubh/Code3/Forrest Cover Type/cov_tester_2.py', 'program': '/home/kaustubh/Code3/Forrest Cover Type/cov_tester_2.py'}
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_init.py:_log_setup():528] Logging user logs to /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231126_022659-rapvj58e/logs/debug.log
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_init.py:_log_setup():529] Logging internal logs to /home/kaustubh/Code3/Forrest Cover Type/wandb/run-20231126_022659-rapvj58e/logs/debug-internal.log
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_init.py:init():568] calling init triggers
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {}
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_init.py:init():618] starting backend
+2023-11-26 02:26:59,985 INFO    MainThread:1942047 [wandb_init.py:init():622] setting up manager
+2023-11-26 02:26:59,988 INFO    MainThread:1942047 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-11-26 02:26:59,989 INFO    MainThread:1942047 [wandb_init.py:init():628] backend started and connected
+2023-11-26 02:26:59,994 INFO    MainThread:1942047 [wandb_init.py:init():720] updated telemetry
+2023-11-26 02:26:59,999 INFO    MainThread:1942047 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-11-26 02:27:00,876 INFO    MainThread:1942047 [wandb_run.py:_on_init():2220] communicating current version
+2023-11-26 02:27:00,977 INFO    MainThread:1942047 [wandb_run.py:_on_init():2229] got version response upgrade_message: "wandb version 0.16.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-11-26 02:27:00,978 INFO    MainThread:1942047 [wandb_init.py:init():804] starting run threads in backend
+2023-11-26 02:27:01,089 INFO    MainThread:1942047 [wandb_run.py:_console_start():2199] atexit reg
+2023-11-26 02:27:01,089 INFO    MainThread:1942047 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-11-26 02:27:01,090 INFO    MainThread:1942047 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-11-26 02:27:01,090 INFO    MainThread:1942047 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-11-26 02:27:01,091 INFO    MainThread:1942047 [wandb_init.py:init():845] run started, returning control to user process
+2023-11-26 02:27:01,091 INFO    MainThread:1942047 [wandb_run.py:_config_callback():1324] config_cb None None {'data_path': 'data/covtype.csv', 'eps': 1.5, 'model_path': 'Models/cov_new_norm_1_split_3', 'batch_size': 4096, 'num_epochs': 2000, 'learning_rate': 0.001, 'wandb_project': 'covertype test', 'norm': 1, 'net_depth': 1}
+2023-11-26 03:29:30,177 WARNING MsgRouterThr:1942047 [router.py:message_loop():77] message_loop has been closed

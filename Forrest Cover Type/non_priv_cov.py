@@ -20,10 +20,9 @@ parser.add_argument('--data_path', type=str, default='data/covtype.csv',
                     help='Path to the CSV file containing the forrest cover data')
 parser.add_argument('--eps', type=float, default=5.0,
                     help='Set epsilon for the model')
-
 parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
-parser.add_argument('--num_epochs', type=int, default=200,
+parser.add_argument('--num_epochs', type=int, default=300,
                     help='Number of epochs to train the model')
 parser.add_argument('--learning_rate', type=float, default=0.003,
                     help='Learning rate for the optimizer')
@@ -33,7 +32,6 @@ parser.add_argument('--norm',type=float,default= 1,
                     help='Normalizing the data by multiplying with this number')
 
 args = parser.parse_args()
-
 # You can access the parsed arguments like this:
 data_path = args.data_path
 eps = args.eps
@@ -41,16 +39,10 @@ batch_size = args.batch_size
 num_epochs = args.num_epochs
 learning_rate = args.learning_rate
 wandb_project = args.wandb_project
-
 norm = args.norm
-
  # adds all of the arguments as config variables
 def main():
     X,Y = cov_data_loader(data_path,norm=norm)
-    
-
-
- 
     run = wandb.init(project=wandb_project)
     wandb.config.update(args)
    

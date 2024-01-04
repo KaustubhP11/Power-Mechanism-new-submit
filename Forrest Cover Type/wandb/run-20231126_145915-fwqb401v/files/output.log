@@ -1,0 +1,27 @@
+/home/kaustubh/llm/lib/python3.10/site-packages/opacus/privacy_engine.py:142: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/kaustubh/llm/lib/python3.10/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/kaustubh/llm/lib/python3.10/site-packages/opacus/accountants/analysis/prv/prvs.py:50: RuntimeWarning: invalid value encountered in log
+  z = np.log((np.exp(t) + q - 1) / q)
+11/26/2023 14:59:16:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/module.py:1344: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/Forrest Cover Type/non_priv_cov.py", line 113, in <module>
+    main()
+  File "/home/kaustubh/Code3/Forrest Cover Type/non_priv_cov.py", line 108, in main
+    train_emb(model2, data_loader, criterion, optimizer2, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_loader)
+  File "/home/kaustubh/Code3/Forrest Cover Type/cov_help.py", line 424, in train_emb
+    loss.backward()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 69, in __call__
+    return self.hook(module, *args, **kwargs)
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/opacus/grad_sample/grad_sample_module.py", line 339, in capture_backprops_hook
+    create_or_accumulate_grad_sample(
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/opacus/grad_sample/grad_sample_module.py", line 57, in create_or_accumulate_grad_sample
+    param._current_grad_sample = torch.zeros(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 534.00 MiB (GPU 0; 15.73 GiB total capacity; 1.09 GiB already allocated; 243.12 MiB free; 1.62 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
