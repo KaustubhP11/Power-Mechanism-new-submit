@@ -12,7 +12,7 @@ from scipy import stats
 import wandb
 
 from cov_help import *
-
+import time
 import argparse
 
 parser = argparse.ArgumentParser(description='Forrest cover private testing')
@@ -24,9 +24,11 @@ parser.add_argument('--model_path', type=str, default='Models/net_1_cov',
                     help='Path to the Model to create embeddings')
 parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
+parser.add_argument('--batch_size_priv', type=int, default=1024,
+                    help='Batch size for calculating eps of the model')
 parser.add_argument('--num_epochs', type=int, default=300,
                     help='Number of epochs to train the model')
-parser.add_argument('--learning_rate', type=float, default=0.003,
+parser.add_argument('--learning_rate', type=float, default=0.001,
                     help='Learning rate for the optimizer')
 parser.add_argument('--wandb_project', type=str, default='covertype test',
                     help='Name of the Weights & Biases project to log metrics to')
@@ -34,6 +36,7 @@ parser.add_argument('--norm',type=float,default= 1,
                     help='Normalizing the data by multiplying with this number')
 parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
+     
 args = parser.parse_args()
 
 # You can access the parsed arguments like this:
@@ -46,17 +49,18 @@ wandb_project = args.wandb_project
 model_path = args.model_path
 norm = args.norm
 net_depth = args.net_depth
+batch_size_priv = args.batch_size_priv
  # adds all of the arguments as config variables
 def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     X,Y = cov_data_loader(data_path,norm=norm)
-    max_dist = torch.cdist(X, X).max()
+    # max_dist = torch.cdist(X, X).max()
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
     train_priv = torch.utils.data.TensorDataset(X_train, Y_train)
     test_priv = torch.utils.data.TensorDataset(X_test, Y_test)
 
-    trainloader_priv = torch.utils.data.DataLoader(train_priv, batch_size=1000,
+    trainloader_priv = torch.utils.data.DataLoader(train_priv, batch_size=batch_size_priv,
                                           shuffle=False, num_workers=2)
-    testloader_priv = torch.utils.data.DataLoader(test_priv, batch_size=1000,
+    testloader_priv = torch.utils.data.DataLoader(test_priv, batch_size=batch_size_priv,
                                           shuffle=False, num_workers=2)
 
    
@@ -75,9 +79,10 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     # print(X[0:2])
     # print(outp)
     # print(net.y)
-    
 
     
+
+    max_dist = 1
     X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.82)
     X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= torch.device('cuda'),l=len(X_test),h=0.82)
     losses_train,indices = torch.sort(losses_train*max_dist)
@@ -96,10 +101,13 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     ind = (losses_train<set_eps).sum()
     print(ind)
     # num_epochs_eps = int(len(X)*num_epochs/ind)
-    batch_size_eps = 1024
+    batch_size_eps = batch_size
     print(batch_size_eps)
     #write code for train test split using X_emb and Y
 
+# Remove all things from cuda that were generated till now
+    torch.cuda.empty_cache()
+    
     
     
     
@@ -125,18 +133,25 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     model = nn.Sequential(
             nn.Linear(54, 64),
             nn.ReLU(),
+            nn.Linear(64, 64),
+            nn.ReLU(),
             nn.Linear(64, 128),
             nn.ReLU(),
-            nn.Linear(128, 256),
+            nn.Linear(128, 128),
             nn.ReLU(),
-            nn.Linear(256, 128),
+            nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Linear(128, 7),
+            nn.Linear(64, 64),
+            nn.ReLU(),
+            nn.Linear(64, 7),
             nn.Softmax(dim=1)
-
         )
     optimizer = torch.optim.Adam(model.parameters(),lr=learning_rate,weight_decay=1e-4)
+    time_start = time.time()
+
     train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_emb_loader,test_total_loader = None)
+    time_end = time.time()
+    print("Time taken to train the model: ",time_end-time_start)
     model.to(torch.device('cpu'))
     # test_model(model,test_emb_loader)
     # test_model(model,test_emb_full_loader)

@@ -1,0 +1,1 @@
+{"loss": 0.5588738322257996, "_timestamp": 1707921691.9731007, "_runtime": 32.120033740997314, "_step": 219, "train acc": Infinity, "test acc": Infinity, "_wandb": {"runtime": 36}}

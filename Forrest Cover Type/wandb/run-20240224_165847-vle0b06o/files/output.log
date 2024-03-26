@@ -1,0 +1,39 @@
+/home/kaustubh/llm/lib/python3.10/site-packages/opacus/privacy_engine.py:142: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/kaustubh/llm/lib/python3.10/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/kaustubh/llm/lib/python3.10/site-packages/opacus/accountants/analysis/prv/prvs.py:50: RuntimeWarning: invalid value encountered in log
+  z = np.log((np.exp(t) + q - 1) / q)
+02/24/2024 16:59:14:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/module.py:1352: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+Exception ignored in: <function _releaseLock at 0x7fa20d783d90>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 228, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.10/multiprocessing/queues.py", line 114, in get
+    raise Empty
+_queue.Empty
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/Forrest Cover Type/non_priv_cov.py", line 108, in <module>
+    main()
+  File "/home/kaustubh/Code3/Forrest Cover Type/non_priv_cov.py", line 101, in main
+    train_emb(model2, data_loader, criterion, optimizer2, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_loader)
+  File "/home/kaustubh/Code3/Forrest Cover Type/cov_help.py", line 608, in train_emb
+    acc = test_model(model,train_loader,device=device)
+  File "/home/kaustubh/Code3/Forrest Cover Type/cov_help.py", line 625, in test_model
+    for data in test_loader:
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1146, in _try_get_data
+    raise RuntimeError(f'DataLoader worker (pid(s) {pids_str}) exited unexpectedly') from e
+RuntimeError: DataLoader worker (pid(s) 3027308) exited unexpectedly

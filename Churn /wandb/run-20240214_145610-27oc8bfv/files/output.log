@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/kaustubh/Code3/Churn /churn_trainer.py", line 102, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,train_flag=train_flag)
+  File "/home/kaustubh/Code3/Churn /churn_trainer.py", line 71, in main
+    net = Net(net_depth)
+  File "/home/kaustubh/Code3/Churn /churn_help.py", line 30, in __init__
+    self.X_net = nn.Sequential(
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/container.py", line 106, in __init__
+    self.add_module(str(idx), module)
+  File "/home/kaustubh/llm/lib/python3.10/site-packages/torch/nn/modules/module.py", line 607, in add_module
+    raise TypeError(f"{torch.typename(module)} is not a Module subclass")
+TypeError: torch.nn.modules.activation.Sigmoid is not a Module subclass
+tensor(0.9998)

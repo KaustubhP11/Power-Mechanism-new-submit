@@ -74,6 +74,8 @@ class Net(nn.Module):
         return y
 
 
+
+
 class Net2(nn.Module):
     def __init__(self,p):
         super(Net, self ).__init__()
@@ -125,6 +127,178 @@ class Net2(nn.Module):
             H = self.H_net1(z).cuda()
             H = H.reshape(bs,d,d)
             z = torch.matmul(z,H).cuda()
+            J = batch_jacobian(H_mul, z, create_graph=True)
+            J_int =-torch.log(torch.abs(torch.det(J)))
+            loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).cuda()
+        self.loss_reg = loss_reg
+        self.y = z
+        y = self.X_net(z)
+        return y
+
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+class Net2(nn.Module):
+    def __init__(self,p):
+        super(Net2, self ).__init__()
+        
+        self.loss_reg = 0
+        self.p =p 
+        self.x = 0
+        self.y = 0
+        self.H_net1 = nn.Sequential(
+            nn.Linear(18, 128),
+            nn.Sigmoid(),
+            nn.Linear(128, 256),
+            nn.Sigmoid(),
+            nn.Linear(256, 18*18).cuda()
+        )
+        self.H_net2 = nn.Sequential(
+            nn.Linear(18, 128),
+            nn.Sigmoid(),
+            nn.Linear(128, 256),
+            nn.Sigmoid(),
+            nn.Linear(256, 18*18).cuda()
+        )
+        self.H_net3 = nn.Sequential(
+            nn.Linear(18, 128),
+            nn.Sigmoid(),
+            nn.Linear(128, 256),
+            nn.Sigmoid(),
+            nn.Linear(256, 18*18).cuda()
+        )
+        self.X_net = nn.Sequential(
+            nn.Linear(54, 128),
+            nn.ReLU(),
+            nn.Linear(128, 128),
+            nn.ReLU(),
+            nn.Linear(128, 7),
+            nn.Softmax(dim=2)
+
+        )
+        
+    def forward(self, x):
+        def H_mul(z):
+            H11 = self.H_net1(z[:,:,0:18])
+            H12 = self.H_net2(z[:,:,18:36])
+            H13 = self.H_net3(z[:,:,36:54])
+            H11= H11.reshape(z.shape[0],18,18)
+            H12= H12.reshape(z.shape[0],18,18)
+            H13= H13.reshape(z.shape[0],18,18)
+            x11 = torch.matmul(z[:,:,0:18],H11)
+            x12 = torch.matmul(z[:,:,18:36],H12)
+            x13 = torch.matmul(z[:,:,36:54],H13)
+        
+            x = torch.cat((x11,x12,x13),dim=2)
+            
+            return(x)
+    
+        
+        def batch_jacobian(func, z, create_graph=False):
+            # x in shape (Batch, Length)
+            def _func_sum(z):
+                return func(z).sum(dim=0)
+            return torch.squeeze(torch.autograd.functional.jacobian(_func_sum, z, create_graph=create_graph)).permute(1,0,2)
+        
+        x.requires_grad =True
+        p = self.p
+        self.x = x
+        d = x.shape[1]
+        bs = x.shape[0]
+        x= torch.unsqueeze(x,1)
+        z = x.cuda()
+        z1 = z[:,:,0:18]
+        z2 = z[:,:,18:36]
+        z3 = z[:,:,36:54]
+        loss_reg = torch.zeros(bs,d).cuda()
+        for i in range(p):
+            
+            H1 = self.H_net1(z1).cuda()
+            H2 = self.H_net2(z2).cuda()
+            H3 = self.H_net3(z3).cuda()
+            H1 = H1.reshape(bs,18,18)
+            H2 = H2.reshape(bs,18,18)
+            H3 = H3.reshape(bs,18,18)
+            
+
+            
+            
+            # H = H.reshape(bs,d,d)
+            
+            # J1 = batch_jacobian(H_mul1, z1, create_graph=True)
+            # J2 = batch_jacobian(H_mul2, z2, create_graph=True)
+            # J3 = batch_jacobian(H_mul3, z3, create_graph=True)
+            J = batch_jacobian(H_mul, z, create_graph=True)
+           
+
+            z1 = torch.matmul(z1,H1).cuda()
+            z2 = torch.matmul(z2,H2).cuda()
+            z3 = torch.matmul(z3,H3).cuda()
+            z = torch.cat((z1,z2,z3),dim=2).cuda()
+            J_int =-torch.log(torch.abs(torch.det(J)))
+            loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).cuda()
+           
+        self.loss_reg = loss_reg
+        self.y = z
+        y = self.X_net(z)
+        return y.squeeze(dim=1)
+
+
+class Net3(nn.Module):
+    def __init__(self,p):
+        super(Net3, self ).__init__()
+        
+        self.loss_reg = 0
+        self.p =p 
+        self.x = 0
+        self.y = 0
+        self.H_net2 = nn.Sequential(
+            nn.Linear(54, 128),
+            nn.Sigmoid(),
+            nn.Linear(128, 256),
+            nn.Sigmoid(),
+            nn.Linear(256, 54).cuda()
+        )
+
+
+        
+        self.X_net = nn.Sequential(
+            nn.Linear(54, 64),
+            nn.ReLU(),
+            nn.Linear(64, 128),
+            nn.ReLU(),
+            nn.Linear(128, 128),
+            nn.ReLU(),
+            nn.Linear(128, 7),
+            nn.Softmax(dim=2)
+
+        )
+        
+    def forward(self, x):
+        def H_mul(z):
+            x12 = self.H_net2(z)
+            return(x12)
+
+
+        
+        def batch_jacobian(func, z, create_graph=False):
+            # x in shape (Batch, Length)
+            def _func_sum(z):
+                return func(z).sum(dim=0)
+          
+            return torch.squeeze(torch.autograd.functional.jacobian(_func_sum, z, create_graph=create_graph)).permute(1,0,2)
+        
+        x.requires_grad =True
+        p = self.p
+        self.x = x
+        d = x.shape[1]
+        bs = x.shape[0]
+        x= torch.unsqueeze(x,1)
+        z = x.cuda()
+        loss_reg = torch.zeros(bs,d).cuda()
+        for i in range(p):
+            z = self.H_net2(z).cuda()
             J = batch_jacobian(H_mul, z, create_graph=True)
             J_int =-torch.log(torch.abs(torch.det(J)))
             loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).cuda()
@@ -191,8 +365,8 @@ def cov_data_loader(path,norm=1):
     #Write code to convert Y from 1,2,3,4,5,6,7 to 0,1,2,3,4,5,6
     Y = Y-1
     Y = Y.type(torch.LongTensor)
-    X = X[::10]
-    Y= Y[::10]
+    # X = X[::100]
+    # Y= Y[::100]
     
     X = normalize2(X,norm)
    
@@ -200,10 +374,11 @@ def cov_data_loader(path,norm=1):
     return X,Y
 
 
-def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.device('cpu'),print_cond = True,only_reg_flag=0,lr_schedular =None):
+def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.device('cuda'),print_cond = True,only_reg_flag=0,lr_schedular =None,lambda_loss=1):
     # scheduler = lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     lr = lr_schedular
     net = net.to(device)
+    
     
     criterion = nn.CrossEntropyLoss()
     for epoch in range(epochs):  # loop over the dataset multiple times
@@ -219,6 +394,7 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
         
         for i, data in enumerate(trainloader, 0):
             # get the inputs; data is a list of [inputs, labels]
+            bs = len(data[0])
             
             inputs = data[0].to(device)
             inputs.requires_grad = True
@@ -236,7 +412,7 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
                 loss = criterion(torch.squeeze(outputs),torch.squeeze(labels))
                 
             else:
-                loss = 1000*criterion(torch.squeeze(outputs),torch.squeeze(labels)) + torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
+                loss = lambda_loss*bs*criterion(torch.squeeze(outputs),torch.squeeze(labels)) + torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
             loss.backward(retain_graph=True)
 
             optimizer.step()
@@ -370,7 +546,7 @@ def create_model_embs2(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
     # scheduler = lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     X_emb = torch.zeros(l,54)
     losses = torch.zeros(l)
-    bs = 1000
+    bs = trainloader.batch_size
 
 
     net = net.to(device)
@@ -421,7 +597,9 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = loss_fn(outputs, labels)
+
             loss.backward()
+            
             optimizer.step()
             running_loss += loss.item()
             wandb.log({"loss": loss.item()})
@@ -429,9 +607,13 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
         # if((epoch+1)%10==0):
             # print('Epoch [%d], loss: %.3f' % (epoch + 1, running_loss /(10* len(train_loader))))
             # running_loss = 0.0
+        for params in model.parameters():
+            print(params.grad)
         acc = test_model(model,train_loader,device=device)
+        
         wandb.log({"train acc": acc})
         if(test_loader):
+        
 
             acc = test_model(model,test_loader,device=device)
             wandb.log({"test acc": acc})

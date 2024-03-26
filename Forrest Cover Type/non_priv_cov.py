@@ -12,7 +12,7 @@ from scipy import stats
 import wandb
 from opacus import PrivacyEngine
 from cov_help import *
-
+import time
 import argparse
 
 parser = argparse.ArgumentParser(description='Forrest cover private testing')
@@ -20,9 +20,9 @@ parser.add_argument('--data_path', type=str, default='data/covtype.csv',
                     help='Path to the CSV file containing the forrest cover data')
 parser.add_argument('--eps', type=float, default=5.0,
                     help='Set epsilon for the model')
-parser.add_argument('--batch_size', type=int, default=4096,
+parser.add_argument('--batch_size', type=int, default=1024,
                     help='Batch size for training the model')
-parser.add_argument('--num_epochs', type=int, default=300,
+parser.add_argument('--num_epochs', type=int, default=100,
                     help='Number of epochs to train the model')
 parser.add_argument('--learning_rate', type=float, default=0.003,
                     help='Learning rate for the optimizer')
@@ -97,7 +97,10 @@ def main():
         epochs = num_epochs,
         max_grad_norm=1.0,
     )
+    time_start = time.time()
     train_emb(model2, data_loader, criterion, optimizer2, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_loader)
+    time_end = time.time()
+    print("Time taken to train the model: ",time_end-time_start)
     
     # test_model(model,test_emb_loader)
     # test_model(model,test_emb_full_loader)

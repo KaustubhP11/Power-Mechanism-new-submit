@@ -24,9 +24,9 @@ parser.add_argument('--model_path', type=str, default='Models/net_1_cov',
                     help='Path to the Model to create embeddings')
 parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
-parser.add_argument('--num_epochs', type=int, default=300,
+parser.add_argument('--num_epochs', type=int, default=600,
                     help='Number of epochs to train the model')
-parser.add_argument('--learning_rate', type=float, default=0.003,
+parser.add_argument('--learning_rate', type=float, default=0.001,
                     help='Learning rate for the optimizer')
 parser.add_argument('--wandb_project', type=str, default='covertype test',
                     help='Name of the Weights & Biases project to log metrics to')
@@ -49,7 +49,7 @@ net_depth = args.net_depth
  # adds all of the arguments as config variables
 def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     X,Y = cov_data_loader(data_path,norm=norm)
-    max_dist = torch.cdist(X, X).max()
+    # max_dist = torch.cdist(X, X).max()
 
     train_priv = torch.utils.data.TensorDataset(X,Y)
 
@@ -71,7 +71,7 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     # print(outp)
     # print(net.y)
     
-    
+    max_dist = 1
     X_emb,losses = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X),h=0.82)
     losses,indices = torch.sort(losses*max_dist)
 
