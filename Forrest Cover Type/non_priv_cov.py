@@ -20,11 +20,11 @@ parser.add_argument('--data_path', type=str, default='data/covtype.csv',
                     help='Path to the CSV file containing the forrest cover data')
 parser.add_argument('--eps', type=float, default=5.0,
                     help='Set epsilon for the model')
-parser.add_argument('--batch_size', type=int, default=1024,
+parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
 parser.add_argument('--num_epochs', type=int, default=100,
                     help='Number of epochs to train the model')
-parser.add_argument('--learning_rate', type=float, default=0.003,
+parser.add_argument('--learning_rate', type=float, default=0.001,
                     help='Learning rate for the optimizer')
 parser.add_argument('--wandb_project', type=str, default='covertype test baseline',
                     help='Name of the Weights & Biases project to log metrics to')
@@ -73,17 +73,22 @@ def main():
     model = nn.Sequential(
             nn.Linear(54, 64),
             nn.ReLU(),
+            nn.Linear(64, 64),
+            nn.ReLU(),
             nn.Linear(64, 128),
             nn.ReLU(),
-            nn.Linear(128, 256),
+            nn.Linear(128, 128),
             nn.ReLU(),
-            nn.Linear(256, 128),
+            nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Linear(128, 7),
+            nn.Linear(64, 64),
+            nn.ReLU(),
+            nn.Linear(64, 7),
             nn.Softmax(dim=1)
-
         )
     optimizer = torch.optim.Adam(model.parameters(),lr=learning_rate,weight_decay=1e-4)
+    # optimizer = torch.optim.SGD(model.parameters(),lr=learning_rate,weight_decay=1e-4)
+    
   
 
 # enter PrivacyEngine

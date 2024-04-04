@@ -100,6 +100,8 @@ def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
         input2 = input()
         model_path = "Models/" + input2
         torch.save(net.state_dict(), model_path)
+        args.model_name = model_path
+        wandb.config.update(args)
         print("Model saved successfully")
     # # # wandb.log_artifact(net)
 

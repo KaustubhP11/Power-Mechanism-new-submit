@@ -13,9 +13,9 @@ import wandb
 
 
 class Net(nn.Module):
-    def __init__(self,p):
+    def __init__(self,p,device=torch.device('cuda')):
         super(Net, self ).__init__()
-        
+        self.device = device
         self.loss_reg = 0
         self.p =p 
         self.x = 0
@@ -25,7 +25,7 @@ class Net(nn.Module):
             nn.Sigmoid(),
             nn.Linear(128, 256),
             nn.Sigmoid(),
-            nn.Linear(256, 54*54).cuda()
+            nn.Linear(256, 54*54).to(device)
         )
         self.X_net = nn.Sequential(
             nn.Linear(54, 64),
@@ -53,21 +53,23 @@ class Net(nn.Module):
                 return func(z).sum(dim=0)
             return torch.squeeze(torch.autograd.functional.jacobian(_func_sum, z, create_graph=create_graph)).permute(1,0,2)
         
+        
+        device = self.device
         x.requires_grad =True
         p = self.p
         self.x = x
         d = x.shape[1]
         bs = x.shape[0]
         x= torch.unsqueeze(x,1)
-        z = x.cuda()
-        loss_reg = torch.zeros(bs,d).cuda()
+        z = x.to(device)
+        loss_reg = torch.zeros(bs,d).to(device)
         for i in range(p):
-            H = self.H_net1(z).cuda()
+            H = self.H_net1(z).to(device)
             H = H.reshape(bs,d,d)
-            z = torch.matmul(z,H).cuda()
+            z = torch.matmul(z,H).to(device)
             J = batch_jacobian(H_mul, z, create_graph=True)
             J_int =-torch.log(torch.abs(torch.det(J)))
-            loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).cuda()
+            loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).to(device)
         self.loss_reg = loss_reg
         self.y = z
         y = self.X_net(z)
@@ -89,7 +91,7 @@ class Net2(nn.Module):
             nn.Sigmoid(),
             nn.Linear(128, 256),
             nn.Sigmoid(),
-            nn.Linear(256, 54*54).cuda()
+            nn.Linear(256, 54*54).to(device)
         )
         self.X_net = nn.Sequential(
             nn.Linear(54, 128),
@@ -121,15 +123,15 @@ class Net2(nn.Module):
         d = x.shape[1]
         bs = x.shape[0]
         x= torch.unsqueeze(x,1)
-        z = x.cuda()
-        loss_reg = torch.zeros(bs,d).cuda()
+        z = x.to(device)
+        loss_reg = torch.zeros(bs,d).to(device)
         for i in range(p):
-            H = self.H_net1(z).cuda()
+            H = self.H_net1(z).to(device)
             H = H.reshape(bs,d,d)
-            z = torch.matmul(z,H).cuda()
+            z = torch.matmul(z,H).to(device)
             J = batch_jacobian(H_mul, z, create_graph=True)
             J_int =-torch.log(torch.abs(torch.det(J)))
-            loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).cuda()
+            loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).to(device)
         self.loss_reg = loss_reg
         self.y = z
         y = self.X_net(z)
@@ -307,22 +309,22 @@ class Net3(nn.Module):
         y = self.X_net(z)
         return y
 
-def gau_ker(u):
-    return torch.pow(2*torch.tensor(torch.pi),u.shape[1]/(-2))*torch.exp(torch.bmm(u.view(u.shape[0], 1, u.shape[1]), u.view(u.shape[0],  u.shape[1],1))/(-2)).cuda()
+def gau_ker(u,device = torch.device('cuda')):
+    return torch.pow(2*torch.tensor(torch.pi),u.shape[1]/(-2))*torch.exp(torch.bmm(u.view(u.shape[0], 1, u.shape[1]), u.view(u.shape[0],  u.shape[1],1))/(-2)).to(device)
 
 
-def py_kde(x,X_t,h):
+def py_kde(x,X_t,h,device = torch.device('cuda')):
     norm = X_t.shape[0]*(h**x.shape[1])
-    prob = torch.zeros(x.shape[0]).cuda()
+    prob = torch.zeros(x.shape[0]).to(device)
     for i in range(len(X_t)):
-        prob+= (torch.squeeze(gau_ker((x - X_t[i])/h))/norm).cuda()
+        prob+= (torch.squeeze(gau_ker((x - X_t[i])/h))/norm).to(device)
     return(prob)
 
 
-def py_kde_der(p_x,x):
+def py_kde_der(p_x,x,device = torch.device('cuda')):
     # x.requires_grad = True
     # p_x = py_kde(x,X_t,h)
-    return (torch.autograd.grad(p_x,x,torch.ones_like(p_x),allow_unused=True,create_graph=True)[0]).cuda()
+    return (torch.autograd.grad(p_x,x,torch.ones_like(p_x),allow_unused=True,create_graph=True)[0]).to(device)
 
 
 def gau_ker_der(X,h):
@@ -337,11 +339,11 @@ def gau_ker_der(X,h):
     return grad
 
 
-def CI_KDE(p_x,n,h,d,alpha):
-    return( stats.norm.ppf(1-alpha/2)*torch.sqrt(p_x/((2**d)*math.sqrt(torch.pi**d)*n*h**(d))).cuda() )
+def CI_KDE(p_x,n,h,d,alpha,device = torch.device('cuda')):
+    return( stats.norm.ppf(1-alpha/2)*torch.sqrt(p_x/((2**d)*math.sqrt(torch.pi**d)*n*h**(d))).to(device) )
 
-def CI_KDE_der(p_x_der,p_x,n,h,d,alpha):
-    return( p_x_der*stats.norm.ppf(1-alpha/2)*torch.sqrt(1/(p_x.unsqueeze(dim=1)*(2**d)*math.sqrt(torch.pi**d)*n*h**(d))).cuda() )
+def CI_KDE_der(p_x_der,p_x,n,h,d,alpha,device = torch.device('cuda')):
+    return( p_x_der*stats.norm.ppf(1-alpha/2)*torch.sqrt(1/(p_x.unsqueeze(dim=1)*(2**d)*math.sqrt(torch.pi**d)*n*h**(d))).to(device) )
 
 def normalize2(x,norm=1):
     n = torch.norm(x,dim=1).max()
@@ -562,13 +564,13 @@ def create_model_embs2(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
         d = inputs.shape[1]
         inputs.requires_grad = True
         labels = data[1].to(device)
-        f = py_kde(inputs,inputs,h)
+        f = py_kde(inputs,inputs,h,device=device)
 
 
-        f_der = py_kde_der(f,inputs)
+        f_der = py_kde_der(f,inputs,device=device)
       
-        ci = CI_KDE(f,n,h,d,alpha)
-       
+        ci = CI_KDE(f,n,h,d,alpha,device=device)
+
         output =  net(inputs)
         
         loss =torch.max(torch.linalg.norm(f_der/(f-ci).view(f.shape[0],1)+net.loss_reg,dim=1),torch.linalg.norm(f_der/(f+ci).view(f.shape[0],1)+net.loss_reg,dim=1)) 
@@ -586,6 +588,7 @@ def create_model_embs2(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
 def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.device('cpu'),test_loader = None,test_total_loader = None):
     running_loss = 0.0
     counter = 0
+    max_test_acc =0.0
     model = model.to(device)
     for epoch in range(num_epochs):
         
@@ -607,8 +610,8 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
         # if((epoch+1)%10==0):
             # print('Epoch [%d], loss: %.3f' % (epoch + 1, running_loss /(10* len(train_loader))))
             # running_loss = 0.0
-        for params in model.parameters():
-            print(params.grad)
+        # for params in model.parameters():
+        #     print(params.grad)
         acc = test_model(model,train_loader,device=device)
         
         wandb.log({"train acc": acc})
@@ -617,6 +620,9 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
 
             acc = test_model(model,test_loader,device=device)
             wandb.log({"test acc": acc})
+            if(acc > max_test_acc):
+                max_test_acc = acc
+            wandb.log({"max test acc": max_test_acc})
             # wandb.log({"epoch": epoch})
         if(test_total_loader):
             acc = test_model(model,test_total_loader,device=device)

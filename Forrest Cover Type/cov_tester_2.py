@@ -14,7 +14,6 @@ import wandb
 from cov_help import *
 import time
 import argparse
-
 parser = argparse.ArgumentParser(description='Forrest cover private testing')
 parser.add_argument('--data_path', type=str, default='data/covtype.csv',
                     help='Path to the CSV file containing the forrest cover data')
@@ -26,7 +25,7 @@ parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
 parser.add_argument('--batch_size_priv', type=int, default=1024,
                     help='Batch size for calculating eps of the model')
-parser.add_argument('--num_epochs', type=int, default=300,
+parser.add_argument('--num_epochs', type=int, default=100,
                     help='Number of epochs to train the model')
 parser.add_argument('--learning_rate', type=float, default=0.001,
                     help='Learning rate for the optimizer')
@@ -36,10 +35,15 @@ parser.add_argument('--norm',type=float,default= 1,
                     help='Normalizing the data by multiplying with this number')
 parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
+parser.add_argument('--device', type=str, default='cuda',
+                    help='Device to run the model on')
+# parser.add_argument('--hist_flag', type=bool, default=False,
+#                     help='If histogram should be plotted or not')
      
 args = parser.parse_args()
 
 # You can access the parsed arguments like this:
+
 data_path = args.data_path
 eps = args.eps
 batch_size = args.batch_size
@@ -50,41 +54,60 @@ model_path = args.model_path
 norm = args.norm
 net_depth = args.net_depth
 batch_size_priv = args.batch_size_priv
+device_name = args.device
+# hist_flag = args.hist_flag  
  # adds all of the arguments as config variables
 def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
+    device = torch.device(device_name)
     X,Y = cov_data_loader(data_path,norm=norm)
     # max_dist = torch.cdist(X, X).max()
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
-    train_priv = torch.utils.data.TensorDataset(X_train, Y_train)
-    test_priv = torch.utils.data.TensorDataset(X_test, Y_test)
+    # if(model_path=="Models/cov_full_expt"):
+    #     print("Loading saved embeddings")
+    #     X_emb_train = torch.load("Embeddings/cov_full_expt/X_emb_train.pt")
+    #     X_emb_test = torch.load("Embeddings/cov_full_expt/X_emb_test.pt")
+    #     losses_train = torch.load("Embeddings/cov_full_expt/losses_train.pt")
+    #     losses_test = torch.load("Embeddings/cov_full_expt/losses_test.pt")
+    # if(model_path=="Models/cov_full"):
+    #     print("Loading saved embeddings")
+    #     X_emb_train = torch.load("Embeddings/cov_full/X_emb_train.pt")
+    #     X_emb_test = torch.load("Embeddings/cov_full/X_emb_test.pt")
+    #     losses_train = torch.load("Embeddings/cov_full/losses_train.pt")
+    #     losses_test = torch.load("Embeddings/cov_full/losses_test.pt")
+    # else:
+        
+        
+    # train_priv = torch.utils.data.TensorDataset(X_train, Y_train)
+    # test_priv = torch.utils.data.TensorDataset(X_test, Y_test)
 
-    trainloader_priv = torch.utils.data.DataLoader(train_priv, batch_size=batch_size_priv,
-                                          shuffle=False, num_workers=2)
-    testloader_priv = torch.utils.data.DataLoader(test_priv, batch_size=batch_size_priv,
-                                          shuffle=False, num_workers=2)
-
-   
-      
-    # net = torch.load("../Code/Models/net_1_cov")
-    state_dict = torch.load(model_path)
-
-    # Create an instance of Net
-    net = Net(net_depth)
-    net.load_state_dict(state_dict)
-
-    # net = net.to(torch.device('cuda'))
-    # # Load the state dictionary into the model
-    # net.load_state_dict(state_dict)
-    # outp = net(X[0:2])
-    # print(X[0:2])
-    # print(outp)
-    # print(net.y)
+    # trainloader_priv = torch.utils.data.DataLoader(train_priv, batch_size=batch_size_priv,
+    #                                     shuffle=False, num_workers=4)
+    # testloader_priv = torch.utils.data.DataLoader(test_priv, batch_size=batch_size_priv,
+    #                                     shuffle=False, num_workers=4)
 
     
+        
+    #     # net = torch.load("../Code/Models/net_1_cov")
+    # state_dict = torch.load(model_path)
 
+    # # Create an instance of Net
+    # net = Net(net_depth,device=device)
+    # net.load_state_dict(state_dict)
+    
+
+    
+    # X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= device,l=len(X_train),h=0.82)
+    # X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= device,l=len(X_test),h=0.82)
+    # torch.save(X_emb_train, 'Embeddings/cov_full/X_emb_train.pt')
+    # torch.save(X_emb_test, 'Embeddings/cov_full/X_emb_test.pt')
+    # torch.save(losses_train, 'Embeddings/cov_full/losses_train.pt')
+    # torch.save(losses_test, 'Embeddings/cov_full/losses_test.pt')
+    
+    X_emb_train = torch.load("Embeddings/cov_full/X_emb_train.pt")
+    X_emb_test = torch.load("Embeddings/cov_full/X_emb_test.pt")
+    losses_train = torch.load("Embeddings/cov_full/losses_train.pt")
+    losses_test = torch.load("Embeddings/cov_full/losses_test.pt")
     max_dist = 1
-    X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.82)
-    X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= torch.device('cuda'),l=len(X_test),h=0.82)
     losses_train,indices = torch.sort(losses_train*max_dist)
 
     # print(indices)
@@ -98,7 +121,7 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     wandb.config.update(args)
    
     set_eps = eps
-    ind = (losses_train<set_eps).sum()
+    ind = (losses_train < set_eps).sum()
     print(ind)
     # num_epochs_eps = int(len(X)*num_epochs/ind)
     batch_size_eps = batch_size
@@ -149,7 +172,7 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     optimizer = torch.optim.Adam(model.parameters(),lr=learning_rate,weight_decay=1e-4)
     time_start = time.time()
 
-    train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_emb_loader,test_total_loader = None)
+    train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=device,test_loader = test_emb_loader,test_total_loader = None)
     time_end = time.time()
     print("Time taken to train the model: ",time_end-time_start)
     model.to(torch.device('cpu'))
