@@ -102,6 +102,8 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
         net = Net(net_depth,device=device)
         net.load_state_dict(state_dict)
         
+        
+        
 
         
         X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= device,l=len(X_train),h=0.82)
