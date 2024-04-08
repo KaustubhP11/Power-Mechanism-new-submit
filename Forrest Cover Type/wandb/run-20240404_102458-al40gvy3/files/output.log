@@ -1,0 +1,15 @@
+
+29255
+Time taken for training:  666.9336268901825
+Traceback (most recent call last):
+  File "/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/cov_trainer_2.py", line 116, in <module>
+    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,train_flag=train_flag)
+  File "/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/cov_trainer_2.py", line 90, in main
+    X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.82)
+  File "/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/cov_help.py", line 567, in create_model_embs2
+    f = py_kde(inputs,inputs,h,device=device)
+  File "/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/cov_help.py", line 320, in py_kde
+    prob+= (torch.squeeze(gau_ker((x - X_t[i])/h))/norm).to(device)
+  File "/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/cov_help.py", line 312, in gau_ker
+    def gau_ker(u,device = torch.device('cuda')):
+KeyboardInterrupt

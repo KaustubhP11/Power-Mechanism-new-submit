@@ -102,6 +102,7 @@ def main():
         epochs = num_epochs,
         max_grad_norm=1.0,
     )
+    torch.cuda.empty_cache()
     time_start = time.time()
     train_emb(model2, data_loader, criterion, optimizer2, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_loader)
     time_end = time.time()

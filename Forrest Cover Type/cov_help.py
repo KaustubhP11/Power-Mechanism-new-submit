@@ -396,6 +396,8 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
         
         for i, data in enumerate(trainloader, 0):
             # get the inputs; data is a list of [inputs, labels]
+            if(i >400 ):
+                break
             bs = len(data[0])
             
             inputs = data[0].to(device)

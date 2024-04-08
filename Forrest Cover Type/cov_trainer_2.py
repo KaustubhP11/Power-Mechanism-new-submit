@@ -10,7 +10,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from scipy import stats
 import wandb
-
+import time
 from cov_help import *
 
 import argparse
@@ -57,7 +57,7 @@ wandb.config.update(args)  # adds all of the arguments as config variables
 
 
 
-def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
+def main():
     X,Y = cov_data_loader(data_path,norm=norm)
     
     # Perform train-test split
@@ -83,16 +83,21 @@ def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
     
     # wandb.watch(net)
     lr_schedule = LearnerRateScheduler('step', base_learning_rate=learning_rate, decay_rate=0.99, decay_steps=1)
+    torch.cuda.empty_cache()
+    time_start = time.time()
     train_model_priv(net, trainloader_priv, optim, num_epochs, h=0.82, rate=10, device=torch.device('cuda'), only_reg_flag=train_flag, lr_schedular=lr_schedule,lambda_loss=lambda_loss)
-    X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.82)
-    X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= torch.device('cuda'),l=len(X_test),h=0.82)
-    print(losses_train.sum()/len(X_train))
-    print(losses_test.sum()/len(X_test))
+    time_end = time.time()
+    print("Time taken for training: ", time_end-time_start)
+    # X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.82)
+    # X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= torch.device('cuda'),l=len(X_test),h=0.82)
+    # print(losses_train.sum()/len(X_train))
+    # print(losses_test.sum()/len(X_test))
 
 
     # Evaluate on test set
     # test_model_priv(net, testloader_priv, criterion, device=torch.device('cuda'))
-    
+    args.time = time_end-time_start
+    wandb.config.update(args)
     print("Please type y or n if you want to save model: \n")
     input1 = input()
     if(input1 == 'y'):
@@ -101,6 +106,7 @@ def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
         model_path = "Models/" + input2
         torch.save(net.state_dict(), model_path)
         args.model_name = model_path
+        args.time = time_end-time_start
         wandb.config.update(args)
         print("Model saved successfully")
     # # # wandb.log_artifact(net)
@@ -108,5 +114,5 @@ def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
 #write a script to run the code
 
 if __name__ == "__main__":
-    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,train_flag=train_flag)
+    main()
 

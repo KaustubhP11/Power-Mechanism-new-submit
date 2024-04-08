@@ -1,0 +1,31 @@
+2024-04-04 10:41:19,498 INFO    MainThread:1190421 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_setup.py:_flush():76] Configure stats pid to 1190421
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_setup.py:_flush():76] Loading settings from /home/surajracha/.config/wandb/settings
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_setup.py:_flush():76] Loading settings from /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/wandb/settings
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'Forrest Cover Type/cov_trainer_2.py', 'program_abspath': '/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/cov_trainer_2.py', 'program': '/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/cov_trainer_2.py'}
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_init.py:_log_setup():526] Logging user logs to /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/wandb/run-20240404_104119-hduwofbl/logs/debug.log
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_init.py:_log_setup():527] Logging internal logs to /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Forrest Cover Type/wandb/run-20240404_104119-hduwofbl/logs/debug-internal.log
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_init.py:init():566] calling init triggers
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {}
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_init.py:init():616] starting backend
+2024-04-04 10:41:19,499 INFO    MainThread:1190421 [wandb_init.py:init():620] setting up manager
+2024-04-04 10:41:19,501 INFO    MainThread:1190421 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-04-04 10:41:19,502 INFO    MainThread:1190421 [wandb_init.py:init():628] backend started and connected
+2024-04-04 10:41:19,504 INFO    MainThread:1190421 [wandb_init.py:init():720] updated telemetry
+2024-04-04 10:41:19,507 INFO    MainThread:1190421 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-04-04 10:41:20,836 INFO    MainThread:1190421 [wandb_run.py:_on_init():2262] communicating current version
+2024-04-04 10:41:20,887 INFO    MainThread:1190421 [wandb_run.py:_on_init():2271] got version response upgrade_message: "wandb version 0.16.6 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-04-04 10:41:20,887 INFO    MainThread:1190421 [wandb_init.py:init():804] starting run threads in backend
+2024-04-04 10:41:23,669 INFO    MainThread:1190421 [wandb_run.py:_console_start():2241] atexit reg
+2024-04-04 10:41:23,669 INFO    MainThread:1190421 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-04-04 10:41:23,669 INFO    MainThread:1190421 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-04-04 10:41:23,670 INFO    MainThread:1190421 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-04-04 10:41:23,671 INFO    MainThread:1190421 [wandb_init.py:init():847] run started, returning control to user process
+2024-04-04 10:41:23,671 INFO    MainThread:1190421 [wandb_run.py:_config_callback():1343] config_cb None None {'data_path': 'data/covtype.csv', 'batch_size': 4096, 'batch_size_priv': 512, 'num_epochs': 1, 'learning_rate': 0.0003, 'wandb_project': 'covertype', 'train_flag': 0, 'norm': 1, 'net_depth': 1, 'lambda_loss': 1.0}
+2024-04-04 10:51:33,279 INFO    MainThread:1190421 [wandb_run.py:_config_callback():1343] config_cb None None {'data_path': 'data/covtype.csv', 'batch_size': 4096, 'batch_size_priv': 512, 'num_epochs': 1, 'learning_rate': 0.0003, 'wandb_project': 'covertype', 'train_flag': 0, 'norm': 1, 'net_depth': 1, 'lambda_loss': 1.0, 'time': 607.3694598674774}
+2024-04-04 10:52:00,463 INFO    MainThread:1190421 [wandb_run.py:_config_callback():1343] config_cb None None {'data_path': 'data/covtype.csv', 'batch_size': 4096, 'batch_size_priv': 512, 'num_epochs': 1, 'learning_rate': 0.0003, 'wandb_project': 'covertype', 'train_flag': 0, 'norm': 1, 'net_depth': 1, 'lambda_loss': 1.0, 'time': 607.3694598674774, 'model_name': 'Models/cov_full_expt_512_1'}
+2024-04-04 10:52:11,293 WARNING MsgRouterThr:1190421 [router.py:message_loop():77] message_loop has been closed

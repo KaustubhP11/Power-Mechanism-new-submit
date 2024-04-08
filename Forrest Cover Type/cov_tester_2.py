@@ -75,42 +75,54 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     #     losses_train = torch.load("Embeddings/cov_full/losses_train.pt")
     #     losses_test = torch.load("Embeddings/cov_full/losses_test.pt")
     # else:
+    model_embs_path = model_path.replace("Models","Embeddings")
+    if (model_path in ['Models/cov_full_expt_512_1','Models/cov_full_expt_512_100','Models/cov_full_expt_512_400']):
+        X_emb_train = torch.load(model_embs_path + "/X_emb_train.pt")
+        X_emb_test = torch.load(model_embs_path + "/X_emb_test.pt")
+        losses_train = torch.load(model_embs_path + "/losses_train.pt")
+        losses_test = torch.load(model_embs_path + "/losses_test.pt")        
+    
+    else:
+        
+    
+        train_priv = torch.utils.data.TensorDataset(X_train, Y_train)
+        test_priv = torch.utils.data.TensorDataset(X_test, Y_test)
+
+        trainloader_priv = torch.utils.data.DataLoader(train_priv, batch_size=batch_size_priv,
+                                            shuffle=False, num_workers=4)
+        testloader_priv = torch.utils.data.DataLoader(test_priv, batch_size=batch_size_priv,
+                                            shuffle=False, num_workers=4)
+
+        
+            
+        #     # net = torch.load("../Code/Models/net_1_cov")
+        state_dict = torch.load(model_path)
+
+        # Create an instance of Net
+        net = Net(net_depth,device=device)
+        net.load_state_dict(state_dict)
+        
+
+        
+        X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= device,l=len(X_train),h=0.82)
+        X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= device,l=len(X_test),h=0.82)
+        torch.save(X_emb_train, model_embs_path + "/X_emb_train.pt")
+        torch.save(X_emb_test, model_embs_path + "/X_emb_test.pt")
+        torch.save(losses_train, model_embs_path + "/losses_train.pt")
+        torch.save(losses_test, model_embs_path + "/losses_test.pt")
         
         
-    # train_priv = torch.utils.data.TensorDataset(X_train, Y_train)
-    # test_priv = torch.utils.data.TensorDataset(X_test, Y_test)
-
-    # trainloader_priv = torch.utils.data.DataLoader(train_priv, batch_size=batch_size_priv,
-    #                                     shuffle=False, num_workers=4)
-    # testloader_priv = torch.utils.data.DataLoader(test_priv, batch_size=batch_size_priv,
-    #                                     shuffle=False, num_workers=4)
-
-    
         
-    #     # net = torch.load("../Code/Models/net_1_cov")
-    # state_dict = torch.load(model_path)
-
-    # # Create an instance of Net
-    # net = Net(net_depth,device=device)
-    # net.load_state_dict(state_dict)
-    
+        
+        
 
     
-    # X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= device,l=len(X_train),h=0.82)
-    # X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= device,l=len(X_test),h=0.82)
-    # torch.save(X_emb_train, 'Embeddings/cov_full/X_emb_train.pt')
-    # torch.save(X_emb_test, 'Embeddings/cov_full/X_emb_test.pt')
-    # torch.save(losses_train, 'Embeddings/cov_full/losses_train.pt')
-    # torch.save(losses_test, 'Embeddings/cov_full/losses_test.pt')
     
-    X_emb_train = torch.load("Embeddings/cov_full/X_emb_train.pt")
-    X_emb_test = torch.load("Embeddings/cov_full/X_emb_test.pt")
-    losses_train = torch.load("Embeddings/cov_full/losses_train.pt")
-    losses_test = torch.load("Embeddings/cov_full/losses_test.pt")
+    
     max_dist = 1
     losses_train,indices = torch.sort(losses_train*max_dist)
 
-    # print(indices)
+
     
      
     X_train = X_train[indices]
@@ -134,9 +146,9 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     
     
     
-    train_emb_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(X_emb_train[0:ind],Y_train[0:ind]), batch_size=batch_size_eps,
+    train_emb_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(X_emb_train[0:ind],Y_train[0:ind]), batch_size=batch_size,
                                             shuffle=True, num_workers=2,drop_last=True)
-    test_emb_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(X_emb_test,Y_test), batch_size=batch_size_eps,
+    test_emb_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(X_emb_test,Y_test), batch_size=batch_size,
                                             shuffle=False, num_workers=2)
     
     #write code to append Xemb and Xemb_rest
