@@ -189,6 +189,8 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     train_emb(model, train_emb_loader, criterion, optimizer, num_epochs=num_epochs,device=device,test_loader = test_emb_loader,test_total_loader = None)
     time_end = time.time()
     print("Time taken to train the model: ",time_end-time_start)
+    args.time = time_end-time_start
+    wandb.config.update(args)
     model.to(torch.device('cpu'))
     # test_model(model,test_emb_loader)
     # test_model(model,test_emb_full_loader)

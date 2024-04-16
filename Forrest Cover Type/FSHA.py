@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import tqdm
-import datasets, architectures
+import datasets
 
 def distance_data_loss(a,b):
     l = tf.losses.MeanSquaredError()
