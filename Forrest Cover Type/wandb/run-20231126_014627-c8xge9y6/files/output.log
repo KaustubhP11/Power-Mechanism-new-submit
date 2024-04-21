@@ -1,7 +1,0 @@
-tensor(36920)
-1024
-Exception ignored in: <function _releaseLock at 0x7f4724b87d90>
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/logging/__init__.py", line 228, in _releaseLock
-    def _releaseLock():
-KeyboardInterrupt:

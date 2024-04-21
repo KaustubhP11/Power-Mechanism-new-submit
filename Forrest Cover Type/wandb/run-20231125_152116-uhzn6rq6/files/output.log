@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/kaustubh/Code3/Forrest Cover Type/cov_tester_2.py", line 147, in <module>
-    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,model_path=model_path)
-  File "/home/kaustubh/Code3/Forrest Cover Type/cov_tester_2.py", line 96, in main
-    ind = (losses_<set_eps).sum()
-NameError: name 'losses_' is not defined
