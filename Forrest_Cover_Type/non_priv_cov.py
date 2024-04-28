@@ -22,7 +22,7 @@ parser.add_argument('--eps', type=float, default=5.0,
                     help='Set epsilon for the model')
 parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
-parser.add_argument('--num_epochs', type=int, default=100,
+parser.add_argument('--num_epochs', type=int, default=1000,
                     help='Number of epochs to train the model')
 parser.add_argument('--learning_rate', type=float, default=0.001,
                     help='Learning rate for the optimizer')
@@ -30,6 +30,8 @@ parser.add_argument('--wandb_project', type=str, default='covertype test baselin
                     help='Name of the Weights & Biases project to log metrics to')
 parser.add_argument('--norm',type=float,default= 1,
                     help='Normalizing the data by multiplying with this number')
+parser.add_argument('--max_steps', type=int, default=10000,
+                    help='Max steps to run')
 
 args = parser.parse_args()
 # You can access the parsed arguments like this:
@@ -40,6 +42,7 @@ num_epochs = args.num_epochs
 learning_rate = args.learning_rate
 wandb_project = args.wandb_project
 norm = args.norm
+max_steps = args.max_steps
  # adds all of the arguments as config variables
 def main():
     X,Y = cov_data_loader(data_path,norm=norm)
@@ -104,7 +107,7 @@ def main():
     )
     torch.cuda.empty_cache()
     time_start = time.time()
-    train_emb(model2, data_loader, criterion, optimizer2, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_loader)
+    train_emb(model2, data_loader, criterion, optimizer2, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = test_loader,max_steps = max_steps)
     time_end = time.time()
     print("Time taken to train the model: ",time_end-time_start)
     args.time = time_end-time_start

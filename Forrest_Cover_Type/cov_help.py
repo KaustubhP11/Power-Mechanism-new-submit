@@ -649,15 +649,17 @@ def create_model_embs2(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
         X_emb[i*bs:i*bs+len(loss)] = torch.squeeze(net.y.detach().cpu())
     return(X_emb,losses)
 
-def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.device('cpu'),test_loader = None,test_total_loader = None):
+def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.device('cpu'),test_loader = None,test_total_loader = None,max_steps =10000):
     running_loss = 0.0
     counter = 0
     max_test_acc =0.0
     model = model.to(device)
+    steps = 0
     for epoch in range(num_epochs):
         
         
         for i, data in enumerate(train_loader, 0):
+            
             inputs, labels = data
             inputs = inputs.to(device)
             labels = labels.to(device)
@@ -670,6 +672,9 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
             optimizer.step()
             running_loss += loss.item()
             wandb.log({"loss": loss.item()})
+            
+            steps+=1
+           
             # counter =0
         # if((epoch+1)%10==0):
             # print('Epoch [%d], loss: %.3f' % (epoch + 1, running_loss /(10* len(train_loader))))
@@ -691,7 +696,9 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
         if(test_total_loader):
             acc = test_model(model,test_total_loader,device=device)
             wandb.log({"test total acc": acc})
-           
+        if(steps > max_steps):
+                break
+        
 
 
 def test_model(model, test_loader,device=torch.device('cpu')):

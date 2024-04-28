@@ -25,7 +25,7 @@ parser.add_argument('--batch_size', type=int, default=4096,
                     help='Batch size for training the model')
 parser.add_argument('--batch_size_priv', type=int, default=1024,
                     help='Batch size for calculating eps of the model')
-parser.add_argument('--num_epochs', type=int, default=100,
+parser.add_argument('--num_epochs', type=int, default=1000,
                     help='Number of epochs to train the model')
 parser.add_argument('--learning_rate', type=float, default=0.001,
                     help='Learning rate for the optimizer')
@@ -37,6 +37,8 @@ parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
 parser.add_argument('--device', type=str, default='cuda',
                     help='Device to run the model on')
+parser.add_argument('--max_steps', type=int, default=10000,
+                    help='Max steps to run')
 # parser.add_argument('--hist_flag', type=bool, default=False,
 #                     help='If histogram should be plotted or not')
      
@@ -55,6 +57,7 @@ norm = args.norm
 net_depth = args.net_depth
 batch_size_priv = args.batch_size_priv
 device_name = args.device
+max_steps = args.max_steps
 # hist_flag = args.hist_flag  
  # adds all of the arguments as config variables
 def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
