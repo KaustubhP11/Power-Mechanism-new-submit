@@ -1,0 +1,1258 @@
+2024-05-07 04:13:20,380 INFO    StreamThr :488950 [internal.py:wandb_internal():86] W&B internal server running at pid: 488950, started at: 2024-05-07 04:13:20.379757
+2024-05-07 04:13:20,382 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status
+2024-05-07 04:13:20,384 INFO    WriterThread:488950 [datastore.py:open_for_write():87] open: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/run-1d84p0gr.wandb
+2024-05-07 04:13:20,386 DEBUG   SenderThread:488950 [sender.py:send():379] send: header
+2024-05-07 04:13:20,388 DEBUG   SenderThread:488950 [sender.py:send():379] send: run
+2024-05-07 04:13:21,069 INFO    SenderThread:488950 [dir_watcher.py:__init__():211] watching files in: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files
+2024-05-07 04:13:21,069 INFO    SenderThread:488950 [sender.py:_start_run_threads():1124] run started: 1d84p0gr with start time 1715080400.379313
+2024-05-07 04:13:21,079 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: check_version
+2024-05-07 04:13:21,079 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: check_version
+2024-05-07 04:13:21,434 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: run_start
+2024-05-07 04:13:21,444 DEBUG   HandlerThread:488950 [system_info.py:__init__():26] System info init
+2024-05-07 04:13:21,445 DEBUG   HandlerThread:488950 [system_info.py:__init__():41] System info init done
+2024-05-07 04:13:21,445 INFO    HandlerThread:488950 [system_monitor.py:start():194] Starting system monitor
+2024-05-07 04:13:21,445 INFO    SystemMonitor:488950 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-07 04:13:21,445 INFO    HandlerThread:488950 [system_monitor.py:probe():214] Collecting system info
+2024-05-07 04:13:21,446 INFO    SystemMonitor:488950 [interfaces.py:start():190] Started cpu monitoring
+2024-05-07 04:13:21,447 INFO    SystemMonitor:488950 [interfaces.py:start():190] Started disk monitoring
+2024-05-07 04:13:21,448 INFO    SystemMonitor:488950 [interfaces.py:start():190] Started gpu monitoring
+2024-05-07 04:13:21,449 INFO    SystemMonitor:488950 [interfaces.py:start():190] Started memory monitoring
+2024-05-07 04:13:21,450 INFO    SystemMonitor:488950 [interfaces.py:start():190] Started network monitoring
+2024-05-07 04:13:21,483 DEBUG   HandlerThread:488950 [system_info.py:probe():150] Probing system
+2024-05-07 04:13:21,486 DEBUG   HandlerThread:488950 [system_info.py:_probe_git():135] Probing git
+2024-05-07 04:13:21,495 DEBUG   HandlerThread:488950 [system_info.py:_probe_git():143] Probing git done
+2024-05-07 04:13:21,495 DEBUG   HandlerThread:488950 [system_info.py:probe():198] Probing system done
+2024-05-07 04:13:21,495 DEBUG   HandlerThread:488950 [system_monitor.py:probe():223] {'os': 'Linux-5.7.0-050700-generic-x86_64-with-glibc2.31', 'python': '3.10.2', 'heartbeatAt': '2024-05-07T11:13:21.483614', 'startedAt': '2024-05-07T11:13:20.354578', 'docker': None, 'cuda': None, 'args': ('--batch_size', '128', '--learning_rate', '0.0003', '--num_epochs', '10'), 'state': 'running', 'program': '/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /churn_trainer.py', 'codePathLocal': 'churn_trainer.py', 'codePath': 'Churn /churn_trainer.py', 'git': {'remote': 'https://github.com/Kaustubh-iitb/Power-Mechanism-new', 'commit': 'c56e72f279fbf231dd16e1b8746c35069bebb2c8'}, 'email': 'ponkshekaustubh11@gmail.com', 'root': '/home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new', 'host': 'shivneri', 'username': 'surajracha', 'executable': '/home/surajracha/miniconda3/envs/chatllm/bin/python3', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2064.354270833334, 'min': 1500.0, 'max': 2800.0}, 'cpu_freq_per_core': [{'current': 1499.893, 'min': 1500.0, 'max': 2800.0}, {'current': 1498.838, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.192, 'min': 1500.0, 'max': 2800.0}, {'current': 3346.149, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.977, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.385, 'min': 1500.0, 'max': 2800.0}, {'current': 3346.27, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.183, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.801, 'min': 1500.0, 'max': 2800.0}, {'current': 2929.443, 'min': 1500.0, 'max': 2800.0}, {'current': 1698.562, 'min': 1500.0, 'max': 2800.0}, {'current': 1478.486, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.626, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.159, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.635, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.601, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.825, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.083, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.099, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.741, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.87, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.911, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.199, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.732, 'min': 1500.0, 'max': 2800.0}, {'current': 1486.004, 'min': 1500.0, 'max': 2800.0}, {'current': 3339.101, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.78, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.174, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.133, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.527, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.666, 'min': 1500.0, 'max': 2800.0}, {'current': 1497.867, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.306, 'min': 1500.0, 'max': 2800.0}, {'current': 3339.695, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.087, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.71, 'min': 1500.0, 'max': 2800.0}, {'current': 2889.48, 'min': 1500.0, 'max': 2800.0}, {'current': 1486.775, 'min': 1500.0, 'max': 2800.0}, {'current': 3347.374, 'min': 1500.0, 'max': 2800.0}, {'current': 3338.721, 'min': 1500.0, 'max': 2800.0}, {'current': 1479.416, 'min': 1500.0, 'max': 2800.0}, {'current': 1486.471, 'min': 1500.0, 'max': 2800.0}, {'current': 3337.536, 'min': 1500.0, 'max': 2800.0}, {'current': 1489.293, 'min': 1500.0, 'max': 2800.0}, {'current': 1673.083, 'min': 1500.0, 'max': 2800.0}, {'current': 3340.531, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.112, 'min': 1500.0, 'max': 2800.0}, {'current': 1486.981, 'min': 1500.0, 'max': 2800.0}, {'current': 1496.959, 'min': 1500.0, 'max': 2800.0}, {'current': 1497.7, 'min': 1500.0, 'max': 2800.0}, {'current': 1498.247, 'min': 1500.0, 'max': 2800.0}, {'current': 3346.581, 'min': 1500.0, 'max': 2800.0}, {'current': 3344.054, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.324, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.868, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.926, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.689, 'min': 1500.0, 'max': 2800.0}, {'current': 2553.379, 'min': 1500.0, 'max': 2800.0}, {'current': 1946.782, 'min': 1500.0, 'max': 2800.0}, {'current': 1482.696, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.339, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.604, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.577, 'min': 1500.0, 'max': 2800.0}, {'current': 3345.77, 'min': 1500.0, 'max': 2800.0}, {'current': 1485.612, 'min': 1500.0, 'max': 2800.0}, {'current': 1486.408, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.582, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.14, 'min': 1500.0, 'max': 2800.0}, {'current': 3346.714, 'min': 1500.0, 'max': 2800.0}, {'current': 3348.217, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.387, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.45, 'min': 1500.0, 'max': 2800.0}, {'current': 1486.49, 'min': 1500.0, 'max': 2800.0}, {'current': 3347.556, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.793, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.893, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.585, 'min': 1500.0, 'max': 2800.0}, {'current': 1498.46, 'min': 1500.0, 'max': 2800.0}, {'current': 1499.479, 'min': 1500.0, 'max': 2800.0}, {'current': 1498.518, 'min': 1500.0, 'max': 2800.0}, {'current': 1497.578, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.69, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.691, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.416, 'min': 1500.0, 'max': 2800.0}, {'current': 3206.287, 'min': 1500.0, 'max': 2800.0}, {'current': 1485.788, 'min': 1500.0, 'max': 2800.0}, {'current': 3359.426, 'min': 1500.0, 'max': 2800.0}, {'current': 3344.449, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.409, 'min': 1500.0, 'max': 2800.0}, {'current': 1486.11, 'min': 1500.0, 'max': 2800.0}, {'current': 3348.837, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.268, 'min': 1500.0, 'max': 2800.0}, {'current': 2453.454, 'min': 1500.0, 'max': 2800.0}, {'current': 3349.534, 'min': 1500.0, 'max': 2800.0}, {'current': 1487.274, 'min': 1500.0, 'max': 2800.0}, {'current': 1488.789, 'min': 1500.0, 'max': 2800.0}], 'disk': {'/': {'total': 856.764030456543, 'used': 119.66127014160156}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 251.82350540161133}}
+2024-05-07 04:13:21,496 INFO    HandlerThread:488950 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-07 04:13:21,496 INFO    HandlerThread:488950 [system_monitor.py:probe():227] Publishing system info
+2024-05-07 04:13:21,496 DEBUG   HandlerThread:488950 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-07 04:13:22,072 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_created():271] file/dir created: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/conda-environment.yaml
+2024-05-07 04:13:27,071 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/conda-environment.yaml
+2024-05-07 04:13:27,123 DEBUG   HandlerThread:488950 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-07 04:13:27,125 INFO    HandlerThread:488950 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-07 04:13:27,130 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:13:27,131 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-07 04:13:27,132 DEBUG   SenderThread:488950 [sender.py:send():379] send: files
+2024-05-07 04:13:27,132 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-05-07 04:13:27,284 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-07 04:13:27,285 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: python_packages
+2024-05-07 04:13:27,286 DEBUG   SenderThread:488950 [sender.py:send():379] send: telemetry
+2024-05-07 04:13:27,287 DEBUG   SenderThread:488950 [sender.py:send():379] send: config
+2024-05-07 04:13:27,289 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-07 04:13:27,289 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-07 04:13:27,289 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: stop_status
+2024-05-07 04:13:27,998 DEBUG   SenderThread:488950 [sender.py:send():379] send: telemetry
+2024-05-07 04:13:28,071 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_created():271] file/dir created: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/output.log
+2024-05-07 04:13:28,072 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_created():271] file/dir created: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/requirements.txt
+2024-05-07 04:13:28,072 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_created():271] file/dir created: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-metadata.json
+2024-05-07 04:13:28,106 DEBUG   SenderThread:488950 [sender.py:send():379] send: telemetry
+2024-05-07 04:13:28,190 INFO    wandb-upload_0:488950 [upload_job.py:push():131] Uploaded file /tmp/tmpna74brlqwandb/bk11jd4y-wandb-metadata.json
+2024-05-07 04:13:28,982 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:28,984 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:28,984 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:28,987 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:29,072 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_created():271] file/dir created: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:29,172 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:29,174 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:29,174 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:29,174 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:29,365 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:29,366 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:29,367 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:29,367 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:29,555 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:29,557 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:29,557 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:29,558 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:29,748 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:29,749 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:29,750 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:29,750 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:29,942 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:29,943 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:29,944 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:29,944 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:30,072 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:30,073 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/output.log
+2024-05-07 04:13:30,131 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:30,132 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:30,133 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:30,133 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:30,323 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:30,325 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:30,325 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:30,325 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:30,521 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:30,522 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:30,522 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:30,523 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:13:30,523 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:30,713 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:30,714 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:30,715 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:30,715 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:30,906 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:30,907 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:30,907 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:30,908 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:31,073 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:31,098 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:31,100 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:31,100 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:31,103 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:31,300 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:31,301 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:31,301 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:31,302 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:31,494 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:31,496 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:31,496 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:31,496 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:31,703 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:31,705 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:31,705 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:31,705 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:31,892 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:31,893 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:31,893 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:31,893 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:32,073 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:32,088 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:32,089 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:32,089 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:32,089 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:32,284 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:32,285 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:32,285 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:32,286 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:32,473 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:32,474 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:32,474 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:32,475 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:32,665 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:32,666 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:32,666 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:32,666 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:32,859 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:32,860 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:32,860 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:32,861 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:33,055 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:33,056 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:33,056 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:33,056 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:33,074 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:33,248 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:33,249 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:33,249 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:33,251 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:33,439 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:33,440 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:33,440 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:33,441 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:33,727 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:33,728 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:33,728 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:33,729 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:33,931 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:33,932 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:33,933 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:33,933 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:34,074 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:34,128 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:34,129 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:34,129 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:34,130 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:34,330 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:34,332 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:34,332 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:34,332 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:34,528 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:34,529 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:34,529 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:34,530 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:34,728 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:34,729 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:34,729 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:34,730 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:34,920 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:34,921 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:34,922 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:34,922 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:35,075 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:35,119 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:35,120 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:35,120 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:35,121 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:35,316 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:35,317 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:35,317 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:35,320 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:35,519 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:35,520 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:35,520 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:35,521 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:35,710 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:35,711 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:35,711 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:35,711 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:13:35,712 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:35,905 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:35,907 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:35,907 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:35,908 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:36,075 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:36,099 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:36,100 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:36,100 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:36,101 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:36,287 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:36,288 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:36,289 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:36,289 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:36,476 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:36,477 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:36,477 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:36,477 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:36,661 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:36,662 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:36,662 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:36,662 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:36,844 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:36,845 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:36,846 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:36,846 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:37,027 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:37,028 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:37,028 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:37,029 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:37,076 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:37,231 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:37,232 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:37,232 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:37,233 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:37,426 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:37,427 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:37,427 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:37,429 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:37,615 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:37,617 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:37,617 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:37,617 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:37,802 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:37,803 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:37,803 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:37,803 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:37,980 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:37,981 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:37,981 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:37,982 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:38,076 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:38,147 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:38,148 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:38,148 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:38,149 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:38,321 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:38,322 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:38,322 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:38,323 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:38,618 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:38,619 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:38,620 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:38,620 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:38,817 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:38,818 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:38,818 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:38,819 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:39,000 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:39,001 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:39,001 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:39,002 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:39,077 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:39,202 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:39,204 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:39,204 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:39,204 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:39,395 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:39,396 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:39,396 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:39,397 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:39,581 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:39,582 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:39,582 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:39,585 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:39,767 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:39,768 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:39,768 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:39,769 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:39,949 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:39,950 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:39,950 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:39,951 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:40,077 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:40,142 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:40,143 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:40,143 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:40,144 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:40,333 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:40,334 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:40,334 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:40,335 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:40,517 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:40,518 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:40,518 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:40,519 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:40,700 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:40,701 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:40,701 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:40,702 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:40,891 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:40,892 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:40,893 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:40,893 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:13:40,894 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:41,077 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:41,081 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:41,082 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:41,083 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:41,083 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:41,265 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:41,266 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:41,266 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:41,267 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:41,446 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:41,447 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:41,447 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:41,448 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:41,635 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:41,637 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:41,637 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:41,640 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:41,819 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:41,820 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:41,820 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:41,821 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:42,004 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:42,005 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:42,006 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:42,007 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:42,078 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:42,187 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:42,188 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:42,189 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:42,189 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:42,287 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-07 04:13:42,287 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-07 04:13:42,288 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: stop_status
+2024-05-07 04:13:42,373 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:42,552 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:42,594 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:42,595 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:42,596 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:42,597 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:42,597 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:42,597 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:42,727 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:42,728 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:42,728 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:42,729 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:42,900 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:42,901 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:42,901 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:42,901 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:43,071 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:43,072 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:43,072 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:43,073 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:43,079 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:43,364 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:43,365 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:43,366 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:43,366 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:43,557 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:43,558 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:43,559 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:43,559 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:43,743 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:43,744 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:43,745 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:43,747 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:43,935 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:43,936 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:43,937 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:43,937 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:44,079 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:44,129 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:44,130 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:44,131 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:44,131 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:44,321 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:44,322 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:44,323 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:44,323 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:44,511 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:44,512 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:44,513 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:44,513 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:44,706 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:44,707 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:44,707 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:44,708 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:44,904 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:44,906 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:44,906 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:44,906 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:45,079 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:45,101 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:45,102 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:45,102 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:45,103 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:45,298 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:45,300 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:45,300 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:45,301 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:45,498 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:45,499 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:45,499 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:45,500 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:45,703 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:45,704 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:45,704 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:45,705 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:45,903 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:45,904 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:45,904 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:45,905 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:13:45,907 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:46,080 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:46,097 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:46,098 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:46,099 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:46,099 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:46,302 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:46,303 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:46,303 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:46,304 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:46,498 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:46,499 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:46,499 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:46,500 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:46,687 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:46,689 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:46,689 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:46,689 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:46,882 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:46,884 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:46,884 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:46,884 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:47,081 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:47,090 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:47,091 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:47,092 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:47,092 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:47,287 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:47,288 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:47,288 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:47,289 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:47,488 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:47,489 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:47,490 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:47,492 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:47,669 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:47,671 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:47,671 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:47,672 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:47,864 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:47,865 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:47,865 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:47,866 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:48,038 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:48,040 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:48,040 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:48,043 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:48,081 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:48,334 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:48,335 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:48,336 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:48,336 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:48,524 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:48,525 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:48,525 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:48,526 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:48,711 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:48,713 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:48,713 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:48,713 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:48,902 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:48,903 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:48,903 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:48,904 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:49,082 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:49,087 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:49,088 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:49,088 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:49,089 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:49,281 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:49,282 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:49,282 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:49,283 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:49,472 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:49,473 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:49,473 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:49,474 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:49,655 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:49,656 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:49,657 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:49,657 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:49,855 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:49,856 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:49,857 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:49,857 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:50,043 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:50,044 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:50,044 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:50,046 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:50,082 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:50,225 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:50,226 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:50,226 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:50,226 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:50,409 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:50,410 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:50,412 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:50,412 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:50,592 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:50,593 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:50,593 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:50,594 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:50,778 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:50,778 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:50,779 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:50,779 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:50,962 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:50,963 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:50,969 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:13:51,083 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:51,152 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:51,335 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:51,520 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:51,706 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:51,890 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:52,076 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:52,280 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:52,471 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:52,661 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:52,845 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:53,137 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:53,318 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:53,501 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:53,679 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:53,691 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,692 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,692 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,693 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,693 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,693 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,694 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,694 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,694 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,695 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,695 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,695 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,695 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,695 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,696 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,696 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,696 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,696 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,696 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,696 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,696 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,697 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,697 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,697 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,697 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,697 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,697 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,697 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,698 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,698 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,698 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,699 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,699 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,699 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,699 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,699 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,699 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,700 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,700 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,700 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,700 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,700 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,700 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,701 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:53,860 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:53,861 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:53,861 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:53,861 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:54,043 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:54,044 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:54,044 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:54,044 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:54,085 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:54,085 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/config.yaml
+2024-05-07 04:13:54,223 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:54,224 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:54,224 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:54,224 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:54,401 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:54,402 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:54,402 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:54,403 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:54,580 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:54,581 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:54,582 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:54,582 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:54,761 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:54,762 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:54,762 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:54,762 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:54,938 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:54,939 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:54,939 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:54,940 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:55,085 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:55,115 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:55,116 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:55,116 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:55,116 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:55,296 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:55,297 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:55,297 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:55,298 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:55,477 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:55,478 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:55,478 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:55,479 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:55,655 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:55,656 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:55,657 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:55,657 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:55,842 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:55,843 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:55,844 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:55,846 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:56,016 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:56,018 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:56,018 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:56,018 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:56,086 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:56,214 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:56,215 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:56,215 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:56,216 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:56,399 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:56,400 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:56,400 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:56,401 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:56,598 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:56,599 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:56,600 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:56,600 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:56,777 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:56,778 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:56,778 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:56,779 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:56,950 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:56,951 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:56,951 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:56,952 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:57,086 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:57,126 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:57,127 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:57,128 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:57,128 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:57,288 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-07 04:13:57,288 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-07 04:13:57,289 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: stop_status
+2024-05-07 04:13:57,307 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:57,482 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:57,672 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:57,672 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:57,673 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:57,674 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:57,674 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:57,675 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:57,788 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:57,789 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:57,790 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:57,790 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:57,994 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:57,995 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:57,995 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:57,997 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:58,087 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:58,201 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:58,202 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:58,203 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:58,203 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:58,399 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:58,400 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:58,401 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:58,401 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:58,591 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:58,592 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:58,593 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:58,593 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:58,798 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:58,799 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:58,800 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:58,800 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:13:58,801 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:58,995 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:58,996 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:58,996 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:58,997 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:59,087 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:13:59,194 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:59,195 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:59,196 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:59,196 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:59,394 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:59,395 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:59,395 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:59,396 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:59,581 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:59,582 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:59,582 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:59,582 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:59,761 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:59,762 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:59,762 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:59,763 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:13:59,962 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:13:59,963 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:13:59,963 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:13:59,964 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:00,088 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:00,149 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:00,150 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:00,151 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:00,154 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:00,337 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:00,338 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:00,339 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:00,339 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:00,525 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:00,526 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:00,527 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:00,527 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:00,731 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:00,732 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:00,733 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:00,733 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:00,922 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:00,923 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:00,923 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:00,924 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:01,088 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:01,108 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:01,109 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:01,109 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:01,110 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:01,295 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:01,296 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:01,296 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:01,297 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:01,487 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:01,488 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:01,488 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:01,488 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:01,664 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:01,664 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:01,665 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:01,665 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:01,848 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:01,849 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:01,849 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:01,850 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:02,027 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:02,028 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:02,028 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:02,029 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:02,089 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:02,198 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:02,199 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:02,199 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:02,202 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:02,379 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:02,380 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:02,381 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:02,381 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:02,664 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:02,666 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:02,666 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:02,666 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:02,855 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:02,856 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:02,856 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:02,857 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:03,043 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:03,044 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:03,045 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:03,045 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:03,089 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:03,239 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:03,240 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:03,240 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:03,241 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:03,409 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:03,410 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:03,410 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:03,411 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:03,585 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:03,586 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:03,586 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:03,587 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:03,773 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:03,775 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:03,775 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:03,776 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:03,950 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:03,951 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:03,952 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:03,952 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:14:03,952 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:04,090 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:04,137 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:04,138 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:04,138 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:04,139 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:04,318 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:04,319 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:04,319 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:04,322 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:04,485 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:04,486 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:04,486 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:04,487 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:04,662 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:04,663 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:04,663 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:04,663 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:04,837 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:04,838 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:04,838 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:04,839 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:05,012 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:05,012 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:05,013 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:05,013 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:05,091 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:05,196 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:05,197 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:05,198 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:05,199 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:05,377 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:05,378 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:05,378 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:05,378 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:05,575 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:05,576 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:05,577 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:05,577 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:05,757 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:05,758 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:05,759 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:05,759 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:05,929 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:05,930 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:05,931 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:05,931 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:06,091 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:06,110 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:06,111 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:06,111 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:06,112 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:06,283 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:06,286 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:06,287 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:06,287 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:06,455 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:06,456 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:06,456 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:06,459 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:06,624 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:06,626 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:06,626 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:06,626 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:06,802 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:06,803 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:06,803 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:06,804 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:06,977 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:06,979 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:06,979 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:06,980 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:07,092 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:07,245 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:07,246 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:07,247 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:07,248 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:07,447 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:07,448 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:07,449 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:07,449 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:07,632 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:07,634 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:07,634 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:07,635 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:07,822 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:07,823 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:07,824 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:07,824 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:08,008 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:08,009 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:08,009 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:08,010 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:08,092 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:08,201 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:08,202 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:08,202 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:08,203 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:08,378 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:08,380 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:08,380 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:08,381 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:08,557 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:08,558 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:08,558 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:08,561 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:08,737 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:08,738 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:08,739 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:08,739 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:08,921 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:08,923 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:08,923 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:08,924 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:09,093 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:09,099 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:09,101 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:09,101 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:09,102 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:14:09,102 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:09,296 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:09,298 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:09,298 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:09,299 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:09,481 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:09,482 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:09,483 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:09,483 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:09,674 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:09,676 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:09,676 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:09,677 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:09,868 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:09,869 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:09,869 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:09,870 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:10,042 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:10,043 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:10,043 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:10,043 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:10,094 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:10,219 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:10,220 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:10,220 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:10,221 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:10,403 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:10,404 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:10,404 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:10,404 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:10,582 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:10,583 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:10,583 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:10,585 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:10,758 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:10,760 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:10,760 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:10,760 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:10,937 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:10,938 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:10,938 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:10,939 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:11,094 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:11,121 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:11,123 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:11,123 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:11,123 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:11,299 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:11,301 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:11,301 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:11,301 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:11,489 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:11,490 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:11,491 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:11,491 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:11,669 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:11,670 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:11,670 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:11,670 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:11,927 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:11,929 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:11,929 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:11,930 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:12,089 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:12,090 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:12,090 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:12,090 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:12,095 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:12,246 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:12,246 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:12,247 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:12,247 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:12,287 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-07 04:14:12,287 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-07 04:14:12,288 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: stop_status
+2024-05-07 04:14:12,406 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:12,565 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:12,667 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:12,667 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:12,670 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:12,671 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:12,671 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:12,671 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:12,727 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:12,728 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:12,728 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:12,728 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:12,900 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:12,900 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:12,901 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:12,901 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:13,069 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:13,071 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:13,071 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:13,072 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:13,096 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:13,228 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:13,229 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:13,229 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:13,230 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:13,387 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:13,388 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:13,388 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:13,389 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:13,545 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:13,546 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:13,547 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:13,547 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:13,705 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:13,707 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:13,707 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:13,707 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:13,862 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:13,863 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:13,864 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:13,864 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:14,036 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:14,037 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:14,037 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:14,038 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:14,096 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:14,214 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:14,215 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:14,216 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:14,216 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:14:14,217 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:14,393 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:14,394 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:14,395 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:14,395 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:14,571 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:14,572 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:14,572 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:14,573 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:14,751 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:14,752 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:14,753 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:14,755 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:14,927 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:14,929 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:14,929 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:14,929 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:15,097 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:15,106 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:15,107 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:15,107 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:15,108 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:15,289 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:15,290 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:15,290 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:15,290 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:15,479 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:15,480 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:15,480 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:15,481 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:15,662 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:15,663 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:15,663 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:15,663 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:15,843 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:15,844 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:15,844 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:15,845 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:16,017 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-07 04:14:16,018 DEBUG   SenderThread:488950 [sender.py:send():379] send: history
+2024-05-07 04:14:16,018 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: summary_record
+2024-05-07 04:14:16,019 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:16,097 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:19,150 DEBUG   SenderThread:488950 [sender.py:send():379] send: exit
+2024-05-07 04:14:19,150 INFO    SenderThread:488950 [sender.py:send_exit():586] handling exit code: 1
+2024-05-07 04:14:19,150 INFO    SenderThread:488950 [sender.py:send_exit():588] handling runtime: 57
+2024-05-07 04:14:19,151 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:19,151 INFO    SenderThread:488950 [sender.py:send_exit():594] send defer
+2024-05-07 04:14:19,151 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,152 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-07 04:14:19,152 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,152 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-05-07 04:14:19,152 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 1
+2024-05-07 04:14:19,152 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,152 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-07 04:14:19,153 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,153 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-05-07 04:14:19,153 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 2
+2024-05-07 04:14:19,153 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,153 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-07 04:14:19,153 INFO    HandlerThread:488950 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-07 04:14:19,154 INFO    HandlerThread:488950 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-07 04:14:19,155 DEBUG   SystemMonitor:488950 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-07 04:14:19,155 INFO    HandlerThread:488950 [interfaces.py:finish():202] Joined disk monitor
+2024-05-07 04:14:19,155 DEBUG   SystemMonitor:488950 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-07 04:14:19,156 DEBUG   SystemMonitor:488950 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-07 04:14:19,843 INFO    HandlerThread:488950 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-07 04:14:19,844 INFO    HandlerThread:488950 [interfaces.py:finish():202] Joined memory monitor
+2024-05-07 04:14:19,844 INFO    HandlerThread:488950 [interfaces.py:finish():202] Joined network monitor
+2024-05-07 04:14:19,845 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,846 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-05-07 04:14:19,846 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 3
+2024-05-07 04:14:19,847 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,847 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-07 04:14:19,847 DEBUG   SenderThread:488950 [sender.py:send():379] send: stats
+2024-05-07 04:14:19,847 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:14:19,850 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,850 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-05-07 04:14:19,850 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 4
+2024-05-07 04:14:19,850 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,850 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-07 04:14:19,851 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,851 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-05-07 04:14:19,851 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 5
+2024-05-07 04:14:19,851 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,851 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-07 04:14:19,852 DEBUG   SenderThread:488950 [sender.py:send():379] send: summary
+2024-05-07 04:14:19,853 INFO    SenderThread:488950 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-07 04:14:19,853 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,853 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-05-07 04:14:19,853 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 6
+2024-05-07 04:14:19,854 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,854 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-07 04:14:19,854 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,854 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-05-07 04:14:19,854 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 7
+2024-05-07 04:14:19,855 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:14:19,855 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:19,855 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-07 04:14:19,855 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:19,856 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-05-07 04:14:20,099 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:20,100 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/output.log
+2024-05-07 04:14:20,151 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-07 04:14:21,866 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 8
+2024-05-07 04:14:21,866 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: poll_exit
+2024-05-07 04:14:21,867 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:21,868 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-07 04:14:21,868 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:21,868 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-05-07 04:14:21,869 INFO    SenderThread:488950 [job_builder.py:build():318] Attempting to build job artifact
+2024-05-07 04:14:21,869 INFO    SenderThread:488950 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-05-07 04:14:21,898 INFO    SenderThread:488950 [job_builder.py:build():431] adding wandb-job metadata file
+2024-05-07 04:14:21,954 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 9
+2024-05-07 04:14:21,955 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:21,955 DEBUG   SenderThread:488950 [sender.py:send():379] send: artifact
+2024-05-07 04:14:21,955 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-07 04:14:22,100 INFO    Thread-12 :488950 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/output.log
+2024-05-07 04:14:22,152 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-07 04:14:23,493 INFO    SenderThread:488950 [sender.py:send_artifact():1468] sent artifact job-https___github.com_Kaustubh-iitb_Power-Mechanism-new_Churn__churn_trainer.py - {'id': 'QXJ0aWZhY3Q6ODI1MzQwNTk2', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MTY0MjMwMA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODI1MzQwNTk2', 'versionIndex': 1}}}
+2024-05-07 04:14:23,494 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:23,494 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-05-07 04:14:23,494 INFO    SenderThread:488950 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-07 04:14:24,102 INFO    SenderThread:488950 [dir_watcher.py:finish():388] scan: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files
+2024-05-07 04:14:24,102 INFO    SenderThread:488950 [dir_watcher.py:finish():402] scan save: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-metadata.json wandb-metadata.json
+2024-05-07 04:14:24,103 INFO    SenderThread:488950 [dir_watcher.py:finish():402] scan save: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/output.log output.log
+2024-05-07 04:14:24,103 INFO    SenderThread:488950 [dir_watcher.py:finish():402] scan save: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json wandb-summary.json
+2024-05-07 04:14:24,103 INFO    SenderThread:488950 [dir_watcher.py:finish():402] scan save: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/config.yaml config.yaml
+2024-05-07 04:14:24,104 INFO    SenderThread:488950 [dir_watcher.py:finish():402] scan save: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/conda-environment.yaml conda-environment.yaml
+2024-05-07 04:14:24,104 INFO    SenderThread:488950 [dir_watcher.py:finish():402] scan save: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/requirements.txt requirements.txt
+2024-05-07 04:14:24,112 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 10
+2024-05-07 04:14:24,112 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: poll_exit
+2024-05-07 04:14:24,117 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:24,120 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-07 04:14:24,121 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:24,121 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-05-07 04:14:24,125 INFO    SenderThread:488950 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-07 04:14:24,154 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-07 04:14:24,154 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: poll_exit
+2024-05-07 04:14:24,762 INFO    wandb-upload_0:488950 [upload_job.py:push():131] Uploaded file /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/output.log
+2024-05-07 04:14:24,850 INFO    wandb-upload_1:488950 [upload_job.py:push():131] Uploaded file /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/wandb-summary.json
+2024-05-07 04:14:24,885 INFO    wandb-upload_2:488950 [upload_job.py:push():131] Uploaded file /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/config.yaml
+2024-05-07 04:14:24,919 INFO    wandb-upload_3:488950 [upload_job.py:push():131] Uploaded file /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/conda-environment.yaml
+2024-05-07 04:14:24,951 INFO    wandb-upload_4:488950 [upload_job.py:push():131] Uploaded file /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/files/requirements.txt
+2024-05-07 04:14:25,151 INFO    Thread-11 (_thread_body):488950 [sender.py:transition_state():614] send defer: 11
+2024-05-07 04:14:25,152 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:25,152 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-07 04:14:25,153 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:25,153 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-05-07 04:14:25,153 INFO    SenderThread:488950 [file_pusher.py:join():178] waiting for file pusher
+2024-05-07 04:14:25,154 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 12
+2024-05-07 04:14:25,154 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:25,154 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-07 04:14:25,154 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: status_report
+2024-05-07 04:14:25,154 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:25,155 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-05-07 04:14:25,155 INFO    SenderThread:488950 [file_stream.py:finish():614] file stream finish called
+2024-05-07 04:14:25,158 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-07 04:14:26,049 INFO    SenderThread:488950 [file_stream.py:finish():618] file stream finish is done
+2024-05-07 04:14:26,049 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 13
+2024-05-07 04:14:26,049 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: poll_exit
+2024-05-07 04:14:26,050 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:26,050 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-07 04:14:26,050 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:26,051 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-05-07 04:14:26,051 INFO    SenderThread:488950 [sender.py:transition_state():614] send defer: 14
+2024-05-07 04:14:26,051 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: defer
+2024-05-07 04:14:26,051 INFO    HandlerThread:488950 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-07 04:14:26,052 DEBUG   SenderThread:488950 [sender.py:send():379] send: final
+2024-05-07 04:14:26,052 DEBUG   SenderThread:488950 [sender.py:send():379] send: footer
+2024-05-07 04:14:26,052 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: defer
+2024-05-07 04:14:26,052 INFO    SenderThread:488950 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-05-07 04:14:26,053 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-07 04:14:26,053 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: poll_exit
+2024-05-07 04:14:26,054 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-07 04:14:26,054 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: poll_exit
+2024-05-07 04:14:26,055 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: server_info
+2024-05-07 04:14:26,055 DEBUG   SenderThread:488950 [sender.py:send_request():406] send_request: server_info
+2024-05-07 04:14:26,059 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-07 04:14:26,059 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-07 04:14:26,061 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-07 04:14:26,329 INFO    MainThread:488950 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-05-07 04:14:26,329 INFO    MainThread:488950 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-05-07 04:14:26,330 INFO    MainThread:488950 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-05-07 04:14:26,330 DEBUG   HandlerThread:488950 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-07 04:14:26,330 INFO    HandlerThread:488950 [handler.py:finish():866] shutting down handler
+2024-05-07 04:14:27,056 INFO    WriterThread:488950 [datastore.py:close():296] close: /home/surajracha/ChatLLM/DataGen/Data/Gemini/Data2/Power-Mechanism-new/Churn /wandb/run-20240507_041320-1d84p0gr/run-1d84p0gr.wandb
+2024-05-07 04:14:27,329 INFO    SenderThread:488950 [sender.py:finish():1546] shutting down sender
+2024-05-07 04:14:27,329 INFO    SenderThread:488950 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-07 04:14:27,329 INFO    SenderThread:488950 [file_pusher.py:join():178] waiting for file pusher

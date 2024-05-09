@@ -191,7 +191,7 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
     lr = lr_schedular
     net = net.to(device)
     
-    criterion = nn.CrossEntropyLoss()
+    criterion = nn.BCELoss()
     for epoch in range(epochs):  # loop over the dataset multiple times
         # scheduler.step()
         running_loss = 0.0
@@ -222,7 +222,7 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
                 loss = criterion(torch.squeeze(outputs),torch.squeeze(labels))
                 
             else:
-                loss = 1000*criterion(torch.squeeze(outputs),torch.squeeze(labels)) + torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
+                loss = criterion(torch.squeeze(outputs),torch.squeeze(labels)) + torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
             loss.backward(retain_graph=True)
 
             optimizer.step()

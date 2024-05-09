@@ -52,12 +52,16 @@ wandb.config.update(args)  # adds all of the arguments as config variables
 
 def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
     X,Y = churn_data_loader(data_path,norm=norm)
+
+
+# Assuming Y is a numpy array
+    
     
     # Perform train-test split
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
     
     max_dist = torch.cdist(X_train, X_train).max()
-    print(max_dist) 
+  
     
     train_priv = torch.utils.data.TensorDataset(X_train, Y_train)
     test_priv = torch.utils.data.TensorDataset(X_test, Y_test)
@@ -79,6 +83,31 @@ def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
     train_model_priv(net, trainloader_priv, optim, num_epochs, h=0.65, rate=10, device=torch.device('cuda'), only_reg_flag=train_flag, lr_schedular=lr_schedule)
     X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.65)
     X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= torch.device('cuda'),l=len(X_test),h=0.65)
+    # Calculate accuracy of the model
+    device = torch.device('cuda')
+    # with torch.no_grad():
+        # net.eval()  # Set the model to evaluation mode
+    correct = 0
+    total = 0
+    for i, data in enumerate(testloader_priv, 0):
+        # get the inputs; data is a list of [inputs, labels]
+        
+        inputs = data[0].to(device)
+        inputs.requires_grad = True
+        labels = data[1].to(device)
+        
+        
+
+        # zero the parameter g[radients
+        
+        # forward + backward + optimize
+        outputs = net(inputs)
+        _, predicted = torch.max(outputs.data, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+
+    accuracy = correct / total
+    print("Accuracy of the model on the test set: {:.2%}".format(accuracy))
     print(losses_train.sum()/len(X_train))
     print(losses_test.sum()/len(X_test))
 
