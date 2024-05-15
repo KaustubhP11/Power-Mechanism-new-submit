@@ -1,0 +1,11 @@
+
+**Starting data processing**
+ ** Starting final training **
+  0%|                                                                                                                           | 1/1000 [00:01<21:42,  1.30s/it, loss: 0.6125167608261108, acc: 0.661300003528595]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/test_higgs.py", line 147, in <module>
+    train_emb(model,trainloader_priv,X_emb_test,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,test_total_loader = None,max_steps =args.max_steps)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/utils.py", line 294, in train_emb
+    inputs = inputs.to(device)
+             ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

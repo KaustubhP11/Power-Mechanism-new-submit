@@ -1,0 +1,206 @@
+2024-05-15 22:38:55,155 INFO    StreamThr :621653 [internal.py:wandb_internal():86] W&B internal server running at pid: 621653, started at: 2024-05-15 22:38:55.154242
+2024-05-15 22:38:55,156 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: status
+2024-05-15 22:38:55,158 INFO    WriterThread:621653 [datastore.py:open_for_write():87] open: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/run-uvhmhpog.wandb
+2024-05-15 22:38:55,159 DEBUG   SenderThread:621653 [sender.py:send():379] send: header
+2024-05-15 22:38:55,160 DEBUG   SenderThread:621653 [sender.py:send():379] send: run
+2024-05-15 22:38:55,788 INFO    SenderThread:621653 [dir_watcher.py:__init__():211] watching files in: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files
+2024-05-15 22:38:55,789 INFO    SenderThread:621653 [sender.py:_start_run_threads():1124] run started: uvhmhpog with start time 1715792935.153777
+2024-05-15 22:38:55,797 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: check_version
+2024-05-15 22:38:55,797 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: check_version
+2024-05-15 22:38:55,903 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: run_start
+2024-05-15 22:38:55,945 DEBUG   HandlerThread:621653 [system_info.py:__init__():26] System info init
+2024-05-15 22:38:55,946 DEBUG   HandlerThread:621653 [system_info.py:__init__():41] System info init done
+2024-05-15 22:38:55,946 INFO    HandlerThread:621653 [system_monitor.py:start():194] Starting system monitor
+2024-05-15 22:38:55,946 INFO    SystemMonitor:621653 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-15 22:38:55,946 INFO    HandlerThread:621653 [system_monitor.py:probe():214] Collecting system info
+2024-05-15 22:38:55,947 INFO    SystemMonitor:621653 [interfaces.py:start():190] Started cpu monitoring
+2024-05-15 22:38:55,947 INFO    SystemMonitor:621653 [interfaces.py:start():190] Started disk monitoring
+2024-05-15 22:38:55,948 INFO    SystemMonitor:621653 [interfaces.py:start():190] Started gpu monitoring
+2024-05-15 22:38:55,948 INFO    SystemMonitor:621653 [interfaces.py:start():190] Started memory monitoring
+2024-05-15 22:38:55,949 INFO    SystemMonitor:621653 [interfaces.py:start():190] Started network monitoring
+2024-05-15 22:38:56,014 DEBUG   HandlerThread:621653 [system_info.py:probe():150] Probing system
+2024-05-15 22:38:56,016 DEBUG   HandlerThread:621653 [system_info.py:_probe_git():135] Probing git
+2024-05-15 22:38:56,022 DEBUG   HandlerThread:621653 [system_info.py:_probe_git():143] Probing git done
+2024-05-15 22:38:56,022 DEBUG   HandlerThread:621653 [system_info.py:probe():198] Probing system done
+2024-05-15 22:38:56,022 DEBUG   HandlerThread:621653 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-174-generic-x86_64-with-glibc2.31', 'python': '3.12.2', 'heartbeatAt': '2024-05-15T17:08:56.014839', 'startedAt': '2024-05-15T17:08:55.150450', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/test_income.py', 'codePathLocal': 'test_income.py', 'codePath': 'Adult_income/test_income.py', 'git': {'remote': 'https://github.com/Kaustubh-iitb/Power-Mechanism-new.git', 'commit': '2ac359c7d10d049b728700bcce9c4954289f7734'}, 'email': 'ponkshekaustubh11@gmail.com', 'root': '/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new', 'host': 'iitb-dgx4.iitb.ac.in', 'username': 'racha_suraj', 'executable': '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/bin/python', 'cpu_count': 128, 'cpu_count_logical': 256, 'cpu_freq': {'current': 3189.3536484374977, 'min': 1500.0, 'max': 2250.0}, 'cpu_freq_per_core': [{'current': 3375.707, 'min': 1500.0, 'max': 2250.0}, {'current': 2179.271, 'min': 1500.0, 'max': 2250.0}, {'current': 1626.98, 'min': 1500.0, 'max': 2250.0}, {'current': 1696.726, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.376, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.122, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.195, 'min': 1500.0, 'max': 2250.0}, {'current': 2257.747, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.697, 'min': 1500.0, 'max': 2250.0}, {'current': 2394.3, 'min': 1500.0, 'max': 2250.0}, {'current': 2410.952, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.042, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.962, 'min': 1500.0, 'max': 2250.0}, {'current': 2255.556, 'min': 1500.0, 'max': 2250.0}, {'current': 3371.226, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.876, 'min': 1500.0, 'max': 2250.0}, {'current': 3312.167, 'min': 1500.0, 'max': 2250.0}, {'current': 3320.515, 'min': 1500.0, 'max': 2250.0}, {'current': 2580.33, 'min': 1500.0, 'max': 2250.0}, {'current': 2679.201, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.168, 'min': 1500.0, 'max': 2250.0}, {'current': 3396.123, 'min': 1500.0, 'max': 2250.0}, {'current': 3378.31, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.388, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.97, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.601, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.845, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.805, 'min': 1500.0, 'max': 2250.0}, {'current': 3380.154, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.029, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.126, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.602, 'min': 1500.0, 'max': 2250.0}, {'current': 3382.54, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.64, 'min': 1500.0, 'max': 2250.0}, {'current': 3376.74, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.166, 'min': 1500.0, 'max': 2250.0}, {'current': 3384.58, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.098, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.19, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.872, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.535, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.497, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.931, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.05, 'min': 1500.0, 'max': 2250.0}, {'current': 3373.071, 'min': 1500.0, 'max': 2250.0}, {'current': 3360.771, 'min': 1500.0, 'max': 2250.0}, {'current': 3364.649, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.858, 'min': 1500.0, 'max': 2250.0}, {'current': 1690.063, 'min': 1500.0, 'max': 2250.0}, {'current': 2534.964, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.275, 'min': 1500.0, 'max': 2250.0}, {'current': 2241.316, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.535, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.102, 'min': 1500.0, 'max': 2250.0}, {'current': 2820.808, 'min': 1500.0, 'max': 2250.0}, {'current': 1692.888, 'min': 1500.0, 'max': 2250.0}, {'current': 2545.072, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.349, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.246, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.106, 'min': 1500.0, 'max': 2250.0}, {'current': 2408.32, 'min': 1500.0, 'max': 2250.0}, {'current': 3382.932, 'min': 1500.0, 'max': 2250.0}, {'current': 2546.835, 'min': 1500.0, 'max': 2250.0}, {'current': 3412.281, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.279, 'min': 1500.0, 'max': 2250.0}, {'current': 2543.978, 'min': 1500.0, 'max': 2250.0}, {'current': 2568.797, 'min': 1500.0, 'max': 2250.0}, {'current': 2562.999, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.492, 'min': 1500.0, 'max': 2250.0}, {'current': 2522.471, 'min': 1500.0, 'max': 2250.0}, {'current': 2582.262, 'min': 1500.0, 'max': 2250.0}, {'current': 3285.233, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.325, 'min': 1500.0, 'max': 2250.0}, {'current': 2587.171, 'min': 1500.0, 'max': 2250.0}, {'current': 3396.502, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.427, 'min': 1500.0, 'max': 2250.0}, {'current': 2533.513, 'min': 1500.0, 'max': 2250.0}, {'current': 2294.94, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.562, 'min': 1500.0, 'max': 2250.0}, {'current': 2583.396, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.366, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.934, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.158, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.419, 'min': 1500.0, 'max': 2250.0}, {'current': 3361.144, 'min': 1500.0, 'max': 2250.0}, {'current': 3397.571, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.787, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.791, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.479, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.599, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.964, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.126, 'min': 1500.0, 'max': 2250.0}, {'current': 1693.136, 'min': 1500.0, 'max': 2250.0}, {'current': 2270.283, 'min': 1500.0, 'max': 2250.0}, {'current': 3414.919, 'min': 1500.0, 'max': 2250.0}, {'current': 3101.764, 'min': 1500.0, 'max': 2250.0}, {'current': 3154.709, 'min': 1500.0, 'max': 2250.0}, {'current': 3099.964, 'min': 1500.0, 'max': 2250.0}, {'current': 3185.112, 'min': 1500.0, 'max': 2250.0}, {'current': 2255.327, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.913, 'min': 1500.0, 'max': 2250.0}, {'current': 3395.064, 'min': 1500.0, 'max': 2250.0}, {'current': 1694.777, 'min': 1500.0, 'max': 2250.0}, {'current': 2562.346, 'min': 1500.0, 'max': 2250.0}, {'current': 2513.545, 'min': 1500.0, 'max': 2250.0}, {'current': 2483.887, 'min': 1500.0, 'max': 2250.0}, {'current': 3400.644, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.101, 'min': 1500.0, 'max': 2250.0}, {'current': 3384.621, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.449, 'min': 1500.0, 'max': 2250.0}, {'current': 3379.649, 'min': 1500.0, 'max': 2250.0}, {'current': 3382.042, 'min': 1500.0, 'max': 2250.0}, {'current': 2555.522, 'min': 1500.0, 'max': 2250.0}, {'current': 2624.823, 'min': 1500.0, 'max': 2250.0}, {'current': 2625.563, 'min': 1500.0, 'max': 2250.0}, {'current': 2600.946, 'min': 1500.0, 'max': 2250.0}, {'current': 3375.503, 'min': 1500.0, 'max': 2250.0}, {'current': 3399.991, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.198, 'min': 1500.0, 'max': 2250.0}, {'current': 3373.477, 'min': 1500.0, 'max': 2250.0}, {'current': 2374.585, 'min': 1500.0, 'max': 2250.0}, {'current': 2435.532, 'min': 1500.0, 'max': 2250.0}, {'current': 2456.365, 'min': 1500.0, 'max': 2250.0}, {'current': 3122.953, 'min': 1500.0, 'max': 2250.0}, {'current': 2714.623, 'min': 1500.0, 'max': 2250.0}, {'current': 2546.661, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.717, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.769, 'min': 1500.0, 'max': 2250.0}, {'current': 3375.527, 'min': 1500.0, 'max': 2250.0}, {'current': 2671.762, 'min': 1500.0, 'max': 2250.0}, {'current': 1691.809, 'min': 1500.0, 'max': 2250.0}, {'current': 1693.261, 'min': 1500.0, 'max': 2250.0}, {'current': 3403.418, 'min': 1500.0, 'max': 2250.0}, {'current': 3379.387, 'min': 1500.0, 'max': 2250.0}, {'current': 2261.402, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.271, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.533, 'min': 1500.0, 'max': 2250.0}, {'current': 3291.362, 'min': 1500.0, 'max': 2250.0}, {'current': 2410.633, 'min': 1500.0, 'max': 2250.0}, {'current': 3368.686, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.594, 'min': 1500.0, 'max': 2250.0}, {'current': 2252.435, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.683, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.727, 'min': 1500.0, 'max': 2250.0}, {'current': 3287.246, 'min': 1500.0, 'max': 2250.0}, {'current': 2556.617, 'min': 1500.0, 'max': 2250.0}, {'current': 2569.945, 'min': 1500.0, 'max': 2250.0}, {'current': 2584.209, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.667, 'min': 1500.0, 'max': 2250.0}, {'current': 3380.684, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.734, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.273, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.156, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.171, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.6, 'min': 1500.0, 'max': 2250.0}, {'current': 3401.544, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.552, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.461, 'min': 1500.0, 'max': 2250.0}, {'current': 3384.82, 'min': 1500.0, 'max': 2250.0}, {'current': 3387.434, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.498, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.988, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.053, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.116, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.243, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.515, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.157, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.206, 'min': 1500.0, 'max': 2250.0}, {'current': 3394.131, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.595, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.181, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.381, 'min': 1500.0, 'max': 2250.0}, {'current': 3366.775, 'min': 1500.0, 'max': 2250.0}, {'current': 3377.758, 'min': 1500.0, 'max': 2250.0}, {'current': 3377.433, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.55, 'min': 1500.0, 'max': 2250.0}, {'current': 1690.833, 'min': 1500.0, 'max': 2250.0}, {'current': 2541.955, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.753, 'min': 1500.0, 'max': 2250.0}, {'current': 3220.081, 'min': 1500.0, 'max': 2250.0}, {'current': 3399.115, 'min': 1500.0, 'max': 2250.0}, {'current': 1894.371, 'min': 1500.0, 'max': 2250.0}, {'current': 2538.147, 'min': 1500.0, 'max': 2250.0}, {'current': 1691.568, 'min': 1500.0, 'max': 2250.0}, {'current': 2492.901, 'min': 1500.0, 'max': 2250.0}, {'current': 2546.816, 'min': 1500.0, 'max': 2250.0}, {'current': 3199.471, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.313, 'min': 1500.0, 'max': 2250.0}, {'current': 2573.005, 'min': 1500.0, 'max': 2250.0}, {'current': 3396.221, 'min': 1500.0, 'max': 2250.0}, {'current': 2552.75, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.897, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.195, 'min': 1500.0, 'max': 2250.0}, {'current': 3398.432, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.655, 'min': 1500.0, 'max': 2250.0}, {'current': 3384.751, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.294, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.417, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.872, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.663, 'min': 1500.0, 'max': 2250.0}, {'current': 2520.22, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.33, 'min': 1500.0, 'max': 2250.0}, {'current': 2581.345, 'min': 1500.0, 'max': 2250.0}, {'current': 2560.776, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.522, 'min': 1500.0, 'max': 2250.0}, {'current': 1692.065, 'min': 1500.0, 'max': 2250.0}, {'current': 2581.942, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.743, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.479, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.849, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.031, 'min': 1500.0, 'max': 2250.0}, {'current': 3307.089, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.675, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.006, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.632, 'min': 1500.0, 'max': 2250.0}, {'current': 2547.734, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.748, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.87, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.913, 'min': 1500.0, 'max': 2250.0}, {'current': 2316.399, 'min': 1500.0, 'max': 2250.0}, {'current': 1695.346, 'min': 1500.0, 'max': 2250.0}, {'current': 2555.651, 'min': 1500.0, 'max': 2250.0}, {'current': 1694.608, 'min': 1500.0, 'max': 2250.0}, {'current': 1699.379, 'min': 1500.0, 'max': 2250.0}, {'current': 2253.02, 'min': 1500.0, 'max': 2250.0}, {'current': 3394.363, 'min': 1500.0, 'max': 2250.0}, {'current': 2565.94, 'min': 1500.0, 'max': 2250.0}, {'current': 2492.697, 'min': 1500.0, 'max': 2250.0}, {'current': 2135.639, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.858, 'min': 1500.0, 'max': 2250.0}, {'current': 3378.998, 'min': 1500.0, 'max': 2250.0}, {'current': 2512.788, 'min': 1500.0, 'max': 2250.0}, {'current': 2567.317, 'min': 1500.0, 'max': 2250.0}, {'current': 3387.73, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.215, 'min': 1500.0, 'max': 2250.0}, {'current': 1633.78, 'min': 1500.0, 'max': 2250.0}, {'current': 2647.732, 'min': 1500.0, 'max': 2250.0}, {'current': 1730.964, 'min': 1500.0, 'max': 2250.0}, {'current': 1628.731, 'min': 1500.0, 'max': 2250.0}, {'current': 1798.606, 'min': 1500.0, 'max': 2250.0}, {'current': 1797.623, 'min': 1500.0, 'max': 2250.0}, {'current': 1791.279, 'min': 1500.0, 'max': 2250.0}, {'current': 1791.989, 'min': 1500.0, 'max': 2250.0}, {'current': 2574.476, 'min': 1500.0, 'max': 2250.0}, {'current': 2624.917, 'min': 1500.0, 'max': 2250.0}, {'current': 2637.711, 'min': 1500.0, 'max': 2250.0}, {'current': 2604.48, 'min': 1500.0, 'max': 2250.0}, {'current': 2492.73, 'min': 1500.0, 'max': 2250.0}, {'current': 2560.514, 'min': 1500.0, 'max': 2250.0}, {'current': 2563.707, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.959, 'min': 1500.0, 'max': 2250.0}, {'current': 2511.74, 'min': 1500.0, 'max': 2250.0}, {'current': 2555.213, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.03, 'min': 1500.0, 'max': 2250.0}, {'current': 3380.55, 'min': 1500.0, 'max': 2250.0}], 'disk': {'/': {'total': 1757.7545127868652, 'used': 1271.0736694335938}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 2015.6736488342285}}
+2024-05-15 22:38:56,023 INFO    HandlerThread:621653 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-15 22:38:56,023 INFO    HandlerThread:621653 [system_monitor.py:probe():227] Publishing system info
+2024-05-15 22:38:56,023 DEBUG   HandlerThread:621653 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-15 22:38:56,789 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/conda-environment.yaml
+2024-05-15 22:38:58,592 DEBUG   HandlerThread:621653 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-15 22:38:58,594 INFO    HandlerThread:621653 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-15 22:38:58,596 DEBUG   SenderThread:621653 [sender.py:send():379] send: files
+2024-05-15 22:38:58,596 INFO    SenderThread:621653 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-05-15 22:38:58,713 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-15 22:38:58,713 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: python_packages
+2024-05-15 22:38:58,714 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-15 22:38:58,715 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: stop_status
+2024-05-15 22:38:58,716 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-15 22:38:58,789 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/conda-environment.yaml
+2024-05-15 22:38:58,789 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/wandb-metadata.json
+2024-05-15 22:38:58,789 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/requirements.txt
+2024-05-15 22:38:59,116 DEBUG   SenderThread:621653 [sender.py:send():379] send: telemetry
+2024-05-15 22:38:59,116 DEBUG   SenderThread:621653 [sender.py:send():379] send: config
+2024-05-15 22:38:59,790 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/output.log
+2024-05-15 22:38:59,871 INFO    wandb-upload_0:621653 [upload_job.py:push():131] Uploaded file /tmp/tmpueqcckuowandb/0jec4zu8-wandb-metadata.json
+2024-05-15 22:39:01,119 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: status_report
+2024-05-15 22:39:01,790 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/output.log
+2024-05-15 22:39:06,119 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: status_report
+2024-05-15 22:39:11,120 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: status_report
+2024-05-15 22:39:13,714 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-15 22:39:13,715 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-15 22:39:13,715 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: stop_status
+2024-05-15 22:39:15,554 DEBUG   SenderThread:621653 [sender.py:send():379] send: exit
+2024-05-15 22:39:15,554 INFO    SenderThread:621653 [sender.py:send_exit():586] handling exit code: 1
+2024-05-15 22:39:15,554 INFO    SenderThread:621653 [sender.py:send_exit():588] handling runtime: 19
+2024-05-15 22:39:15,555 INFO    SenderThread:621653 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-15 22:39:15,555 INFO    SenderThread:621653 [sender.py:send_exit():594] send defer
+2024-05-15 22:39:15,556 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:15,556 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-15 22:39:15,556 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:15,556 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-05-15 22:39:15,556 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 1
+2024-05-15 22:39:15,556 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:15,556 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-15 22:39:15,556 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:15,556 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-05-15 22:39:15,556 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 2
+2024-05-15 22:39:15,556 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:15,556 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-15 22:39:15,556 INFO    HandlerThread:621653 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-15 22:39:15,558 DEBUG   SystemMonitor:621653 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-15 22:39:15,558 INFO    HandlerThread:621653 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-15 22:39:15,558 DEBUG   SystemMonitor:621653 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-15 22:39:15,558 INFO    HandlerThread:621653 [interfaces.py:finish():202] Joined disk monitor
+2024-05-15 22:39:15,558 DEBUG   SystemMonitor:621653 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-15 22:39:15,796 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/wandb-summary.json
+2024-05-15 22:39:17,797 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/output.log
+2024-05-15 22:39:21,487 INFO    HandlerThread:621653 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-15 22:39:21,488 INFO    HandlerThread:621653 [interfaces.py:finish():202] Joined memory monitor
+2024-05-15 22:39:21,488 INFO    HandlerThread:621653 [interfaces.py:finish():202] Joined network monitor
+2024-05-15 22:39:21,488 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:21,489 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: status_report
+2024-05-15 22:39:21,489 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:21,490 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-05-15 22:39:21,490 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 3
+2024-05-15 22:39:21,490 DEBUG   SenderThread:621653 [sender.py:send():379] send: stats
+2024-05-15 22:39:21,491 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:21,494 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:21,494 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-15 22:39:21,495 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:21,495 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-05-15 22:39:21,495 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 4
+2024-05-15 22:39:21,495 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:21,495 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-15 22:39:21,495 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:21,495 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-05-15 22:39:21,495 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 5
+2024-05-15 22:39:21,495 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:21,495 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-15 22:39:21,496 DEBUG   SenderThread:621653 [sender.py:send():379] send: summary
+2024-05-15 22:39:21,496 INFO    SenderThread:621653 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-15 22:39:21,497 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:21,497 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-05-15 22:39:21,497 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 6
+2024-05-15 22:39:21,497 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:21,497 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-15 22:39:21,497 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:21,497 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-05-15 22:39:21,502 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: status_report
+2024-05-15 22:39:21,558 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-15 22:39:21,558 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:21,799 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/wandb-summary.json
+2024-05-15 22:39:22,398 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 7
+2024-05-15 22:39:22,398 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:22,399 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:22,399 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-15 22:39:22,399 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:22,399 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-05-15 22:39:22,559 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:22,799 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/config.yaml
+2024-05-15 22:39:23,559 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 8
+2024-05-15 22:39:23,559 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:23,559 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:23,559 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-15 22:39:23,560 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:23,560 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-05-15 22:39:23,560 INFO    SenderThread:621653 [job_builder.py:build():318] Attempting to build job artifact
+2024-05-15 22:39:23,560 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:23,562 INFO    SenderThread:621653 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-05-15 22:39:23,578 INFO    SenderThread:621653 [job_builder.py:build():431] adding wandb-job metadata file
+2024-05-15 22:39:23,581 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 9
+2024-05-15 22:39:23,581 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:23,581 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:23,581 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-15 22:39:23,581 DEBUG   SenderThread:621653 [sender.py:send():379] send: artifact
+2024-05-15 22:39:23,799 INFO    Thread-12 :621653 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/output.log
+2024-05-15 22:39:24,563 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:25,050 INFO    SenderThread:621653 [sender.py:send_artifact():1468] sent artifact job-https___github.com_Kaustubh-iitb_Power-Mechanism-new.git_Adult_income_test_income.py - {'id': 'QXJ0aWZhY3Q6ODM2MDUxMDQ4', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MzczMzk4NQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODM2MzU3NjQy', 'versionIndex': 4}}}
+2024-05-15 22:39:25,050 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:25,050 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-05-15 22:39:25,050 INFO    SenderThread:621653 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-15 22:39:25,802 INFO    SenderThread:621653 [dir_watcher.py:finish():388] scan: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files
+2024-05-15 22:39:25,802 INFO    SenderThread:621653 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/requirements.txt requirements.txt
+2024-05-15 22:39:25,802 INFO    SenderThread:621653 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/output.log output.log
+2024-05-15 22:39:25,803 INFO    SenderThread:621653 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/wandb-summary.json wandb-summary.json
+2024-05-15 22:39:25,803 INFO    SenderThread:621653 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/wandb-metadata.json wandb-metadata.json
+2024-05-15 22:39:25,803 INFO    SenderThread:621653 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/config.yaml config.yaml
+2024-05-15 22:39:25,803 INFO    SenderThread:621653 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/conda-environment.yaml conda-environment.yaml
+2024-05-15 22:39:25,806 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 10
+2024-05-15 22:39:25,806 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:25,807 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:25,807 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-15 22:39:25,810 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:25,810 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-05-15 22:39:25,810 INFO    SenderThread:621653 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-15 22:39:26,540 INFO    wandb-upload_0:621653 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/output.log
+2024-05-15 22:39:26,562 INFO    wandb-upload_2:621653 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/wandb-summary.json
+2024-05-15 22:39:26,564 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:26,564 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:26,573 INFO    wandb-upload_1:621653 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/requirements.txt
+2024-05-15 22:39:26,580 INFO    wandb-upload_3:621653 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/config.yaml
+2024-05-15 22:39:26,630 INFO    wandb-upload_4:621653 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/files/conda-environment.yaml
+2024-05-15 22:39:26,830 INFO    Thread-11 (_thread_body):621653 [sender.py:transition_state():614] send defer: 11
+2024-05-15 22:39:26,830 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:26,831 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-15 22:39:26,831 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:26,831 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-05-15 22:39:26,831 INFO    SenderThread:621653 [file_pusher.py:join():178] waiting for file pusher
+2024-05-15 22:39:26,831 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 12
+2024-05-15 22:39:26,832 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:26,832 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-15 22:39:26,832 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:26,832 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-05-15 22:39:26,832 INFO    SenderThread:621653 [file_stream.py:finish():614] file stream finish called
+2024-05-15 22:39:27,121 INFO    SenderThread:621653 [file_stream.py:finish():618] file stream finish is done
+2024-05-15 22:39:27,121 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 13
+2024-05-15 22:39:27,121 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:27,121 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-15 22:39:27,121 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:27,122 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-05-15 22:39:27,122 INFO    SenderThread:621653 [sender.py:transition_state():614] send defer: 14
+2024-05-15 22:39:27,122 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: defer
+2024-05-15 22:39:27,122 INFO    HandlerThread:621653 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-15 22:39:27,122 DEBUG   SenderThread:621653 [sender.py:send():379] send: final
+2024-05-15 22:39:27,122 DEBUG   SenderThread:621653 [sender.py:send():379] send: footer
+2024-05-15 22:39:27,122 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: defer
+2024-05-15 22:39:27,122 INFO    SenderThread:621653 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-05-15 22:39:27,123 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:27,123 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:27,123 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-15 22:39:27,124 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: poll_exit
+2024-05-15 22:39:27,124 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: server_info
+2024-05-15 22:39:27,124 DEBUG   SenderThread:621653 [sender.py:send_request():406] send_request: server_info
+2024-05-15 22:39:27,125 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-15 22:39:27,126 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-15 22:39:27,126 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-15 22:39:27,408 INFO    MainThread:621653 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-05-15 22:39:27,408 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: status_report
+2024-05-15 22:39:27,408 INFO    MainThread:621653 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-05-15 22:39:27,408 INFO    MainThread:621653 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-05-15 22:39:27,409 DEBUG   HandlerThread:621653 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-15 22:39:27,409 INFO    HandlerThread:621653 [handler.py:finish():866] shutting down handler
+2024-05-15 22:39:28,408 INFO    SenderThread:621653 [sender.py:finish():1546] shutting down sender
+2024-05-15 22:39:28,408 INFO    SenderThread:621653 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-15 22:39:28,408 INFO    SenderThread:621653 [file_pusher.py:join():178] waiting for file pusher
+2024-05-15 22:39:28,409 INFO    WriterThread:621653 [datastore.py:close():296] close: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/wandb/run-20240515_223855-uvhmhpog/run-uvhmhpog.wandb

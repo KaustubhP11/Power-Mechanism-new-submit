@@ -68,6 +68,7 @@ def main(data_path ,batch_size,num_epochs,learning_rate,train_flag):
     lr_schedule = LearnerRateScheduler('step', base_learning_rate=learning_rate, decay_rate = 0.99, decay_steps=1)
     time_start = time.time()
     train_model_priv(net,trainloader_priv,optim,num_epochs,h=0.82,rate=10,device=torch.device('cuda'),only_reg_flag=train_flag,lr_schedular=lr_schedule)
+   
     time_end = time.time()
     print("Time taken to train the model: ",time_end-time_start)
     print("Please type y or n if you want to save model: \n")

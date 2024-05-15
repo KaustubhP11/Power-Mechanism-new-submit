@@ -1,0 +1,66 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.12.2
+    cli_version: 0.16.6
+    framework: xgboost
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1715532057.0
+    t:
+      1:
+      - 1
+      - 5
+      - 6
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 6
+      - 11
+      - 49
+      - 53
+      - 55
+      3:
+      - 23
+      4: 3.12.2
+      5: 0.16.6
+      8:
+      - 5
+      13: linux-x86_64
+device:
+  desc: null
+  value: cuda:3
+epochs:
+  desc: null
+  value: 300
+lr:
+  desc: null
+  value: 0.01
+batch_size:
+  desc: null
+  value: 512
+lambda_loss:
+  desc: null
+  value: 1
+only_reg_flag:
+  desc: null
+  value: 0
+max_steps:
+  desc: null
+  value: 10000
+model_path:
+  desc: null
+  value: Models/adult_512_1
+net_depth:
+  desc: null
+  value: 1
+eps:
+  desc: null
+  value: 10.0
+grad_norm:
+  desc: null
+  value: 100

@@ -1,0 +1,10 @@
+
+**Starting data processing**
+48626
+ ** Creating embeddings **
+  38900
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/test_income.py", line 128, in <module>
+    net = Net_new(net_depth,device=device)
+                  ^^^^^^^^^
+NameError: name 'net_depth' is not defined

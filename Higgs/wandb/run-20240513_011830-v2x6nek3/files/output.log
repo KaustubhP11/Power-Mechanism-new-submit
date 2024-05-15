@@ -1,0 +1,11 @@
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/test_higgs.py", line 70, in <module>
+    X_emb_train, losses_train = create_model_embs2(net,trainloader,device= device,l=len(y_train_tensor),h=0.8)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/utils.py", line 268, in create_model_embs2
+    X_emb[i*bs:i*bs+len(loss)] = torch.squeeze(net.y.detach().cpu())
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: The expanded size of the tensor (68) must match the existing size (33) at non-singleton dimension 1.  Target sizes: [4096, 68].  Tensor sizes: [4096, 33]

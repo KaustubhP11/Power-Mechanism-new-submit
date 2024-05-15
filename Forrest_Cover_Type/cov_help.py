@@ -458,8 +458,8 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
         
         for i, data in enumerate(trainloader, 0):
             # get the inputs; data is a list of [inputs, labels]
-            # if(i >100 ):
-            #     break
+            if(i >100 ):
+                break
             bs = len(data[0])
             
             inputs = data[0].to(device)
@@ -649,7 +649,7 @@ def create_model_embs2(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
         X_emb[i*bs:i*bs+len(loss)] = torch.squeeze(net.y.detach().cpu())
     return(X_emb,losses)
 
-def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.device('cpu'),test_loader = None,test_total_loader = None,max_steps =10000):
+def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.device('cpu'),test_loader = None,test_total_loader = None,max_steps =100000):
     running_loss = 0.0
     counter = 0
     max_test_acc =0.0
@@ -659,7 +659,8 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
         
         
         for i, data in enumerate(train_loader, 0):
-            
+            if(steps > max_steps):
+                break
             inputs, labels = data
             inputs = inputs.to(device)
             labels = labels.to(device)

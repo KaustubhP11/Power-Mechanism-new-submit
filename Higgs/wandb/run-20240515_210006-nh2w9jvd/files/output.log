@@ -1,0 +1,19 @@
+
+**Starting data processing**
+ ** Starting final training **
+  0%|                                                                                                                          | 1/1000 [00:00<12:23,  1.34it/s, loss: 0.6849788427352905, acc: 0.6802600026130676]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/test_higgs.py", line 147, in <module>
+    train_emb(model,trainloader_priv,X_emb_test,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,test_total_loader = None,max_steps =args.max_steps)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/utils.py", line 289, in train_emb
+    for i, data in enumerate(train_loader, 0):
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+KeyboardInterrupt

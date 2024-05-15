@@ -1,0 +1,47 @@
+
+**Starting data processing**
+48626
+05/12/2024 21:57:00:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 69%|████████████████████████████████████████████████████████████████▊                             | 69/100 [00:45<00:20,  1.52it/s, loss: 0.5270022749900818, acc: 0.7606415748596191]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/priv_baseline.py", line 155, in <module>
+    train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =10000)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/utils.py", line 310, in train_emb
+    optimizer.step()
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/opacus/optimizers/optimizer.py", line 518, in step
+    if self.pre_step():
+       ^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/opacus/optimizers/optimizer.py", line 499, in pre_step
+    self.clip_and_accumulate()
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/opacus/optimizers/optimizer.py", line 402, in clip_and_accumulate
+    g.reshape(len(g), -1).norm(2, dim=-1) for g in self.grad_samples
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/_tensor.py", line 765, in norm
+    return torch.norm(self, p, dim, keepdim, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/functional.py", line 1631, in norm
+    return torch.linalg.vector_norm(input, _p, _dim, keepdim, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

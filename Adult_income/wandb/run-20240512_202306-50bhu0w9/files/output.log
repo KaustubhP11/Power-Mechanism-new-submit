@@ -1,0 +1,10 @@
+
+**Starting data processing**
+48626
+ ** Creating embeddings **
+  38900
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/test_income.py", line 125, in <module>
+    state_dict = torch.load(model_path)
+                            ^^^^^^^^^^
+NameError: name 'model_path' is not defined

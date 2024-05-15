@@ -1,0 +1,7 @@
+
+**Starting data processing**
+48626
+ ** Creating embeddings **
+  38900
+ ** Starting final training **
+Accuracy of Random Forest:  0.8238741517581739 Accuracy of XGBoost:  0.8256220440057578

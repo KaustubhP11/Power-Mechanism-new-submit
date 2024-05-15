@@ -1,0 +1,10 @@
+
+**Starting data processing**
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/income_train.py", line 56, in <module>
+    df = fill_missing_categorical(df, 'native-country')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/utils.py", line 337, in fill_missing_categorical
+    le = LabelEncoder()
+         ^^^^^^^^^^^^
+NameError: name 'LabelEncoder' is not defined

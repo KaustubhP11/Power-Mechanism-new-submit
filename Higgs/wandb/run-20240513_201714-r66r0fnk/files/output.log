@@ -1,0 +1,51 @@
+
+**Starting data processing**
+ ** Starting final training **
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  1%|▍                                      | 114/10000 [00:55<1:20:17,  2.05it/s, loss: 0.41573649644851685, acc: 0.8132799863815308]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/test_higgs.py", line 139, in <module>
+    train_emb(model,trainloader_priv,X_emb_test,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,test_total_loader = None,max_steps =args.max_steps)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/utils.py", line 286, in train_emb
+    for i, data in enumerate(train_loader, 0):
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/_utils/collate.py", line 316, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/_utils/collate.py", line 170, in collate
+    transposed = list(zip(*batch))  # It may be accessed twice, so we use a list.
+                 ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,445 @@
+2024-05-13 21:33:57,894 INFO    StreamThr :2554281 [internal.py:wandb_internal():86] W&B internal server running at pid: 2554281, started at: 2024-05-13 21:33:57.893339
+2024-05-13 21:33:57,895 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status
+2024-05-13 21:33:57,896 INFO    WriterThread:2554281 [datastore.py:open_for_write():87] open: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/run-y0hgvrni.wandb
+2024-05-13 21:33:57,897 DEBUG   SenderThread:2554281 [sender.py:send():379] send: header
+2024-05-13 21:33:57,898 DEBUG   SenderThread:2554281 [sender.py:send():379] send: run
+2024-05-13 21:33:58,569 INFO    SenderThread:2554281 [dir_watcher.py:__init__():211] watching files in: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files
+2024-05-13 21:33:58,569 INFO    SenderThread:2554281 [sender.py:_start_run_threads():1124] run started: y0hgvrni with start time 1715616237.893416
+2024-05-13 21:33:58,574 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: check_version
+2024-05-13 21:33:58,574 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: check_version
+2024-05-13 21:33:58,612 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: run_start
+2024-05-13 21:33:58,651 DEBUG   HandlerThread:2554281 [system_info.py:__init__():26] System info init
+2024-05-13 21:33:58,651 DEBUG   HandlerThread:2554281 [system_info.py:__init__():41] System info init done
+2024-05-13 21:33:58,651 INFO    HandlerThread:2554281 [system_monitor.py:start():194] Starting system monitor
+2024-05-13 21:33:58,651 INFO    SystemMonitor:2554281 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-13 21:33:58,651 INFO    HandlerThread:2554281 [system_monitor.py:probe():214] Collecting system info
+2024-05-13 21:33:58,652 INFO    SystemMonitor:2554281 [interfaces.py:start():190] Started cpu monitoring
+2024-05-13 21:33:58,652 INFO    SystemMonitor:2554281 [interfaces.py:start():190] Started disk monitoring
+2024-05-13 21:33:58,653 INFO    SystemMonitor:2554281 [interfaces.py:start():190] Started gpu monitoring
+2024-05-13 21:33:58,654 INFO    SystemMonitor:2554281 [interfaces.py:start():190] Started memory monitoring
+2024-05-13 21:33:58,654 INFO    SystemMonitor:2554281 [interfaces.py:start():190] Started network monitoring
+2024-05-13 21:33:58,716 DEBUG   HandlerThread:2554281 [system_info.py:probe():150] Probing system
+2024-05-13 21:33:58,718 DEBUG   HandlerThread:2554281 [system_info.py:_probe_git():135] Probing git
+2024-05-13 21:33:58,723 DEBUG   HandlerThread:2554281 [system_info.py:_probe_git():143] Probing git done
+2024-05-13 21:33:58,723 DEBUG   HandlerThread:2554281 [system_info.py:probe():198] Probing system done
+2024-05-13 21:33:58,723 DEBUG   HandlerThread:2554281 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-174-generic-x86_64-with-glibc2.31', 'python': '3.12.2', 'heartbeatAt': '2024-05-13T16:03:58.716099', 'startedAt': '2024-05-13T16:03:57.889848', 'docker': None, 'cuda': None, 'args': ('--epochs', '10000', '--lr', '0.0003', '--eps', '0.75', '--max_steps', '11000', '--model_path', 'Models/higg_512_50'), 'state': 'running', 'program': '/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/test_higgs.py', 'codePathLocal': 'test_higgs.py', 'codePath': 'Higgs/test_higgs.py', 'git': {'remote': 'https://github.com/Kaustubh-iitb/Power-Mechanism-new.git', 'commit': '2ac359c7d10d049b728700bcce9c4954289f7734'}, 'email': 'ponkshekaustubh11@gmail.com', 'root': '/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new', 'host': 'iitb-dgx4.iitb.ac.in', 'username': 'racha_suraj', 'executable': '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/bin/python', 'cpu_count': 128, 'cpu_count_logical': 256, 'cpu_freq': {'current': 2979.5490507812515, 'min': 1500.0, 'max': 2250.0}, 'cpu_freq_per_core': [{'current': 3350.854, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.572, 'min': 1500.0, 'max': 2250.0}, {'current': 1696.571, 'min': 1500.0, 'max': 2250.0}, {'current': 1689.947, 'min': 1500.0, 'max': 2250.0}, {'current': 3196.784, 'min': 1500.0, 'max': 2250.0}, {'current': 1792.622, 'min': 1500.0, 'max': 2250.0}, {'current': 1793.265, 'min': 1500.0, 'max': 2250.0}, {'current': 1797.281, 'min': 1500.0, 'max': 2250.0}, {'current': 3190.888, 'min': 1500.0, 'max': 2250.0}, {'current': 1740.197, 'min': 1500.0, 'max': 2250.0}, {'current': 2490.239, 'min': 1500.0, 'max': 2250.0}, {'current': 1735.013, 'min': 1500.0, 'max': 2250.0}, {'current': 2570.692, 'min': 1500.0, 'max': 2250.0}, {'current': 1732.264, 'min': 1500.0, 'max': 2250.0}, {'current': 3206.771, 'min': 1500.0, 'max': 2250.0}, {'current': 1738.962, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.708, 'min': 1500.0, 'max': 2250.0}, {'current': 3341.165, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.018, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.003, 'min': 1500.0, 'max': 2250.0}, {'current': 2510.611, 'min': 1500.0, 'max': 2250.0}, {'current': 2572.333, 'min': 1500.0, 'max': 2250.0}, {'current': 2253.945, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.638, 'min': 1500.0, 'max': 2250.0}, {'current': 1859.48, 'min': 1500.0, 'max': 2250.0}, {'current': 3397.064, 'min': 1500.0, 'max': 2250.0}, {'current': 2581.358, 'min': 1500.0, 'max': 2250.0}, {'current': 3376.738, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.378, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.344, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.235, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.301, 'min': 1500.0, 'max': 2250.0}, {'current': 3399.472, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.707, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.32, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.493, 'min': 1500.0, 'max': 2250.0}, {'current': 3335.1, 'min': 1500.0, 'max': 2250.0}, {'current': 3318.538, 'min': 1500.0, 'max': 2250.0}, {'current': 3324.37, 'min': 1500.0, 'max': 2250.0}, {'current': 3321.321, 'min': 1500.0, 'max': 2250.0}, {'current': 2563.844, 'min': 1500.0, 'max': 2250.0}, {'current': 2801.739, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.073, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.638, 'min': 1500.0, 'max': 2250.0}, {'current': 2321.569, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.122, 'min': 1500.0, 'max': 2250.0}, {'current': 2583.865, 'min': 1500.0, 'max': 2250.0}, {'current': 2555.589, 'min': 1500.0, 'max': 2250.0}, {'current': 1791.071, 'min': 1500.0, 'max': 2250.0}, {'current': 3219.025, 'min': 1500.0, 'max': 2250.0}, {'current': 3206.296, 'min': 1500.0, 'max': 2250.0}, {'current': 2585.552, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.107, 'min': 1500.0, 'max': 2250.0}, {'current': 1697.05, 'min': 1500.0, 'max': 2250.0}, {'current': 1695.521, 'min': 1500.0, 'max': 2250.0}, {'current': 1694.492, 'min': 1500.0, 'max': 2250.0}, {'current': 1734.855, 'min': 1500.0, 'max': 2250.0}, {'current': 1737.276, 'min': 1500.0, 'max': 2250.0}, {'current': 2766.701, 'min': 1500.0, 'max': 2250.0}, {'current': 1737.725, 'min': 1500.0, 'max': 2250.0}, {'current': 3338.674, 'min': 1500.0, 'max': 2250.0}, {'current': 2422.399, 'min': 1500.0, 'max': 2250.0}, {'current': 2623.625, 'min': 1500.0, 'max': 2250.0}, {'current': 1730.582, 'min': 1500.0, 'max': 2250.0}, {'current': 2360.032, 'min': 1500.0, 'max': 2250.0}, {'current': 3351.731, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.051, 'min': 1500.0, 'max': 2250.0}, {'current': 3225.337, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.7, 'min': 1500.0, 'max': 2250.0}, {'current': 2396.452, 'min': 1500.0, 'max': 2250.0}, {'current': 3387.549, 'min': 1500.0, 'max': 2250.0}, {'current': 3401.456, 'min': 1500.0, 'max': 2250.0}, {'current': 2516.675, 'min': 1500.0, 'max': 2250.0}, {'current': 2553.739, 'min': 1500.0, 'max': 2250.0}, {'current': 1738.798, 'min': 1500.0, 'max': 2250.0}, {'current': 1739.56, 'min': 1500.0, 'max': 2250.0}, {'current': 3224.32, 'min': 1500.0, 'max': 2250.0}, {'current': 1798.262, 'min': 1500.0, 'max': 2250.0}, {'current': 1795.593, 'min': 1500.0, 'max': 2250.0}, {'current': 1796.077, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.618, 'min': 1500.0, 'max': 2250.0}, {'current': 2301.91, 'min': 1500.0, 'max': 2250.0}, {'current': 3405.444, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.193, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.586, 'min': 1500.0, 'max': 2250.0}, {'current': 3397.042, 'min': 1500.0, 'max': 2250.0}, {'current': 2493.847, 'min': 1500.0, 'max': 2250.0}, {'current': 3397.856, 'min': 1500.0, 'max': 2250.0}, {'current': 2465.817, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.128, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.584, 'min': 1500.0, 'max': 2250.0}, {'current': 3387.857, 'min': 1500.0, 'max': 2250.0}, {'current': 2379.159, 'min': 1500.0, 'max': 2250.0}, {'current': 3382.961, 'min': 1500.0, 'max': 2250.0}, {'current': 1693.099, 'min': 1500.0, 'max': 2250.0}, {'current': 3380.564, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.227, 'min': 1500.0, 'max': 2250.0}, {'current': 3387.145, 'min': 1500.0, 'max': 2250.0}, {'current': 2543.735, 'min': 1500.0, 'max': 2250.0}, {'current': 3384.536, 'min': 1500.0, 'max': 2250.0}, {'current': 2476.482, 'min': 1500.0, 'max': 2250.0}, {'current': 3403.982, 'min': 1500.0, 'max': 2250.0}, {'current': 3382.308, 'min': 1500.0, 'max': 2250.0}, {'current': 3399.033, 'min': 1500.0, 'max': 2250.0}, {'current': 2491.25, 'min': 1500.0, 'max': 2250.0}, {'current': 3398.47, 'min': 1500.0, 'max': 2250.0}, {'current': 3399.17, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.176, 'min': 1500.0, 'max': 2250.0}, {'current': 1693.64, 'min': 1500.0, 'max': 2250.0}, {'current': 1689.533, 'min': 1500.0, 'max': 2250.0}, {'current': 1690.778, 'min': 1500.0, 'max': 2250.0}, {'current': 3387.631, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.156, 'min': 1500.0, 'max': 2250.0}, {'current': 2566.225, 'min': 1500.0, 'max': 2250.0}, {'current': 2525.372, 'min': 1500.0, 'max': 2250.0}, {'current': 2513.915, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.293, 'min': 1500.0, 'max': 2250.0}, {'current': 1698.836, 'min': 1500.0, 'max': 2250.0}, {'current': 1698.311, 'min': 1500.0, 'max': 2250.0}, {'current': 1696.018, 'min': 1500.0, 'max': 2250.0}, {'current': 3395.483, 'min': 1500.0, 'max': 2250.0}, {'current': 3404.033, 'min': 1500.0, 'max': 2250.0}, {'current': 3089.591, 'min': 1500.0, 'max': 2250.0}, {'current': 3067.046, 'min': 1500.0, 'max': 2250.0}, {'current': 2458.865, 'min': 1500.0, 'max': 2250.0}, {'current': 2527.192, 'min': 1500.0, 'max': 2250.0}, {'current': 2559.318, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.635, 'min': 1500.0, 'max': 2250.0}, {'current': 3384.02, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.628, 'min': 1500.0, 'max': 2250.0}, {'current': 1695.121, 'min': 1500.0, 'max': 2250.0}, {'current': 1693.904, 'min': 1500.0, 'max': 2250.0}, {'current': 1794.677, 'min': 1500.0, 'max': 2250.0}, {'current': 1790.896, 'min': 1500.0, 'max': 2250.0}, {'current': 1792.227, 'min': 1500.0, 'max': 2250.0}, {'current': 1795.902, 'min': 1500.0, 'max': 2250.0}, {'current': 1737.758, 'min': 1500.0, 'max': 2250.0}, {'current': 1731.5, 'min': 1500.0, 'max': 2250.0}, {'current': 2547.175, 'min': 1500.0, 'max': 2250.0}, {'current': 3193.911, 'min': 1500.0, 'max': 2250.0}, {'current': 2766.178, 'min': 1500.0, 'max': 2250.0}, {'current': 1735.271, 'min': 1500.0, 'max': 2250.0}, {'current': 1729.175, 'min': 1500.0, 'max': 2250.0}, {'current': 2706.797, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.432, 'min': 1500.0, 'max': 2250.0}, {'current': 3346.269, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.23, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.567, 'min': 1500.0, 'max': 2250.0}, {'current': 2535.183, 'min': 1500.0, 'max': 2250.0}, {'current': 2558.449, 'min': 1500.0, 'max': 2250.0}, {'current': 2260.456, 'min': 1500.0, 'max': 2250.0}, {'current': 3401.354, 'min': 1500.0, 'max': 2250.0}, {'current': 2541.663, 'min': 1500.0, 'max': 2250.0}, {'current': 3379.857, 'min': 1500.0, 'max': 2250.0}, {'current': 2587.678, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.61, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.335, 'min': 1500.0, 'max': 2250.0}, {'current': 3384.215, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.588, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.848, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.751, 'min': 1500.0, 'max': 2250.0}, {'current': 3395.185, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.685, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.014, 'min': 1500.0, 'max': 2250.0}, {'current': 3317.808, 'min': 1500.0, 'max': 2250.0}, {'current': 3334.602, 'min': 1500.0, 'max': 2250.0}, {'current': 3314.717, 'min': 1500.0, 'max': 2250.0}, {'current': 3316.589, 'min': 1500.0, 'max': 2250.0}, {'current': 2539.142, 'min': 1500.0, 'max': 2250.0}, {'current': 2538.38, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.916, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.076, 'min': 1500.0, 'max': 2250.0}, {'current': 2536.092, 'min': 1500.0, 'max': 2250.0}, {'current': 3397.874, 'min': 1500.0, 'max': 2250.0}, {'current': 2573.341, 'min': 1500.0, 'max': 2250.0}, {'current': 2562.854, 'min': 1500.0, 'max': 2250.0}, {'current': 1792.533, 'min': 1500.0, 'max': 2250.0}, {'current': 1798.083, 'min': 1500.0, 'max': 2250.0}, {'current': 1791.594, 'min': 1500.0, 'max': 2250.0}, {'current': 3050.843, 'min': 1500.0, 'max': 2250.0}, {'current': 3377.362, 'min': 1500.0, 'max': 2250.0}, {'current': 1688.203, 'min': 1500.0, 'max': 2250.0}, {'current': 1696.267, 'min': 1500.0, 'max': 2250.0}, {'current': 2446.588, 'min': 1500.0, 'max': 2250.0}, {'current': 1734.659, 'min': 1500.0, 'max': 2250.0}, {'current': 1739.356, 'min': 1500.0, 'max': 2250.0}, {'current': 2599.934, 'min': 1500.0, 'max': 2250.0}, {'current': 1742.721, 'min': 1500.0, 'max': 2250.0}, {'current': 3219.251, 'min': 1500.0, 'max': 2250.0}, {'current': 2383.362, 'min': 1500.0, 'max': 2250.0}, {'current': 3318.315, 'min': 1500.0, 'max': 2250.0}, {'current': 3338.376, 'min': 1500.0, 'max': 2250.0}, {'current': 3301.658, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.124, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.145, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.312, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.511, 'min': 1500.0, 'max': 2250.0}, {'current': 2248.971, 'min': 1500.0, 'max': 2250.0}, {'current': 3377.984, 'min': 1500.0, 'max': 2250.0}, {'current': 1688.388, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.865, 'min': 1500.0, 'max': 2250.0}, {'current': 3377.83, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.624, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.541, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.373, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.313, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.693, 'min': 1500.0, 'max': 2250.0}, {'current': 3379.52, 'min': 1500.0, 'max': 2250.0}, {'current': 3386.332, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.63, 'min': 1500.0, 'max': 2250.0}, {'current': 2281.053, 'min': 1500.0, 'max': 2250.0}, {'current': 2313.761, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.877, 'min': 1500.0, 'max': 2250.0}, {'current': 3380.03, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.233, 'min': 1500.0, 'max': 2250.0}, {'current': 3395.195, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.703, 'min': 1500.0, 'max': 2250.0}, {'current': 3381.315, 'min': 1500.0, 'max': 2250.0}, {'current': 2305.508, 'min': 1500.0, 'max': 2250.0}, {'current': 3396.31, 'min': 1500.0, 'max': 2250.0}, {'current': 3385.894, 'min': 1500.0, 'max': 2250.0}, {'current': 2293.509, 'min': 1500.0, 'max': 2250.0}, {'current': 3392.0, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.654, 'min': 1500.0, 'max': 2250.0}, {'current': 3365.391, 'min': 1500.0, 'max': 2250.0}, {'current': 2343.064, 'min': 1500.0, 'max': 2250.0}, {'current': 2347.138, 'min': 1500.0, 'max': 2250.0}, {'current': 2359.142, 'min': 1500.0, 'max': 2250.0}, {'current': 2370.419, 'min': 1500.0, 'max': 2250.0}, {'current': 3399.092, 'min': 1500.0, 'max': 2250.0}, {'current': 2287.721, 'min': 1500.0, 'max': 2250.0}, {'current': 3387.869, 'min': 1500.0, 'max': 2250.0}, {'current': 2355.362, 'min': 1500.0, 'max': 2250.0}, {'current': 3389.651, 'min': 1500.0, 'max': 2250.0}, {'current': 2274.381, 'min': 1500.0, 'max': 2250.0}, {'current': 2285.753, 'min': 1500.0, 'max': 2250.0}, {'current': 3394.933, 'min': 1500.0, 'max': 2250.0}, {'current': 3391.809, 'min': 1500.0, 'max': 2250.0}, {'current': 3402.479, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.658, 'min': 1500.0, 'max': 2250.0}, {'current': 2364.714, 'min': 1500.0, 'max': 2250.0}, {'current': 2275.119, 'min': 1500.0, 'max': 2250.0}, {'current': 2277.049, 'min': 1500.0, 'max': 2250.0}, {'current': 3404.154, 'min': 1500.0, 'max': 2250.0}, {'current': 3393.505, 'min': 1500.0, 'max': 2250.0}, {'current': 3394.623, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.906, 'min': 1500.0, 'max': 2250.0}, {'current': 3396.339, 'min': 1500.0, 'max': 2250.0}, {'current': 2365.876, 'min': 1500.0, 'max': 2250.0}, {'current': 3390.835, 'min': 1500.0, 'max': 2250.0}, {'current': 2300.913, 'min': 1500.0, 'max': 2250.0}, {'current': 3401.568, 'min': 1500.0, 'max': 2250.0}, {'current': 3388.69, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.639, 'min': 1500.0, 'max': 2250.0}, {'current': 3383.361, 'min': 1500.0, 'max': 2250.0}, {'current': 3201.077, 'min': 1500.0, 'max': 2250.0}], 'disk': {'/': {'total': 1757.7545127868652, 'used': 1270.1754608154297}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 2015.6736488342285}}
+2024-05-13 21:33:58,723 INFO    HandlerThread:2554281 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-13 21:33:58,723 INFO    HandlerThread:2554281 [system_monitor.py:probe():227] Publishing system info
+2024-05-13 21:33:58,723 DEBUG   HandlerThread:2554281 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-13 21:33:59,570 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/conda-environment.yaml
+2024-05-13 21:34:01,242 DEBUG   HandlerThread:2554281 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-13 21:34:01,243 INFO    HandlerThread:2554281 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-13 21:34:01,245 DEBUG   SenderThread:2554281 [sender.py:send():379] send: files
+2024-05-13 21:34:01,245 INFO    SenderThread:2554281 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-05-13 21:34:01,360 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-13 21:34:01,360 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: python_packages
+2024-05-13 21:34:01,362 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:34:01,362 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:34:01,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:34:01,570 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/conda-environment.yaml
+2024-05-13 21:34:01,570 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/requirements.txt
+2024-05-13 21:34:01,570 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/wandb-metadata.json
+2024-05-13 21:34:01,679 DEBUG   SenderThread:2554281 [sender.py:send():379] send: telemetry
+2024-05-13 21:34:01,679 DEBUG   SenderThread:2554281 [sender.py:send():379] send: config
+2024-05-13 21:34:02,570 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:02,718 INFO    wandb-upload_0:2554281 [upload_job.py:push():131] Uploaded file /tmp/tmpgnie_zp2wandb/diwola5f-wandb-metadata.json
+2024-05-13 21:34:03,556 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:04,571 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:06,571 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:09,499 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:12,573 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:14,989 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:16,362 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:34:16,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:34:16,363 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:34:20,574 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:20,787 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:25,840 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:26,576 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:30,577 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:31,362 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:34:31,362 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:34:31,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:34:31,749 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:32,578 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/config.yaml
+2024-05-13 21:34:34,578 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:37,296 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:40,580 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:42,449 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:46,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:34:46,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:34:46,364 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:34:46,582 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:47,661 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:50,583 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:52,856 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:56,584 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:34:58,024 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:34:58,655 DEBUG   SystemMonitor:2554281 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-13 21:34:58,658 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:35:01,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:35:01,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:35:01,364 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:35:02,586 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:03,704 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:06,587 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:09,567 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:12,589 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:14,669 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:16,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:35:16,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:35:16,363 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:35:16,589 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:19,792 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:20,590 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:24,592 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:25,184 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:28,661 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:35:30,445 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:30,593 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:31,362 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:35:31,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:35:31,363 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:35:35,580 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:36,595 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:40,596 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:41,484 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:46,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:35:46,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:35:46,364 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:35:46,746 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:48,598 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:52,183 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:56,601 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:35:58,038 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:35:58,664 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:36:01,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:36:01,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:36:01,364 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:36:03,751 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:06,605 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:36:08,809 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:14,352 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:14,608 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:36:16,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:36:16,363 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:36:16,364 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:36:19,540 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:20,610 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:36:24,540 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:28,613 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:36:28,665 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:36:29,667 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:31,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:36:31,364 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:36:31,364 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:36:34,712 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:38,616 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:36:40,137 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:45,138 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:46,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:36:46,363 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:36:46,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:36:46,619 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:36:50,678 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:52,621 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:36:55,922 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:36:58,668 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:37:00,625 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:37:01,360 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:01,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:37:01,364 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:37:01,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:37:06,709 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:10,627 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:37:12,489 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:16,363 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:37:16,364 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:37:16,364 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:37:17,757 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:18,629 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:37:23,378 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:26,632 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:37:28,671 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:37:28,672 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:31,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:37:31,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:37:31,365 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:37:32,633 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:37:34,202 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:39,202 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:42,636 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:37:44,933 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:46,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:37:46,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:37:46,366 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:37:50,008 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:50,639 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:37:55,009 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:37:58,672 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:38:00,641 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:00,694 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:01,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:38:01,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:38:01,366 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:38:04,642 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:06,313 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:11,314 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:12,649 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:16,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:38:16,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:38:16,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:16,366 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:38:22,179 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:22,652 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:27,180 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:28,675 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:38:30,655 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:31,365 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:38:31,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:38:31,366 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:38:32,701 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:36,656 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:38,262 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:43,263 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:44,658 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:46,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:38:46,367 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:38:46,367 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:38:48,738 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:52,660 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:38:54,566 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:38:58,679 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:39:00,469 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:00,662 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:01,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:39:01,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:39:01,367 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:39:05,687 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:08,664 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:11,537 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:16,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:39:16,367 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:39:16,367 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:39:16,698 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:18,667 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:22,271 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:26,669 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:27,678 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:28,680 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:39:31,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:39:31,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:39:31,367 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:39:32,670 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:32,723 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:37,724 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:40,673 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:42,726 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:46,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:39:46,366 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:39:46,367 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:39:48,559 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:48,674 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:53,560 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:39:56,676 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:39:58,682 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:39:58,684 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:01,368 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:40:01,368 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:40:01,368 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:40:03,774 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:04,682 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:40:08,774 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:12,684 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:40:13,821 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:16,367 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:40:16,367 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:40:16,368 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:40:19,682 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:22,687 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:40:25,640 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:28,685 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:40:28,688 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:40:30,686 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:31,367 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:40:31,367 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:40:31,368 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:40:35,756 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:36,690 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:40:40,806 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:46,368 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:40:46,369 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:40:46,369 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:40:46,672 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:46,693 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:40:50,694 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:40:52,353 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:57,355 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:40:58,687 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:41:00,697 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:41:01,368 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:41:01,368 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:41:01,368 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:41:02,708 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:07,709 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:08,700 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:41:13,117 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:16,368 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 21:41:16,368 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:41:16,369 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: stop_status
+2024-05-13 21:41:18,703 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:41:18,931 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:23,932 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:26,705 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:41:27,179 DEBUG   SenderThread:2554281 [sender.py:send():379] send: exit
+2024-05-13 21:41:27,179 INFO    SenderThread:2554281 [sender.py:send_exit():586] handling exit code: 1
+2024-05-13 21:41:27,180 INFO    SenderThread:2554281 [sender.py:send_exit():588] handling runtime: 448
+2024-05-13 21:41:27,180 INFO    SenderThread:2554281 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-13 21:41:27,180 INFO    SenderThread:2554281 [sender.py:send_exit():594] send defer
+2024-05-13 21:41:27,180 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:27,181 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-13 21:41:27,181 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:27,181 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-05-13 21:41:27,181 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 1
+2024-05-13 21:41:27,181 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:27,181 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-13 21:41:27,181 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:27,181 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-05-13 21:41:27,181 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 2
+2024-05-13 21:41:27,181 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:27,181 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-13 21:41:27,181 INFO    HandlerThread:2554281 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-13 21:41:27,183 DEBUG   SystemMonitor:2554281 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-13 21:41:27,183 INFO    HandlerThread:2554281 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-13 21:41:27,183 DEBUG   SystemMonitor:2554281 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-13 21:41:27,183 INFO    HandlerThread:2554281 [interfaces.py:finish():202] Joined disk monitor
+2024-05-13 21:41:27,705 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_created():271] file/dir created: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/wandb-summary.json
+2024-05-13 21:41:28,706 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:41:32,820 INFO    HandlerThread:2554281 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-13 21:41:32,821 INFO    HandlerThread:2554281 [interfaces.py:finish():202] Joined memory monitor
+2024-05-13 21:41:32,821 INFO    HandlerThread:2554281 [interfaces.py:finish():202] Joined network monitor
+2024-05-13 21:41:32,821 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:32,821 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:32,821 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:32,821 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-05-13 21:41:32,821 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 3
+2024-05-13 21:41:32,822 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:32,822 DEBUG   SenderThread:2554281 [sender.py:send():379] send: stats
+2024-05-13 21:41:32,822 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-13 21:41:32,823 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:32,824 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:32,824 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-05-13 21:41:32,824 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 4
+2024-05-13 21:41:32,824 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:32,825 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-13 21:41:32,825 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:32,825 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-05-13 21:41:32,825 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 5
+2024-05-13 21:41:32,825 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:32,825 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-13 21:41:32,825 DEBUG   SenderThread:2554281 [sender.py:send():379] send: summary
+2024-05-13 21:41:32,825 INFO    SenderThread:2554281 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-13 21:41:32,825 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:32,825 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-05-13 21:41:32,825 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 6
+2024-05-13 21:41:32,826 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:32,826 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-13 21:41:32,826 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:32,826 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-05-13 21:41:32,826 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 7
+2024-05-13 21:41:32,826 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:32,826 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:32,826 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-13 21:41:32,826 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:32,826 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-05-13 21:41:33,182 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-13 21:41:33,183 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:33,708 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/wandb-summary.json
+2024-05-13 21:41:34,647 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 8
+2024-05-13 21:41:34,647 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:34,647 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:34,647 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-13 21:41:34,647 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:34,647 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-05-13 21:41:34,648 INFO    SenderThread:2554281 [job_builder.py:build():318] Attempting to build job artifact
+2024-05-13 21:41:34,648 INFO    SenderThread:2554281 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-05-13 21:41:34,664 INFO    SenderThread:2554281 [job_builder.py:build():431] adding wandb-job metadata file
+2024-05-13 21:41:34,666 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 9
+2024-05-13 21:41:34,666 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:34,666 DEBUG   SenderThread:2554281 [sender.py:send():379] send: artifact
+2024-05-13 21:41:34,666 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-13 21:41:34,708 INFO    Thread-12 :2554281 [dir_watcher.py:_on_file_modified():288] file/dir modified: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:41:35,184 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:36,207 INFO    SenderThread:2554281 [sender.py:send_artifact():1468] sent artifact job-https___github.com_Kaustubh-iitb_Power-Mechanism-new.git_Higgs_test_higgs.py - {'id': 'QXJ0aWZhY3Q6ODMzMzY1MjYz', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MzgwNTQ3MA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODMzMzg3Mzgx', 'versionIndex': 2}}}
+2024-05-13 21:41:36,207 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:36,208 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-05-13 21:41:36,208 INFO    SenderThread:2554281 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-13 21:41:36,709 INFO    SenderThread:2554281 [dir_watcher.py:finish():388] scan: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files
+2024-05-13 21:41:36,709 INFO    SenderThread:2554281 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/requirements.txt requirements.txt
+2024-05-13 21:41:36,709 INFO    SenderThread:2554281 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log output.log
+2024-05-13 21:41:36,709 INFO    SenderThread:2554281 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/wandb-summary.json wandb-summary.json
+2024-05-13 21:41:36,710 INFO    SenderThread:2554281 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/wandb-metadata.json wandb-metadata.json
+2024-05-13 21:41:36,710 INFO    SenderThread:2554281 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/config.yaml config.yaml
+2024-05-13 21:41:36,710 INFO    SenderThread:2554281 [dir_watcher.py:finish():402] scan save: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/conda-environment.yaml conda-environment.yaml
+2024-05-13 21:41:36,710 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 10
+2024-05-13 21:41:36,710 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:36,711 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:36,713 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-13 21:41:36,715 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:36,717 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-05-13 21:41:36,717 INFO    SenderThread:2554281 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-13 21:41:37,185 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:37,185 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:37,436 INFO    wandb-upload_0:2554281 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/output.log
+2024-05-13 21:41:37,469 INFO    wandb-upload_2:2554281 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/wandb-summary.json
+2024-05-13 21:41:37,513 INFO    wandb-upload_4:2554281 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/conda-environment.yaml
+2024-05-13 21:41:37,522 INFO    wandb-upload_3:2554281 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/config.yaml
+2024-05-13 21:41:38,186 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:38,186 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:38,334 INFO    wandb-upload_1:2554281 [upload_job.py:push():131] Uploaded file /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/files/requirements.txt
+2024-05-13 21:41:38,534 INFO    Thread-11 (_thread_body):2554281 [sender.py:transition_state():614] send defer: 11
+2024-05-13 21:41:38,535 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:38,535 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-13 21:41:38,535 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:38,535 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-05-13 21:41:38,535 INFO    SenderThread:2554281 [file_pusher.py:join():178] waiting for file pusher
+2024-05-13 21:41:38,536 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 12
+2024-05-13 21:41:38,536 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:38,536 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-13 21:41:38,536 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:38,536 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-05-13 21:41:38,536 INFO    SenderThread:2554281 [file_stream.py:finish():614] file stream finish called
+2024-05-13 21:41:39,187 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:39,448 INFO    SenderThread:2554281 [file_stream.py:finish():618] file stream finish is done
+2024-05-13 21:41:39,448 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 13
+2024-05-13 21:41:39,448 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:39,448 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:39,448 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-13 21:41:39,448 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:39,448 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-05-13 21:41:39,448 INFO    SenderThread:2554281 [sender.py:transition_state():614] send defer: 14
+2024-05-13 21:41:39,449 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 21:41:39,449 INFO    HandlerThread:2554281 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-13 21:41:39,449 DEBUG   SenderThread:2554281 [sender.py:send():379] send: final
+2024-05-13 21:41:39,449 DEBUG   SenderThread:2554281 [sender.py:send():379] send: footer
+2024-05-13 21:41:39,449 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: defer
+2024-05-13 21:41:39,449 INFO    SenderThread:2554281 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-05-13 21:41:39,449 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:39,449 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:39,450 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 21:41:39,450 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: poll_exit
+2024-05-13 21:41:39,450 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: server_info
+2024-05-13 21:41:39,450 DEBUG   SenderThread:2554281 [sender.py:send_request():406] send_request: server_info
+2024-05-13 21:41:39,451 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-13 21:41:39,452 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-13 21:41:39,452 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 21:41:39,729 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 21:41:39,729 INFO    MainThread:2554281 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-05-13 21:41:39,729 INFO    MainThread:2554281 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-05-13 21:41:39,729 INFO    MainThread:2554281 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-05-13 21:41:39,730 DEBUG   HandlerThread:2554281 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-13 21:41:39,730 INFO    HandlerThread:2554281 [handler.py:finish():866] shutting down handler
+2024-05-13 21:41:40,729 INFO    SenderThread:2554281 [sender.py:finish():1546] shutting down sender
+2024-05-13 21:41:40,729 INFO    SenderThread:2554281 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-13 21:41:40,729 INFO    SenderThread:2554281 [file_pusher.py:join():178] waiting for file pusher
+2024-05-13 21:41:40,729 INFO    WriterThread:2554281 [datastore.py:close():296] close: /raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/wandb/run-20240513_213357-y0hgvrni/run-y0hgvrni.wandb

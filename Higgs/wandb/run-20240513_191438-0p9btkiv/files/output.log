@@ -1,0 +1,293 @@
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 49/49 [03:54<00:00,  4.78s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 13/13 [00:58<00:00,  4.49s/it]
+[{"name": "AdaBoostClassifier", "type": "abc.ABCMeta", "interfaces": ["abc.ABCMeta", "type", "object"], "hasNamedChildren": true, "value": "<class 'sklearn.ensemble._weight_boosting.AdaBoostClassifier'>", "root": "AdaBoostClassifier", "propertyChain": [], "language": "python"}, {"name": "CI_KDE", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function CI_KDE at 0x7f108586e2a0>", "root": "CI_KDE", "propertyChain": [], "language": "python"}, {"name": "CI_KDE_der", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function CI_KDE_der at 0x7f108586e340>", "root": "CI_KDE_der", "propertyChain": [], "language": "python"}, {"name": "F", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'torch.nn.functional' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/nn/functional.py'>", "root": "F", "propertyChain": [], "language": "python"}, {"name": "GradientBoostingClassifier", "type": "abc.ABCMeta", "interfaces": ["abc.ABCMeta", "type", "object"], "hasNamedChildren": true, "value": "<class 'sklearn.ensemble._gb.GradientBoostingClassifier'>", "root": "GradientBoostingClassifier", "propertyChain": [], "language": "python"}, {"name": "LogisticRegression", "type": "type", "interfaces": ["type", "object"], "hasNamedChildren": true, "value": "<class 'utils.LogisticRegression'>", "root": "LogisticRegression", "propertyChain": [], "language": "python"}, {"name": "Net_new", "type": "type", "interfaces": ["type", "object"], "hasNamedChildren": true, "value": "<class 'utils.Net_new'>", "root": "Net_new", "propertyChain": [], "language": "python"}, {"name": "RandomForestClassifier", "type": "abc.ABCMeta", "interfaces": ["abc.ABCMeta", "type", "object"], "hasNamedChildren": true, "value": "<class 'sklearn.ensemble._forest.RandomForestClassifier'>", "root": "RandomForestClassifier", "propertyChain": [], "language": "python"}, {"name": "X", "type": "numpy.ndarray", "interfaces": ["numpy.ndarray", "object"], "hasNamedChildren": false, "value": "array([[ 0.02362388,  0.00881268,  0.01668992, ...,  0.        ,\n         0.00017061,  0.        ],\n       [ 0.0274569 ,  0.01173227,  0.01761256, ...,  0.00017061,\n         0.        ,  0.        ],\n       [-0.1704359 ,  0.0276676 ,  0.0214884 , ...,  0.00017061,\n         0.        ,  0.        ],\n       ...,\n       [ 0.01799165,  0.01032613,  0.01293863, ...,  0.00017061,\n         0.        ,  0.        ],\n       [ 0.01619926,  0.00330328,  0.01173977, ...,  0.        ,\n         0.        ,  0.        ],\n       [-0.1704359 ,  0.01241265,  0.01208423, ...,  0.        ,\n         0.        ,  0.        ]], dtype=float32)", "root": "X", "propertyChain": [], "language": "python"}, {"name": "XGBClassifier", "type": "type", "interfaces": ["type", "object"], "hasNamedChildren": true, "value": "<class 'xgboost.sklearn.XGBClassifier'>", "root": "XGBClassifier", "propertyChain": [], "language": "python"}, {"name": "X_emb_test", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([[ 0.1052, -0.1340,  0.3621,  ...,  0.3012,  0.4119, -0.4246],\n        [ 0.1217, -0.1345,  0.3596,  ...,  0.3109,  0.4183, -0.4154],\n        [ 0.1195, -0.1354,  0.3599,  ...,  0.3085,  0.4141, -0.4172],\n        ...,\n        [ 0.0876, -0.2027,  0.3142,  ...,  0.4087,  0.3257, -0.3972],\n        [ 0.1154, -0.1347,  0.3564,  ...,  0.3143,  0.4148, -0.4178],\n        [ 0.0206, -0.0198,  0.1622,  ...,  0.1004,  0.2888, -0.3550]])", "root": "X_emb_test", "propertyChain": [], "language": "python"}, {"name": "X_emb_train", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([[-0.0383,  0.0425, -0.0287,  ..., -0.0702, -0.1021, -0.0208],\n        [-0.0085,  0.0097, -0.0032,  ..., -0.0284, -0.0275, -0.0073],\n        [-0.0220,  0.0243, -0.0187,  ..., -0.0496, -0.0593, -0.0066],\n        ...,\n        [-0.0199,  0.0144, -0.0065,  ..., -0.0359, -0.0369, -0.0067],\n        [ 0.1127, -0.1341,  0.3561,  ...,  0.3110,  0.4114, -0.4202],\n        [ 0.1214, -0.1366,  0.3599,  ...,  0.3114,  0.4161, -0.4148]])", "root": "X_emb_train", "propertyChain": [], "language": "python"}, {"name": "X_test", "type": "numpy.ndarray", "interfaces": ["numpy.ndarray", "object"], "hasNamedChildren": false, "value": "array([[ 0.02326595,  0.00548363,  0.01623457, ...,  0.        ,\n         0.        ,  0.        ],\n       [ 0.02100968,  0.01261925,  0.01246537, ...,  0.        ,\n         0.        ,  0.        ],\n       [ 0.01948258,  0.01318481,  0.0144299 , ...,  0.        ,\n         0.        ,  0.        ],\n       ...,\n       [-0.1704359 ,  0.01225313,  0.02033834, ...,  0.        ,\n         0.        ,  0.        ],\n       [ 0.0118331 ,  0.00905051,  0.00886915, ...,  0.        ,\n         0.        ,  0.        ],\n       [ 0.01812609,  0.01430399,  0.01250136, ...,  0.00017061,\n         0.        ,  0.        ]], dtype=float32)", "root": "X_test", "propertyChain": [], "language": "python"}, {"name": "X_train", "type": "numpy.ndarray", "interfaces": ["numpy.ndarray", "object"], "hasNamedChildren": false, "value": "array([[0.02525369, 0.00258588, 0.01407691, ..., 0.        , 0.00017061,\n        0.        ],\n       [0.0144212 , 0.00871475, 0.00965582, ..., 0.        , 0.00017061,\n        0.        ],\n       [0.01523414, 0.00888212, 0.01072688, ..., 0.        , 0.00017061,\n        0.        ],\n       ...,\n       [0.01488747, 0.00887324, 0.01163161, ..., 0.        , 0.00017061,\n        0.        ],\n       [0.01175104, 0.00877873, 0.00952616, ..., 0.        , 0.        ,\n        0.        ],\n       [0.01928604, 0.01422466, 0.01464998, ..., 0.        , 0.        ,\n        0.        ]], dtype=float32)", "root": "X_train", "propertyChain": [], "language": "python"}, {"name": "argparse", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'argparse' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/argparse.py'>", "root": "argparse", "propertyChain": [], "language": "python"}, {"name": "create_model_embs2", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function create_model_embs2 at 0x7f108586e160>", "root": "create_model_embs2", "propertyChain": [], "language": "python"}, {"name": "data", "type": "pandas.core.frame.DataFrame", "interfaces": ["pandas.core.frame.DataFrame", "pandas.core.generic.NDFrame", "pandas.core.base.PandasObject", "pandas.core.accessor.DirNamesMixin", "pandas.core.indexing.IndexingMixin", "pandas.core.arraylike.OpsMixin", "object"], "hasNamedChildren": true, "value": "        EventId  DER_mass_MMC  DER_mass_transverse_met_lep  DER_mass_vis  DER_pt_h  DER_deltaeta_jet_jet  DER_mass_jet_jet  DER_prodeta_jet_jet  DER_deltar_tau_lep  DER_pt_tot  DER_sum_pt  DER_pt_ratio_lep_tau  DER_met_phi_centrality  DER_lep_eta_centrality  PRI_tau_pt  PRI_tau_eta  PRI_tau_phi  PRI_lep_pt  PRI_lep_eta  PRI_lep_phi  PRI_met  PRI_met_phi  PRI_met_sumet  PRI_jet_num  PRI_jet_leading_pt  PRI_jet_leading_eta  PRI_jet_leading_phi  PRI_jet_subleading_pt  PRI_jet_subleading_eta  PRI_jet_subleading_phi  PRI_jet_all_pt    Weight Label\n0        100000       138.470                       51.655        97.827    27.980                  0.91           124.711                2.666               3.064      41.928     197.760                 1.582                   1.396                     0.2      32.638        1.017        0.381      51.626        2.273       -2.414   16.824       -0.277        258.733            2              67.435                2.150                0.444     ...", "root": "data", "propertyChain": [], "language": "python"}, {"name": "derivative", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function derivative at 0x7f11dd9b3ba0>", "root": "derivative", "propertyChain": [], "language": "python"}, {"name": "device", "type": "torch.device", "interfaces": ["torch.device", "object"], "hasNamedChildren": false, "value": "device(type='cuda', index=2)", "root": "device", "propertyChain": [], "language": "python"}, {"name": "df_data", "type": "pandas.core.frame.DataFrame", "interfaces": ["pandas.core.frame.DataFrame", "pandas.core.generic.NDFrame", "pandas.core.base.PandasObject", "pandas.core.accessor.DirNamesMixin", "pandas.core.indexing.IndexingMixin", "pandas.core.arraylike.OpsMixin", "object"], "hasNamedChildren": true, "value": "        DER_mass_MMC  DER_mass_transverse_met_lep  DER_mass_vis  DER_pt_h  DER_deltaeta_jet_jet  DER_mass_jet_jet  DER_prodeta_jet_jet  DER_deltar_tau_lep  DER_pt_tot  DER_sum_pt  DER_pt_ratio_lep_tau  DER_met_phi_centrality  DER_lep_eta_centrality  PRI_tau_pt  PRI_tau_eta  PRI_tau_phi  PRI_lep_pt  PRI_lep_eta  PRI_lep_phi  PRI_met  PRI_met_phi  PRI_met_sumet  PRI_jet_num  PRI_jet_leading_pt  PRI_jet_leading_eta  PRI_jet_leading_phi  PRI_jet_subleading_pt  PRI_jet_subleading_eta  PRI_jet_subleading_phi  PRI_jet_all_pt Label\n0            138.470                       51.655        97.827    27.980                  0.91           124.711                2.666               3.064      41.928     197.760                 1.582                   1.396                     0.2      32.638        1.017        0.381      51.626        2.273       -2.414   16.824       -0.277        258.733            2              67.435                2.150                0.444                 46.062          ...", "root": "df_data", "propertyChain": [], "language": "python"}, {"name": "epochs", "type": "int", "interfaces": ["int", "object"], "hasNamedChildren": false, "value": "1", "root": "epochs", "propertyChain": [], "language": "python"}, {"name": "gau_ker", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function gau_ker at 0x7f1299f80540>", "root": "gau_ker", "propertyChain": [], "language": "python"}, {"name": "gau_ker_der", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function gau_ker_der at 0x7f108586de40>", "root": "gau_ker_der", "propertyChain": [], "language": "python"}, {"name": "indices", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([152844, 154486,  50716,  ...,   7792,  22895, 114324])", "root": "indices", "propertyChain": [], "language": "python"}, {"name": "losses_test", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([0.6807, 0.6860, 0.6827,  ..., 0.7938, 0.6625, 0.4981])", "root": "losses_test", "propertyChain": [], "language": "python"}, {"name": "losses_train", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([0.4587, 0.4614, 0.4616,  ..., 2.6539, 2.6971, 2.8834])", "root": "losses_train", "propertyChain": [], "language": "python"}, {"name": "math", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'math' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/lib-dynload/math.cpython-312-x86_64-linux-gnu.so'>", "root": "math", "propertyChain": [], "language": "python"}, {"name": "model_path", "type": "str", "interfaces": ["str", "object"], "hasNamedChildren": false, "value": "'Models/higg_4096_1'", "root": "model_path", "propertyChain": [], "language": "python"}, {"name": "net", "type": "utils.Net_new", "interfaces": ["utils.Net_new", "torch.nn.modules.module.Module", "object"], "hasNamedChildren": true, "value": "Net_new(\n  (H_net1): Sequential(\n    (0): Linear(in_features=33, out_features=128, bias=True)\n    (1): Sigmoid()\n    (2): Linear(in_features=128, out_features=64, bias=True)\n    (3): Sigmoid()\n    (4): Linear(in_features=64, out_features=1089, bias=True)\n  )\n  (X_net): Sequential(\n    (0): Linear(in_features=33, out_features=64, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=64, out_features=128, bias=True)\n    (3): ReLU()\n    (4): Linear(in_features=128, out_features=1, bias=True)\n    (5): Sigmoid()\n  )\n)", "root": "net", "propertyChain": [], "language": "python"}, {"name": "nn", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'torch.nn' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/nn/__init__.py'>", "root": "nn", "propertyChain": [], "language": "python"}, {"name": "normalize2", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function normalize2 at 0x7f108586dee0>", "root": "normalize2", "propertyChain": [], "language": "python"}, {"name": "np", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'numpy' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/numpy/__init__.py'>", "root": "np", "propertyChain": [], "language": "python"}, {"name": "parser", "type": "argparse.ArgumentParser", "interfaces": ["argparse.ArgumentParser", "argparse._AttributeHolder", "argparse._ActionsContainer", "object"], "hasNamedChildren": true, "value": "ArgumentParser(prog='ipykernel_launcher.py', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)", "root": "parser", "propertyChain": [], "language": "python"}, {"name": "pd", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'pandas' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/pandas/__init__.py'>", "root": "pd", "propertyChain": [], "language": "python"}, {"name": "py_kde", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function py_kde at 0x7f108586d260>", "root": "py_kde", "propertyChain": [], "language": "python"}, {"name": "py_kde_der", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function py_kde_der at 0x7f108586dda0>", "root": "py_kde_der", "propertyChain": [], "language": "python"}, {"name": "state_dict", "type": "collections.OrderedDict", "interfaces": ["collections.OrderedDict", "dict", "object"], "hasNamedChildren": true, "value": "OrderedDict({'H_net1.0.weight': tensor([[-0.0255,  0.1294, -0.0160,  ..., -0.0071,  0.0021, -0.0546],\n        [-0.0019,  0.1769,  0.1163,  ..., -0.0484,  0.0447, -0.0788],\n        [-0.1322,  0.0004, -0.0729,  ..., -0.0263, -0.1749, -0.0948],\n        ...,\n        [ 0.1140, -0.1058,  0.1151,  ...,  0.1731, -0.1067, -0.1557],\n        [ 0.1556, -0.1211, -0.1096,  ..., -0.1375,  0.1093, -0.0983],\n        [-0.0793, -0.1309,  0.0707,  ..., -0.0424,  0.1338, -0.0938]],\n       device='cuda:3'), 'H_net1.0.bias': tensor([ 0.0854, -0.0601, -0.1565,  0.0475,  0.0636, -0.0479,  0.1664,  0.0452,\n         0.0907, -0.0281,  0.0986, -0.1265, -0.1593, -0.1113,  0.0741, -0.0540,\n        -0.0908,  0.0896, -0.0834,  0.0875,  0.1621, -0.0173,  0.1290, -0.1440,\n         0.0686, -0.1267, -0.0069, -0.0482, -0.0984, -0.0353, -0.0141, -0.0533,\n        -0.0299,  0.1534, -0.1270,  0.1677, -0.0635,  0.1061, -0.0886,  0.0996,\n         0.0041, -0.0623,  0.1997,  0.0719, -0.1627, -0.0547, -0.1455, -0.0462,\n         0....", "root": "state_dict", "propertyChain": [], "language": "python"}, {"name": "stats", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'scipy.stats' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/scipy/stats/__init__.py'>", "root": "stats", "propertyChain": [], "language": "python"}, {"name": "testloader", "type": "torch.utils.data.dataloader.DataLoader", "interfaces": ["torch.utils.data.dataloader.DataLoader", "typing.Generic", "object"], "hasNamedChildren": true, "value": "<torch.utils.data.dataloader.DataLoader object at 0x7f1030c875f0>", "root": "testloader", "propertyChain": [], "language": "python"}, {"name": "torch", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'torch' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/__init__.py'>", "root": "torch", "propertyChain": [], "language": "python"}, {"name": "tqdm", "type": "type", "interfaces": ["type", "object"], "hasNamedChildren": true, "value": "<class 'tqdm.std.tqdm'>", "root": "tqdm", "propertyChain": [], "language": "python"}, {"name": "train_emb", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function train_emb at 0x7f108586e200>", "root": "train_emb", "propertyChain": [], "language": "python"}, {"name": "train_model_priv", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function train_model_priv at 0x7f108586df80>", "root": "train_model_priv", "propertyChain": [], "language": "python"}, {"name": "train_test_split", "type": "function", "interfaces": ["function", "object"], "hasNamedChildren": true, "value": "<function train_test_split at 0x7f1136357420>", "root": "train_test_split", "propertyChain": [], "language": "python"}, {"name": "trainloader", "type": "torch.utils.data.dataloader.DataLoader", "interfaces": ["torch.utils.data.dataloader.DataLoader", "typing.Generic", "object"], "hasNamedChildren": true, "value": "<torch.utils.data.dataloader.DataLoader object at 0x7f106be7f260>", "root": "trainloader", "propertyChain": [], "language": "python"}, {"name": "wandb", "type": "module", "interfaces": ["module", "object"], "hasNamedChildren": true, "value": "<module 'wandb' from '/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/wandb/__init__.py'>", "root": "wandb", "propertyChain": [], "language": "python"}, {"name": "x_test_tensor", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([[ 0.0233,  0.0055,  0.0162,  ...,  0.0000,  0.0000,  0.0000],\n        [ 0.0210,  0.0126,  0.0125,  ...,  0.0000,  0.0000,  0.0000],\n        [ 0.0195,  0.0132,  0.0144,  ...,  0.0000,  0.0000,  0.0000],\n        ...,\n        [-0.1704,  0.0123,  0.0203,  ...,  0.0000,  0.0000,  0.0000],\n        [ 0.0118,  0.0091,  0.0089,  ...,  0.0000,  0.0000,  0.0000],\n        [ 0.0181,  0.0143,  0.0125,  ...,  0.0002,  0.0000,  0.0000]])", "root": "x_test_tensor", "propertyChain": [], "language": "python"}, {"name": "x_train_tensor", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([[0.0253, 0.0026, 0.0141,  ..., 0.0000, 0.0002, 0.0000],\n        [0.0144, 0.0087, 0.0097,  ..., 0.0000, 0.0002, 0.0000],\n        [0.0152, 0.0089, 0.0107,  ..., 0.0000, 0.0002, 0.0000],\n        ...,\n        [0.0149, 0.0089, 0.0116,  ..., 0.0000, 0.0002, 0.0000],\n        [0.0118, 0.0088, 0.0095,  ..., 0.0000, 0.0000, 0.0000],\n        [0.0193, 0.0142, 0.0146,  ..., 0.0000, 0.0000, 0.0000]])", "root": "x_train_tensor", "propertyChain": [], "language": "python"}, {"name": "y", "type": "numpy.ndarray", "interfaces": ["numpy.ndarray", "object"], "hasNamedChildren": false, "value": "array([1., 0., 0., ..., 1., 0., 0.], dtype=float32)", "root": "y", "propertyChain": [], "language": "python"}, {"name": "y_test", "type": "numpy.ndarray", "interfaces": ["numpy.ndarray", "object"], "hasNamedChildren": false, "value": "array([0., 0., 0., ..., 0., 0., 0.], dtype=float32)", "root": "y_test", "propertyChain": [], "language": "python"}, {"name": "y_test_tensor", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([0., 0., 0.,  ..., 0., 0., 0.])", "root": "y_test_tensor", "propertyChain": [], "language": "python"}, {"name": "y_train", "type": "numpy.ndarray", "interfaces": ["numpy.ndarray", "object"], "hasNamedChildren": false, "value": "array([1., 0., 0., ..., 0., 0., 0.], dtype=float32)", "root": "y_train", "propertyChain": [], "language": "python"}, {"name": "y_train_tensor", "type": "torch.Tensor", "interfaces": ["torch.Tensor", "torch._C.TensorBase", "object"], "hasNamedChildren": true, "value": "tensor([1., 0., 0.,  ..., 0., 0., 0.])", "root": "y_train_tensor", "propertyChain": [], "language": "python"}]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 250000 entries, 0 to 249999
+Data columns (total 33 columns):
+ #   Column                       Non-Null Count   Dtype
+---  ------                       --------------   -----
+ 0   EventId                      250000 non-null  int64
+ 1   DER_mass_MMC                 250000 non-null  float64
+ 2   DER_mass_transverse_met_lep  250000 non-null  float64
+ 3   DER_mass_vis                 250000 non-null  float64
+ 4   DER_pt_h                     250000 non-null  float64
+ 5   DER_deltaeta_jet_jet         250000 non-null  float64
+ 6   DER_mass_jet_jet             250000 non-null  float64
+ 7   DER_prodeta_jet_jet          250000 non-null  float64
+ 8   DER_deltar_tau_lep           250000 non-null  float64
+ 9   DER_pt_tot                   250000 non-null  float64
+ 10  DER_sum_pt                   250000 non-null  float64
+ 11  DER_pt_ratio_lep_tau         250000 non-null  float64
+ 12  DER_met_phi_centrality       250000 non-null  float64
+ 13  DER_lep_eta_centrality       250000 non-null  float64
+ 14  PRI_tau_pt                   250000 non-null  float64
+ 15  PRI_tau_eta                  250000 non-null  float64
+ 16  PRI_tau_phi                  250000 non-null  float64
+ 17  PRI_lep_pt                   250000 non-null  float64
+ 18  PRI_lep_eta                  250000 non-null  float64
+ 19  PRI_lep_phi                  250000 non-null  float64
+ 20  PRI_met                      250000 non-null  float64
+ 21  PRI_met_phi                  250000 non-null  float64
+ 22  PRI_met_sumet                250000 non-null  float64
+ 23  PRI_jet_num                  250000 non-null  int64
+ 24  PRI_jet_leading_pt           250000 non-null  float64
+ 25  PRI_jet_leading_eta          250000 non-null  float64
+ 26  PRI_jet_leading_phi          250000 non-null  float64
+ 27  PRI_jet_subleading_pt        250000 non-null  float64
+ 28  PRI_jet_subleading_eta       250000 non-null  float64
+ 29  PRI_jet_subleading_phi       250000 non-null  float64
+ 30  PRI_jet_all_pt               250000 non-null  float64
+ 31  Weight                       250000 non-null  float64
+ 32  Label                        250000 non-null  object
+dtypes: float64(30), int64(2), object(1)
+memory usage: 62.9+ MB
+None
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 250000 entries, 0 to 249999
+Data columns (total 31 columns):
+ #   Column                       Non-Null Count   Dtype
+---  ------                       --------------   -----
+ 0   DER_mass_MMC                 250000 non-null  float64
+ 1   DER_mass_transverse_met_lep  250000 non-null  float64
+ 2   DER_mass_vis                 250000 non-null  float64
+ 3   DER_pt_h                     250000 non-null  float64
+ 4   DER_deltaeta_jet_jet         250000 non-null  float64
+ 5   DER_mass_jet_jet             250000 non-null  float64
+ 6   DER_prodeta_jet_jet          250000 non-null  float64
+ 7   DER_deltar_tau_lep           250000 non-null  float64
+ 8   DER_pt_tot                   250000 non-null  float64
+ 9   DER_sum_pt                   250000 non-null  float64
+ 10  DER_pt_ratio_lep_tau         250000 non-null  float64
+ 11  DER_met_phi_centrality       250000 non-null  float64
+ 12  DER_lep_eta_centrality       250000 non-null  float64
+ 13  PRI_tau_pt                   250000 non-null  float64
+ 14  PRI_tau_eta                  250000 non-null  float64
+ 15  PRI_tau_phi                  250000 non-null  float64
+ 16  PRI_lep_pt                   250000 non-null  float64
+ 17  PRI_lep_eta                  250000 non-null  float64
+ 18  PRI_lep_phi                  250000 non-null  float64
+ 19  PRI_met                      250000 non-null  float64
+ 20  PRI_met_phi                  250000 non-null  float64
+ 21  PRI_met_sumet                250000 non-null  float64
+ 22  PRI_jet_num                  250000 non-null  int64
+ 23  PRI_jet_leading_pt           250000 non-null  float64
+ 24  PRI_jet_leading_eta          250000 non-null  float64
+ 25  PRI_jet_leading_phi          250000 non-null  float64
+ 26  PRI_jet_subleading_pt        250000 non-null  float64
+ 27  PRI_jet_subleading_eta       250000 non-null  float64
+ 28  PRI_jet_subleading_phi       250000 non-null  float64
+ 29  PRI_jet_all_pt               250000 non-null  float64
+ 30  Label                        250000 non-null  object
+dtypes: float64(29), int64(1), object(1)
+memory usage: 59.1+ MB
+None
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+
+
+
+  6%|▌         | 3/49 [00:15<03:51,  5.04s/it]
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 49/49 [03:50<00:00,  4.71s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 13/13 [00:56<00:00,  4.35s/it]
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 49/49 [03:52<00:00,  4.75s/it]
+
+
+
+
+
+
+
+
+
+
+
+

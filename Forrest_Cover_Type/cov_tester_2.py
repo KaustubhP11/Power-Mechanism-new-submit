@@ -35,7 +35,7 @@ parser.add_argument('--norm',type=float,default= 1,
                     help='Normalizing the data by multiplying with this number')
 parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
-parser.add_argument('--device', type=str, default='cuda',
+parser.add_argument('--device', type=str, default='cuda:2',
                     help='Device to run the model on')
 parser.add_argument('--max_steps', type=int, default=10000,
                     help='Max steps to run')
@@ -78,14 +78,29 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
     #     losses_train = torch.load("Embeddings/cov_full/losses_train.pt")
     #     losses_test = torch.load("Embeddings/cov_full/losses_test.pt")
     # else:
-    model_embs_path = model_path.replace("Models","Embeddings")
-    if (model_path in ['Models/cov_full_expt_512_1','Models/cov_full_expt_512_100','Models/cov_full_expt_512_400','Models/cov_Net_new_512_100','Models/cov_Net_new_128_100']):
-        X_emb_train = torch.load(model_embs_path + "/X_emb_train.pt")
-        X_emb_test = torch.load(model_embs_path + "/X_emb_test.pt")
-        losses_train = torch.load(model_embs_path + "/losses_train.pt")
-        losses_test = torch.load(model_embs_path + "/losses_test.pt")        
+    import os
+    def get_folders(directory):
+        folders = []
+        for root, dirs, files in os.walk(directory):
+            for dir in dirs:
+                folders.append(dir)
+        return folders
+
+    directory_path = './Embeddings'
+
+# Call the function to get the directory names
+    directory_names = get_folders(directory_path)
+    
+    if(args.model_path[7:] in directory_names):
+        print("Loading saved embeddings")
+        dirpth =  './Embeddings/'+args.model_path[7:]
+        X_emb_train = torch.load(dirpth+'/X_emb_train.pt')
+        X_emb_test = torch.load(dirpth+'/X_emb_test.pt')
+        losses_train = torch.load(dirpth+'/losses_train.pt')
+        losses_test = torch.load(dirpth+'/losses_test.pt')      
     
     else:
+        print("\n \n ** Creating embeddings ** \n \n ")
         
     
         train_priv = torch.utils.data.TensorDataset(X_train, Y_train)

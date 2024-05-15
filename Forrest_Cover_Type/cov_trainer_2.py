@@ -75,7 +75,7 @@ def main():
                                           shuffle=False, num_workers=2, drop_last=True)
 
     
-    net = Net_new(net_depth)
+    net = Net_new(net_depth,torch.device('cuda'))
     print(sum(p.numel() for p in net.X_net.parameters() if p.requires_grad))
     
     optim = torch.optim.Adam(net.parameters(), lr=learning_rate)
@@ -86,6 +86,7 @@ def main():
     torch.cuda.empty_cache()
     time_start = time.time()
     train_model_priv(net, trainloader_priv, optim, num_epochs, h=0.82, rate=10, device=torch.device('cuda'), only_reg_flag=train_flag, lr_schedular=lr_schedule,lambda_loss=lambda_loss)
+    # train_emb(net, trainloader_priv, criterion, optimizer, num_epochs=num_epochs,device=device,test_loader = test_emb_loader,test_total_loader = None,max_steps = 100)
     time_end = time.time()
     print("Time taken for training: ", time_end-time_start)
     # X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.82)

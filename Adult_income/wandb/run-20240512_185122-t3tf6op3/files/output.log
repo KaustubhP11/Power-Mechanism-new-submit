@@ -1,0 +1,37 @@
+
+**Starting data processing**
+48626
+** Formed Tensors and starting model training**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████| 1/1 [01:01<00:00, 61.01s/it, loss: 0.796448290348053, loss_reg: 0.09508482366800308,Acc: 0]
+Final Accuracy:  tensor(0.3683)
+Please type y or n if you want to save model:

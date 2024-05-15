@@ -1,0 +1,70 @@
+**Starting data processing**
+ ** Creating embeddings **
+  200000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 49/49 [05:42<00:00,  6.99s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [01:39<00:00,  7.66s/it]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/test_higgs.py", line 106, in <module>
+    X_emb_train = torch.save(dirpth+'/X_emb_train.pt')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: save() missing 1 required positional argument: 'f'

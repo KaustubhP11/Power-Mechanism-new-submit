@@ -1,0 +1,43 @@
+  0%|                                                                                                         | 0/100 [00:00<?, ?it/s]/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/nn/modules/module.py:1373: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 18%|████████▎                                     | 18/100 [00:37<02:49,  2.07s/it, loss: 0.6356251835823059, acc: 0.661300003528595]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/priv_higgs_base.py", line 93, in <module>
+    train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =args.max_steps)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/utils.py", line 284, in train_emb
+    for i, data in enumerate(train_loader, 0):
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    self._try_put_index()
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1352, in _try_put_index
+    index = self._next_index()
+            ^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 621, in _next_index
+    return next(self._sampler_iter)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/opacus/utils/uniform_sampler.py", line 64, in __iter__
+    indices = mask.nonzero(as_tuple=False).reshape(-1).tolist()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -30,7 +30,7 @@ parser.add_argument('--wandb_project', type=str, default='covertype test baselin
                     help='Name of the Weights & Biases project to log metrics to')
 parser.add_argument('--norm',type=float,default= 1,
                     help='Normalizing the data by multiplying with this number')
-parser.add_argument('--max_steps', type=int, default=10000,
+parser.add_argument('--max_steps', type=int, default=100000,
                     help='Max steps to run')
 
 args = parser.parse_args()

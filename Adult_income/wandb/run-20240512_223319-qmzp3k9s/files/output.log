@@ -1,0 +1,43 @@
+
+**Starting data processing**
+48626
+05/12/2024 22:33:41:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 25%|███████████████████████▌                                                                      | 75/300 [00:46<02:19,  1.61it/s, loss: 0.8532140851020813, acc: 0.7710261344909668]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/priv_baseline.py", line 155, in <module>
+    train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =10000)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/utils.py", line 310, in train_emb
+    optimizer.step()
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/opacus/optimizers/optimizer.py", line 519, in step
+    return self.original_optimizer.step()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/optim/optimizer.py", line 379, in wrapper
+    with torch.autograd.profiler.record_function(profile_name):
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/autograd/profiler.py", line 622, in __exit__
+    torch.ops.profiler._record_function_exit._RecordFunction(record)
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/_ops.py", line 594, in __call__
+    return self_._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

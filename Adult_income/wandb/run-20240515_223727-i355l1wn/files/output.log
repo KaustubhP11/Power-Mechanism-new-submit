@@ -1,0 +1,12 @@
+
+**Starting data processing**
+48626
+ ** Creating embeddings **
+  38900
+ ** Creating embeddings **
+  38900
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/test_income.py", line 160, in <module>
+    trainloader = torch.utils.data.DataLoader(list(zip(x_train_tensor, y_train_tensor)), batch_size=args.batch_size_emb, shuffle=False)
+                                                                                                    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'batch_size_emb'. Did you mean: 'batch_size'?
