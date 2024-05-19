@@ -22,6 +22,8 @@ argparser.add_argument('--eps', type=float, default=5.0,
                     help='Set epsilon for the model')
 argparser.add_argument('--model_path', type=str, default='Models/cov_Net_new_512_100',
                     help='Path to the Model to create embeddings')
+argparser.add_argument('--seed',type=int,default= 58,
+                    help='Seed for reproducibility')
 
 args = argparser.parse_args()
 
@@ -30,7 +32,11 @@ norm = 1
 X,Y = cov_data_loader(data_path,norm=norm)
 # max_dist = torch.cdist(X, X).max()
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
-
+torch.manual_seed(args.seed)
+np.random.seed(args.seed)
+torch.manual_seed(args.seed)
+torch.cuda.manual_seed(args.seed)
+np.random.seed(args.seed)
 model_path = args.model_path
 import os
 def get_folders(directory):
@@ -68,14 +74,15 @@ from sklearn.ensemble import RandomForestClassifier
 # X, y = make_classification(n_samples=1000, n_features=4,
 #                            n_informative=2, n_redundant=0,
 #                            random_state=0, shuffle=False) 
-clf = RandomForestClassifier(n_estimators=10,max_depth=10,  random_state=0)
+clf = RandomForestClassifier(n_estimators=10,max_depth=10,  random_state=args.seed)
 clf.fit(X_emb_train_priv, Y_train)
 
 print((clf.predict(X_emb_test) == np.asarray(Y_test)).sum()/len(Y_test))
 
 
 from xgboost import XGBClassifier
-clf = XGBClassifier()
+clf = XGBClassifier(device="cuda", random_state=args.seed, tree_method="hist", seed=args.seed,subsample=0.5)
+# clf = XGBClassifier(device = "cuda",random_state=args.seed,tree_method = "hist")
 clf.fit(X_emb_train_priv, Y_train)
 
 print((clf.predict(X_emb_test) == np.asarray(Y_test)).sum()/len(Y_test))

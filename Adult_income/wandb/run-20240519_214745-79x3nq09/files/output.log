@@ -1,0 +1,47 @@
+
+**Starting data processing**
+48626
+ ** Creating embeddings **
+  38900
+ ** Starting final training **
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 26%|█████████████████████████████████▋                                                                                                  | 255/1000 [01:19<03:51,  3.21it/s, loss: 0.3516674339771271, acc: 0.8140037059783936]
+Accuracy of Random Forest:  0.8085543902940572 Accuracy of XGBoost:  0.787374048940983

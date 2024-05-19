@@ -39,6 +39,8 @@ parser.add_argument('--device', type=str, default='cuda:2',
                     help='Device to run the model on')
 parser.add_argument('--max_steps', type=int, default=10000,
                     help='Max steps to run')
+parser.add_argument('--seed',type=int,default= 58,
+                    help='Seed for reproducibility')
 # parser.add_argument('--hist_flag', type=bool, default=False,
 #                     help='If histogram should be plotted or not')
      
@@ -122,7 +124,8 @@ def main(data_path ,batch_size,num_epochs,learning_rate,model_path):
         
         
         
-
+        os.makedirs("Embeddings/"+args.model_path[7:])
+        model_embs_path = "Embeddings/"+args.model_path[7:]
         
         X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= device,l=len(X_train),h=0.82)
         X_emb_test,losses_test = create_model_embs2(net,testloader_priv,device= device,l=len(X_test),h=0.82)

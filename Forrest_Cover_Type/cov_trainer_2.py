@@ -15,6 +15,7 @@ from cov_help import *
 
 import argparse
 from sklearn.model_selection import train_test_split
+from opacus import PrivacyEngine
 
 parser = argparse.ArgumentParser(description='Forrest cover private training')
 
@@ -37,7 +38,10 @@ parser.add_argument('--norm',type=float,default= 1,
 parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')  
 parser.add_argument('--lambda_loss',type=float,default= 1.0,
-                    help='Weighing the joint losses')    
+                    help='Weighing the joint losses') 
+parser.add_argument('--max_steps',type=int,default= 100000,
+                    help='Max steps for training')   
+
                                
 args = parser.parse_args()
 
@@ -62,7 +66,7 @@ def main():
     
     # Perform train-test split
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
-    
+ 
     # max_dist = torch.cdist(X_train, X_train).max()
     # print(max_dist) 
   
@@ -76,17 +80,31 @@ def main():
 
     
     net = Net_new(net_depth,torch.device('cuda'))
-    print(sum(p.numel() for p in net.X_net.parameters() if p.requires_grad))
+    # net = Net_non_priv(net_depth,torch.device('cuda'))
+    # print(sum(p.numel() for p in net.X_net.parameters() if p.requires_grad))
     
     optim = torch.optim.Adam(net.parameters(), lr=learning_rate)
     criterion = nn.CrossEntropyLoss()
     
     # wandb.watch(net)
     lr_schedule = LearnerRateScheduler('step', base_learning_rate=learning_rate, decay_rate=0.99, decay_steps=1)
+ 
     torch.cuda.empty_cache()
     time_start = time.time()
-    train_model_priv(net, trainloader_priv, optim, num_epochs, h=0.82, rate=10, device=torch.device('cuda'), only_reg_flag=train_flag, lr_schedular=lr_schedule,lambda_loss=lambda_loss)
+    # privacy_engine = PrivacyEngine()
+    # net2, optimizer2, data_loader = privacy_engine.make_private_with_epsilon(
+    #     module=net,
+    #     optimizer=optim,
+    #     data_loader=trainloader_priv,
+    #     target_epsilon=1,
+    #     target_delta =0.0001,
+    #     epochs = num_epochs,
+    #     max_grad_norm=1,
+    # )
+    train_model_priv(net, trainloader_priv, optim, num_epochs, h=0.82, rate=10, device=torch.device('cuda'), only_reg_flag=train_flag, lr_schedular=lr_schedule,lambda_loss=lambda_loss,max_steps = args.max_steps)
+    # train_model_priv(net2, data_loader, optimizer2, num_epochs, h=0.82, rate=10, device=torch.device('cuda'), only_reg_flag=train_flag, lr_schedular=None,lambda_loss=lambda_loss,max_steps = args.max_steps)
     # train_emb(net, trainloader_priv, criterion, optimizer, num_epochs=num_epochs,device=device,test_loader = test_emb_loader,test_total_loader = None,max_steps = 100)
+    # train_emb(net, data_loader, criterion, optimizer2, num_epochs=num_epochs,device=torch.device('cuda'),test_loader = None,test_total_loader = None,max_steps = 100)
     time_end = time.time()
     print("Time taken for training: ", time_end-time_start)
     # X_emb_train,losses_train = create_model_embs2(net,trainloader_priv,device= torch.device('cuda'),l=len(X_train),h=0.82)

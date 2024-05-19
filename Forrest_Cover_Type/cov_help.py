@@ -10,6 +10,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from scipy import stats
 import wandb
+import tqdm
 
 
 class Net(nn.Module):
@@ -135,6 +136,69 @@ class Net_new(nn.Module):
             J_int =-torch.log(torch.abs(torch.det(J)))
             loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).to(device)
         self.loss_reg = loss_reg
+        self.y = z
+        y = self.X_net(z)
+        return y
+
+class Net_non_priv(nn.Module):
+    def __init__(self,p,device=torch.device('cuda')):
+        super(Net_non_priv, self ).__init__()
+        self.device = device
+      
+        self.p =p 
+        self.x = 0
+        self.y = 0
+        self.H_net1 = nn.Sequential(
+            nn.Linear(54, 128),
+            nn.Sigmoid(),
+            nn.Linear(128, 64),
+            nn.Sigmoid(),
+            nn.Linear(64, 54*54).to(device)
+        )
+        self.X_net = nn.Sequential(
+            nn.Linear(54, 64),
+            nn.ReLU(),
+            nn.Linear(64, 128),
+            nn.ReLU(),
+            # nn.Linear(128, 128),
+            # nn.ReLU(),
+            nn.Linear(128, 7),
+            nn.Softmax(dim=2)
+
+        )
+        
+    def forward(self, x):
+        def H_mul(z):
+            H12 = self.H_net1(z)
+            H12= H12.reshape(z.shape[0],d,d)
+            x12 = torch.matmul(z,H12)
+            return(x12)
+    
+        
+        # def batch_jacobian(func, z, create_graph=False):
+        #     # x in shape (Batch, Length)
+        #     def _func_sum(z):
+        #         return func(z).sum(dim=0)
+        #     return torch.squeeze(torch.autograd.functional.jacobian(_func_sum, z, create_graph=create_graph)).permute(1,0,2)
+        
+        
+        device = self.device
+        x.requires_grad =True
+        p = self.p
+        self.x = x
+        d = x.shape[1]
+        bs = x.shape[0]
+        x= torch.unsqueeze(x,1)
+        z = x.to(device)
+        loss_reg = torch.zeros(bs,d).to(device)
+        for i in range(p):
+            H = self.H_net1(z).to(device)
+            H = H.reshape(bs,d,d)
+            z = torch.matmul(z,H).to(device)
+        #     J = batch_jacobian(H_mul, z, create_graph=True)
+        #     J_int =-torch.log(torch.abs(torch.det(J)))
+        #     loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).to(device)
+        # self.loss_reg = loss_reg
         self.y = z
         y = self.X_net(z)
         return y
@@ -438,7 +502,7 @@ def cov_data_loader(path,norm=1):
     return X,Y
 
 
-def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.device('cuda'),print_cond = True,only_reg_flag=0,lr_schedular =None,lambda_loss=1):
+def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.device('cuda'),print_cond = True,only_reg_flag=0,lr_schedular =None,lambda_loss=1,max_steps =100000):
     # scheduler = lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     lr = lr_schedular
     net = net.to(device)
@@ -456,9 +520,9 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
         # optimizer.param_groups[0]['lr'] = lr(epoch)
         
         
-        for i, data in enumerate(trainloader, 0):
+        for i, data in enumerate((pbar:= tqdm.tqdm(trainloader, 0))):
             # get the inputs; data is a list of [inputs, labels]
-            if(i >100 ):
+            if(i >max_steps ):
                 break
             bs = len(data[0])
             
@@ -474,11 +538,25 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
             outputs = net(inputs)
             if(only_reg_flag==1):
                 loss = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
+                
             elif(only_reg_flag==2):
                 loss = criterion(torch.squeeze(outputs),torch.squeeze(labels))
+                try:
+                    loss_reg = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().detach().cpu()/len(inputs)
+                    wandb.log({"loss": loss.item(),"loss_reg":loss_reg.item()})
+                    pbar.set_postfix({'loss': loss.item(),'loss_reg':loss_reg.item()})
+                
+                    
+                except:
+                    
+                    wandb.log({"loss": loss.item()})
+                    pbar.set_postfix({'loss': loss.item()})
                 
             else:
                 loss = lambda_loss*bs*criterion(torch.squeeze(outputs),torch.squeeze(labels)) + torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
+                loss_reg = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().detach().cpu()/len(inputs)
+                wandb.log({"loss": loss.item(),"loss_reg":loss_reg.item()})
+                pbar.set_postfix({'loss': loss.item(),'loss_reg':loss_reg.item()})
             loss.backward(retain_graph=True)
 
             optimizer.step()
@@ -487,13 +565,12 @@ def train_model_priv(net,trainloader,optimizer,epochs,h,rate=10,device= torch.de
           
             if(epoch ==0 and i==0):
                 continue
-            loss_reg = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().detach().cpu()/len(inputs)
-            wandb.log({"loss": loss.item(),"loss_reg":loss_reg.item()})
+            
 
             # print statistics
             # print(loss.sum().shape)
-            running_loss += loss.item()
-            running_loss_reg += torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().item()
+            # running_loss += loss.item()
+            # running_loss_reg += torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().item()
             # if i % 100 == 99:    # print every 2000 mini-batches
             # if((i+1)%rate==0):
 
@@ -620,7 +697,7 @@ def create_model_embs2(net,trainloader,device= torch.device('cpu'),l=0,h=0.82):
 
         
         
-    for i, data in enumerate(trainloader, 0):
+    for i, data in enumerate(tqdm.tqdm(trainloader, 0)):
         # get the inputs; data is a list of [inputs, labels]
    
         inputs = data[0].to(device)
@@ -666,7 +743,8 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
             labels = labels.to(device)
             optimizer.zero_grad()
             outputs = model(inputs)
-            loss = loss_fn(outputs, labels)
+            # print(outputs.shape,labels.shape)
+            loss = loss_fn(outputs.squeeze(), labels)
 
             loss.backward()
             
@@ -682,9 +760,9 @@ def train_emb(model, train_loader, loss_fn, optimizer, num_epochs,device=torch.d
             # running_loss = 0.0
         # for params in model.parameters():
         #     print(params.grad)
-        acc = test_model(model,train_loader,device=device)
+        # acc = test_model(model,train_loader,device=device)
         
-        wandb.log({"train acc": acc})
+        # wandb.log({"train acc": acc})
         if(test_loader):
         
 

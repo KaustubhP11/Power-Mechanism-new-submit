@@ -29,6 +29,8 @@ parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
 parser.add_argument('--eps', type=float, default=1.0,
                     help='Set epsilon for the model')
+parser.add_argument('--seed',type=int,default= 58,
+                    help='Seed for reproducibility')
                     
 args = parser.parse_args()
 device = torch.device(args.device)
@@ -61,6 +63,8 @@ y_test_tensor = torch.tensor(y_test)
 import torch
 import torch.nn as nn
 import os
+torch.manual_seed(args.seed)
+np.random.seed(args.seed)
 def get_folders(directory):
     folders = []
     for root, dirs, files in os.walk(directory):
@@ -145,7 +149,7 @@ trainloader_priv = torch.utils.data.DataLoader(list(zip(X_emb_train_priv, Y_trai
 print("\n \n ** Starting final training ** \n \n ")
 torch.cuda.empty_cache()
 train_emb(model,trainloader_priv,X_emb_test,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,test_total_loader = None,max_steps =args.max_steps)
-model = RandomForestClassifier(n_estimators=50)
+model = RandomForestClassifier(n_estimators=50, random_state=args.seed)
 
 # Train the model
 model.fit(X_emb_train_priv, Y_train)
@@ -153,7 +157,7 @@ model.fit(X_emb_train_priv, Y_train)
 # Make predictions
 predictions = model.predict(X_emb_test)
 acc_rf = (predictions == np.array(y_test_tensor)).sum()/(len(y_test_tensor))
-model = XGBClassifier()
+model = XGBClassifier(device='cuda',random_state=args.seed,subsample=0.5)
 
 model.fit(X_emb_train_priv, Y_train)
 

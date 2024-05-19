@@ -32,6 +32,8 @@ parser.add_argument('--norm',type=float,default= 1,
                     help='Normalizing the data by multiplying with this number')
 parser.add_argument('--max_steps', type=int, default=100000,
                     help='Max steps to run')
+parser.add_argument('--seed',type=int,default= 58,
+                    help='Seed for reproducibility')
 
 args = parser.parse_args()
 # You can access the parsed arguments like this:
@@ -53,6 +55,9 @@ def main():
     #write code for train test split using X_emb and Y
     
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+    # Set random seeds
+    torch.manual_seed(args.seed)
+    np.random.seed(args.seed)
     
     train_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(X_train,Y_train), batch_size=batch_size,
                                             shuffle=True, num_workers=2,drop_last=True)

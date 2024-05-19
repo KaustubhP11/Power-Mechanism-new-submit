@@ -56,12 +56,13 @@ import torch.nn as nn
 # Print the model architecture
 print("\n \n** Formed Tensors and starting model training** \n \n ")
 net = Net_new(args.net_depth,device = device)
+# net = Net_non_priv(args.net_depth)
 trainloader = torch.utils.data.DataLoader(list(zip(x_train_tensor, y_train_tensor)), batch_size=args.batch_size, shuffle=False)
 torch.cuda.empty_cache()
 optimizer = torch.optim.Adam(net.parameters(), lr=args.lr)
 
 
-train_model_priv(net,trainloader,x_test_tensor,y_test_tensor,optimizer,epochs,0.82,device= device,print_cond = True,only_reg_flag=0,lr_schedular =None,lambda_loss=args.lambda_loss,max_steps=args.max_steps)
+train_model_priv(net,trainloader,x_test_tensor,y_test_tensor,optimizer,epochs,0.82,device= device,print_cond = True,only_reg_flag=args.only_reg_flag,lr_schedular =None,lambda_loss=args.lambda_loss,max_steps=args.max_steps)
 wandb.config.update(args)
 print("Please type y or n if you want to save model: \n")
 input1 = input()

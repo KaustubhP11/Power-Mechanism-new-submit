@@ -35,6 +35,8 @@ parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
 parser.add_argument('--eps', type=float, default=1.0,
                     help='Set epsilon for the model')
+parser.add_argument('--seed',type=int,default= 58,
+                    help='Seed for reproducibility')
                     
 args = parser.parse_args()
 device = torch.device(args.device)
@@ -52,6 +54,9 @@ y = np.asarray(y, dtype = np.float32)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 import torch
+torch.manual_seed(args.seed)
+np.random.seed(args.seed)
+
 
 # Convert X_train and X_test to tensors
 x_train_tensor = torch.tensor(X_train)
@@ -79,19 +84,19 @@ from opacus import PrivacyEngine
 privacy_engine = PrivacyEngine()
 optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 grad_norm = 10
-# model2, optimizer2, data_loader = privacy_engine.make_private_with_epsilon(
-#     module=model,
-#     optimizer=optimizer,
-#     data_loader=trainloader,
-#     target_epsilon=args.eps,
-#     target_delta =0.0001,
-#     epochs = num_epochs,
-#     max_grad_norm=grad_norm,
-# )
+model2, optimizer2, data_loader = privacy_engine.make_private_with_epsilon(
+    module=model,
+    optimizer=optimizer,
+    data_loader=trainloader,
+    target_epsilon=args.eps,
+    target_delta =0.0001,
+    epochs = num_epochs,
+    max_grad_norm=grad_norm,
+)
 wandb.init(project="higgs priv baseline")
 wandb.config.update(args)
-# train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =args.max_steps)
-train_emb(model,trainloader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,max_steps =args.max_steps)
+train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =args.max_steps)
+# train_emb(model,trainloader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,max_steps =args.max_steps)
 args.grad_norm = grad_norm
 # Train the model
 

@@ -1,0 +1,68 @@
+05/19/2024 22:18:20:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 20%|███████████████████████████▍                                                                                                          | 41/200 [01:12<04:42,  1.77s/it, loss: 0.5542473793029785, acc: 0.7606415748596191]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/priv_baseline.py", line 161, in <module>
+    train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =args.max_steps)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/utils.py", line 371, in train_emb
+    for i, data in enumerate(train_loader, 0):
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 439, in __iter__
+    return self._get_iterator()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 387, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1085, in __init__
+    self._reset(loader, first_iter=True)
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1118, in _reset
+    self._try_put_index()
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1363, in _try_put_index
+    self._index_queues[worker_queue_idx].put((self._send_idx, index))  # type: ignore[possibly-undefined]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/multiprocessing/queues.py", line 94, in put
+    self._start_thread()
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/multiprocessing/queues.py", line 180, in _start_thread
+    self._thread = threading.Thread(
+                   ^^^^^^^^^^^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/threading.py", line 933, in __init__
+    self._started = Event()
+                    ^^^^^^^
+  File "/raid/ganesh/racha_suraj/miniconda3/envs/dpo/lib/python3.12/threading.py", line 589, in __init__
+    self._cond = Condition(Lock())
+                           ^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,60 @@
+05/18/2024 00:49:11:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 17%|████████████████████▏                                                                                                   | 168/1000 [01:43<08:33,  1.62it/s, loss: 0.5668256282806396, acc: 0.7606415748596191]
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/priv_baseline.py", line 157, in <module>
+    train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =10000)
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/utils.py", line 374, in train_emb
+    outputs = model(inputs).squeeze()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

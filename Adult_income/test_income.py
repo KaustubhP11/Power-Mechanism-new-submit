@@ -38,7 +38,8 @@ parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
 parser.add_argument('--eps', type=float, default=1.0,
                     help='Set epsilon for the model')
-                    
+parser.add_argument('--seed',type=int,default= 58,
+                    help='Seed for reproducibility')
 args = parser.parse_args()
 device = torch.device(args.device)
 epochs = args.epochs
@@ -109,7 +110,8 @@ for i in range(len(y.values)):
 import torch
 x_train,x_test,y_train,y_test = train_test_split(X_fil,Y_fil,test_size = 0.2,random_state = 42)
 
-
+torch.manual_seed(args.seed)
+np.random.seed(args.seed)
 x_train_tensor = torch.tensor(x_train, dtype=torch.float32)
 x_test_tensor = torch.tensor(x_test, dtype=torch.float32)
 y_train_tensor = torch.tensor(y_train, dtype=torch.float32)
@@ -200,8 +202,8 @@ optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 trainloader_priv = torch.utils.data.DataLoader(list(zip(X_emb_train_priv, Y_train)), batch_size=args.batch_size, shuffle=True)
 print("\n \n ** Starting final training ** \n \n ")
 torch.cuda.empty_cache()
-train_emb(model,trainloader_priv,X_emb_test,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,test_total_loader = None,max_steps =10000)
-model = RandomForestClassifier(n_estimators=50)
+train_emb(model,trainloader_priv,X_emb_test,y_test_tensor,nn.BCELoss(),optimizer,num_epochs,device=device,test_total_loader = None,max_steps =args.max_steps)
+model = RandomForestClassifier(n_estimators=50,random_state=args.seed)
 
 # Train the model
 model.fit(X_emb_train_priv, Y_train)
@@ -209,7 +211,7 @@ model.fit(X_emb_train_priv, Y_train)
 # Make predictions
 predictions = model.predict(X_emb_test)
 acc_rf = (predictions == np.array(y_test_tensor)).sum()/(len(y_test_tensor))
-model = XGBClassifier()
+model = XGBClassifier(device = 'cuda',random_state=args.seed,tree_method = 'hist',subsample=0.5)
 
 model.fit(X_emb_train_priv, Y_train)
 

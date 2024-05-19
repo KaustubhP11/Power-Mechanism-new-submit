@@ -31,6 +31,7 @@ parser.add_argument('--batch_size', type=int, default=512, help='Batch size for 
 parser.add_argument('--lambda_loss', type=float, default=1, help='Lambda for loss function')
 parser.add_argument('--only_reg_flag', type=int, default=0, help='Flag for only regularizer')
 parser.add_argument('--max_steps', type=int, default=10000, help='Max steps for training')
+
 args = parser.parse_args()
 device = torch.device(args.device)
 epochs = args.epochs
@@ -119,25 +120,26 @@ import torch.nn as nn
 print("\n \n** Formed Tensors and starting model training** \n \n ")
 print(torch.cdist(x_train_tensor, x_train_tensor).max())
 print(torch.cdist(x_test_tensor, x_test_tensor).max())
-net = Net_new(1,device = device)
+# net = Net_new(1,device = device)
+net = Net_non_priv(1,device = device)
 trainloader = torch.utils.data.DataLoader(list(zip(x_train_tensor, y_train_tensor)), batch_size=args.batch_size, shuffle=False)
 torch.cuda.empty_cache()
-# optimizer = torch.optim.Adam(net.parameters(), lr=args.lr)
+optimizer = torch.optim.Adam(net.parameters(), lr=args.lr)
 
 
-# train_model_priv(net,trainloader,x_test_tensor,y_test_tensor,optimizer,epochs,0.82,device= device,print_cond = True,only_reg_flag=0,lr_schedular =None,lambda_loss=args.lambda_loss,max_steps=args.max_steps)
-# wandb.config.update(args)
-# print("Please type y or n if you want to save model: \n")
-# input1 = input()
-# if(input1 == 'y'):
-#     print("Please type the name of the model: \n")
-#     input2 = input()
-#     model_path = "Models/" + input2
-#     torch.save(net.state_dict(), model_path)
-#     args.model_name = model_path
+train_model_priv(net,trainloader,x_test_tensor,y_test_tensor,optimizer,epochs,0.82,device= device,print_cond = True,only_reg_flag=args.only_reg_flag,lr_schedular =None,lambda_loss=args.lambda_loss,max_steps=args.max_steps)
+wandb.config.update(args)
+print("Please type y or n if you want to save model: \n")
+input1 = input()
+if(input1 == 'y'):
+    print("Please type the name of the model: \n")
+    input2 = input()
+    model_path = "Models/" + input2
+    torch.save(net.state_dict(), model_path)
+    args.model_name = model_path
 
-#     wandb.config.update(args)
-#     print("Model saved successfully")
+    wandb.config.update(args)
+    print("Model saved successfully")
 
 
 

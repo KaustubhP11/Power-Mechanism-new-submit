@@ -1,0 +1,11 @@
+
+**Starting data processing**
+48626
+** Formed Tensors and starting model training**
+tensor(1.0356)
+tensor(0.3589)
+Traceback (most recent call last):
+  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Adult_income/income_train.py", line 130, in <module>
+    train_model_priv(net,trainloader,x_test_tensor,y_test_tensor,optimizer,epochs,0.82,device= device,print_cond = True,only_reg_flag=args.train_flag,lr_schedular =None,lambda_loss=args.lambda_loss,max_steps=args.max_steps)
+                                                                                                                                      ^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'train_flag'

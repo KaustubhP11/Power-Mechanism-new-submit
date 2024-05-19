@@ -97,7 +97,71 @@ class Net_new(nn.Module):
         self.y = z
         y = self.X_net(z)
         return y
+    
+    
+class Net_non_priv(nn.Module):
+    def __init__(self,p,device=torch.device('cuda')):
+        super(Net_non_priv, self ).__init__()
+        self.device = device
+        self.loss_reg = 0
+        self.p =p 
+        self.x = 0
+        self.y = 0
+        self.H_net1 = nn.Sequential(
+            nn.Linear(68, 128),
+            nn.Sigmoid(),
+            nn.Linear(128, 64),
+            nn.Sigmoid(),
+            nn.Linear(64, 68*68).to(device)
+        )
+        self.X_net = nn.Sequential(
+            nn.Linear(68, 1),
+            # nn.ReLU(),
+            # nn.Linear(128, 512),
+            # nn.ReLU(),
+            # nn.Linear(512, 128),
+            # nn.ReLU(),
+            # nn.Linear(128, 1),
+            nn.Sigmoid()
+        )
+        
+    def forward(self, x):
+        def H_mul(z):
+            H12 = self.H_net1(z)
+            H12= H12.reshape(z.shape[0],d,d)
+            x12 = torch.matmul(z,H12)
+            return(x12)
+    
+        
+        # def batch_jacobian(func, z, create_graph=False):
+        #     # x in shape (Batch, Length)
+        #     def _func_sum(z):
+        #         return func(z).sum(dim=0)
+        #     return torch.squeeze(torch.autograd.functional.jacobian(_func_sum, z, create_graph=create_graph)).permute(1,0,2)
+        
+        
+        device = self.device
+       
+        x.requires_grad =True
+        p = self.p
+        self.x = x
+        d = x.shape[1]
+        bs = x.shape[0]
+        x= torch.unsqueeze(x,1)
+        z = x.to(device)
 
+        loss_reg = torch.zeros(bs,d).to(device)
+        for i in range(p):
+            H = self.H_net1(z).to(device)
+            H = H.reshape(bs,d,d)
+            z = torch.matmul(z,H).to(device)
+        #     J = batch_jacobian(H_mul, z, create_graph=True)
+        #     J_int =-torch.log(torch.abs(torch.det(J)))
+        #     loss_reg = loss_reg + torch.squeeze(torch.autograd.grad(J_int, x,torch.ones_like(J_int),allow_unused=True,create_graph= True)[0]).to(device)
+        # self.loss_reg = loss_reg
+        self.y = z
+        y = self.X_net(z)
+        return y
 
 
         
@@ -199,10 +263,16 @@ def train_model_priv(net,trainloader,x_test,y_test,optimizer,epochs,h,rate=10,de
                 loss = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
             elif(only_reg_flag==2):
                 loss = criterion(torch.squeeze(outputs),torch.squeeze(labels))
+                loss_reg = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().detach().cpu()/len(inputs)
+                wandb.log({"loss": loss.item(),"loss_reg":loss_reg.item()})
+                pbar.set_postfix_str(f"loss: {loss.item()}, loss_reg: {loss_reg.item()},Acc: {acc}")
                 
             else:
                
                 loss = lambda_loss*bs*criterion(torch.squeeze(outputs),torch.squeeze(labels)) + torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum()
+                loss_reg = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().detach().cpu()/len(inputs)
+                wandb.log({"loss": loss.item(),"loss_reg":loss_reg.item()})
+                pbar.set_postfix_str(f"loss: {loss.item()}, loss_reg: {loss_reg.item()},Acc: {acc}")
             loss.backward(retain_graph=True)
 
             optimizer.step()
@@ -214,8 +284,7 @@ def train_model_priv(net,trainloader,x_test,y_test,optimizer,epochs,h,rate=10,de
             loss_reg = torch.norm(f_der/f.view(f.shape[0],1)+ net.loss_reg,dim=1).sum().detach().cpu()/len(inputs)
             
             
-            wandb.log({"loss": loss.item(),"loss_reg":loss_reg.item()})
-            pbar.set_postfix_str(f"loss: {loss.item()}, loss_reg: {loss_reg.item()},Acc: {acc}")
+            
 
             # print statistics
             # print(loss.sum().shape)
@@ -293,10 +362,14 @@ def train_emb(model, train_loader, x_test,y_test,loss_fn, optimizer, num_epochs=
     steps = 0
     acc = 0
     max_acc =0
+    steps = 0 
     for epoch in (pbar:= tqdm(range(num_epochs))):
+        if(steps>max_steps):
+            break
         
         
         for i, data in enumerate(train_loader, 0):
+            steps+=1
             
             inputs, labels = data
             inputs = inputs.to(device)

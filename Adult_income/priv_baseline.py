@@ -38,14 +38,15 @@ parser.add_argument('--net_depth',type=int,default= 1,
                     help='Depth of the network')
 parser.add_argument('--eps', type=float, default=1.0,
                     help='Set epsilon for the model')
+parser.add_argument('--seed',type=int,default= 58,
+                    help='Seed for reproducibility')
                     
 args = parser.parse_args()
 device = torch.device(args.device)
 epochs = args.epochs
 
 df = pd.read_csv('./Data/adult.csv')
-wandb.init(project="income_prediction priv baseline")
-wandb.config.update(args)
+
 print("**Starting data processing** \n \n ")
 
 
@@ -108,6 +109,8 @@ for i in range(len(y.values)):
 
 import torch
 x_train,x_test,y_train,y_test = train_test_split(X_fil,Y_fil,test_size = 0.2,random_state = 42)
+torch.manual_seed(args.seed)
+np.random.seed(args.seed)
 
 
 x_train_tensor = torch.tensor(x_train, dtype=torch.float32)
@@ -142,7 +145,10 @@ model = nn.Sequential(
 from opacus import PrivacyEngine
 privacy_engine = PrivacyEngine()
 optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
-grad_norm = 100
+grad_norm = 10
+
+wandb.init(project="income_prediction priv baseline")
+wandb.config.update(args)
 model2, optimizer2, data_loader = privacy_engine.make_private_with_epsilon(
     module=model,
     optimizer=optimizer,
@@ -152,7 +158,7 @@ model2, optimizer2, data_loader = privacy_engine.make_private_with_epsilon(
     epochs = num_epochs,
     max_grad_norm=grad_norm,
 )
-train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =10000)
+train_emb(model2,data_loader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =args.max_steps)
 args.grad_norm = grad_norm
 # Train the model
 
