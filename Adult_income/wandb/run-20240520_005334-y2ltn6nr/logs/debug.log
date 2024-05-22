@@ -27,3 +27,5 @@ config: {}
 2024-05-20 00:53:38,456 INFO    MainThread:1417724 [wandb_run.py:_redirect():2280] Redirects installed.
 2024-05-20 00:53:38,456 INFO    MainThread:1417724 [wandb_init.py:init():842] run started, returning control to user process
 2024-05-20 00:53:38,457 INFO    MainThread:1417724 [wandb_run.py:_config_callback():1347] config_cb None None {'device': 'cuda:3', 'epochs': 1000, 'lr': 0.001, 'batch_size': 512, 'lambda_loss': 1, 'only_reg_flag': 0, 'max_steps': 200000, 'model_path': 'Models/adult_512_1', 'net_depth': 1, 'eps': 1.5, 'seed': 77}
+2024-05-20 02:11:41,651 INFO    MainThread:1417724 [wandb_run.py:_config_callback():1347] config_cb None None {'device': 'cuda:3', 'epochs': 1000, 'lr': 0.001, 'batch_size': 512, 'lambda_loss': 1, 'only_reg_flag': 0, 'max_steps': 200000, 'model_path': 'Models/adult_512_1', 'net_depth': 1, 'eps': 1.5, 'seed': 77, 'grad_norm': 10}
+2024-05-20 02:11:54,421 WARNING MsgRouterThr:1417724 [router.py:message_loop():77] message_loop has been closed

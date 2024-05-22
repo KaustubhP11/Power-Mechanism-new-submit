@@ -68,3 +68,6 @@ eps:
 seed:
   desc: null
   value: 77
+grad_norm:
+  desc: null
+  value: 10
