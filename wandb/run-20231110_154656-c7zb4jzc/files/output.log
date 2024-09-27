@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/kaustubh/Code3/non_priv_cov.py", line 101, in <module>
-    main()
-  File "/home/kaustubh/Code3/non_priv_cov.py", line 58, in main
-    print(batch_size_eps)
-NameError: name 'batch_size_eps' is not defined
