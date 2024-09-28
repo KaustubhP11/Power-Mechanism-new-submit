@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/kaustubh/Code3/Churn /churn_trainer.py", line 102, in <module>
-    main(data_path=data_path,batch_size=batch_size,num_epochs=num_epochs,learning_rate=learning_rate,train_flag=train_flag)
-  File "/home/kaustubh/Code3/Churn /churn_trainer.py", line 54, in main
-    X,Y = cov_data_loader(data_path,norm=norm)
-NameError: name 'cov_data_loader' is not defined
