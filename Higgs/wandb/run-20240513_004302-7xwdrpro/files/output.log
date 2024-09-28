@@ -1,9 +1,0 @@
-**Starting data processing**
-** Formed Tensors and starting model training**
-Traceback (most recent call last):
-  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/higgs_train.py", line 62, in <module>
-    train_model_priv(net,trainloader,x_test_tensor,y_test_tensor,optimizer,epochs,0.82,device= device,print_cond = True,only_reg_flag=0,lr_schedular =None,lambda_loss=args.lambda_loss,max_steps=args.max_steps)
-  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/utils.py", line 154, in train_model_priv
-    for epoch in (pbar:= tqdm(range(epochs))):  # loop over the dataset multiple times
-                         ^^^^^^^^^^^^^^^^^^^
-TypeError: 'module' object is not callable. Did you mean: 'tqdm.tqdm(...)'?

@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/raid/ganesh/racha_suraj/SF_test/Power-Mechanism-new/Higgs/priv_higgs_base.py", line 94, in <module>
-    train_emb(model,trainloader,x_test_tensor,y_test_tensor,nn.BCELoss(),optimizer2,num_epochs,device=device,max_steps =args.max_steps)
-                                                                         ^^^^^^^^^^
-NameError: name 'optimizer2' is not defined. Did you mean: 'optimizer'?
